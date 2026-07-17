@@ -384,9 +384,15 @@
             <h2>考研情报中心</h2>
             <p class="muted-line" id="intelUpdated">等待首次同步</p>
           </div>
-          <div class="intel-switch" role="group" aria-label="情报类型">
-            <button type="button" class="active" data-intel-type="admissions">招生信息</button>
-            <button type="button" data-intel-type="politics">政治时事</button>
+          <div class="intel-band-actions">
+            <div class="intel-health-summary" aria-live="polite">
+              <span class="health-chip bad" id="intelHealth">尚未核验</span>
+              <span id="intelSourceSummary">等待来源状态</span>
+            </div>
+            <div class="intel-switch" role="group" aria-label="情报类型">
+              <button type="button" class="active" data-intel-type="admissions">招生信息</button>
+              <button type="button" data-intel-type="politics">政治时事</button>
+            </div>
           </div>
         </section>
         <section class="intel-layout">
@@ -410,7 +416,8 @@
               <a href="https://yz.chsi.com.cn/" target="_blank" rel="noreferrer"><strong>中国研招网</strong><span>政策、报名与考试流程</span></a>
               <a href="https://www.news.cn/politics/" target="_blank" rel="noreferrer"><strong>新华网时政</strong><span>政治时事原始来源</span></a>
             </div>
-            <div class="source-note">2027 招生目录与初试日期尚未发布时，页面会标注“沿用上一年度参考”，不会把历史信息当作新政策。</div>
+            <div class="source-health-list" id="sourceHealthList"></div>
+            <div class="source-note" id="intelNotice">只展示官方原文，自动归类不代表官方命题判断。</div>
           </aside>
         </section>
       </section>

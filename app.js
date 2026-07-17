@@ -319,7 +319,7 @@ const fallbackState = {
 };
 
 let state = loadState();
-let timer = { total: 45 * 60, remaining: 45 * 60, running: false, interval: null };
+let timer = { total: 45 * 60, remaining: 45 * 60, running: false, interval: null, startedAt: 0, startRemaining: 45 * 60 };
 
 function loadState() {
   try {
@@ -342,19 +342,42 @@ function loadState() {
 }
 
 function mergeState(value) {
+  const input = value && typeof value === "object" && !Array.isArray(value) ? value : {};
+  const objectValue = (candidate) => candidate && typeof candidate === "object" && !Array.isArray(candidate) ? candidate : {};
+  const recordArray = (candidate) => Array.isArray(candidate) ? candidate.filter((item) => item && typeof item === "object").slice(-5000) : [];
+  const validDate = (candidate, fallback = BASELINE_DATE) => /^20\d{2}-\d{2}-\d{2}$/.test(String(candidate || "")) ? candidate : fallback;
+  const mode = ["base", "standard", "full"].includes(input.settings?.mode) ? input.settings.mode : fallbackState.settings.mode;
+  const topicProgress = Object.fromEntries(Object.entries(objectValue(input.topicProgress)).map(([key, level]) => [key, Math.max(0, Math.min(3, Number(level) || 0))]));
   return {
     ...structuredClone(fallbackState),
-    ...value,
-    settings: { ...fallbackState.settings, ...(value.settings || {}) },
-    topicProgress: { ...defaultTopicProgress, ...(value.topicProgress || {}) },
-    vocabChapters: { ...(value.vocabChapters || {}) },
-    phaseGoals: { ...(value.phaseGoals || {}) },
-    ui: { ...fallbackState.ui, ...(value.ui || {}) },
+    ...input,
+    settings: {
+      ...fallbackState.settings,
+      ...objectValue(input.settings),
+      mode,
+      examDate: validDate(input.settings?.examDate, fallbackState.settings.examDate),
+      goalScore: Math.max(300, Math.min(500, Number(input.settings?.goalScore) || fallbackState.settings.goalScore)),
+    },
+    tasks: recordArray(input.tasks).map((item) => ({ ...item, id: item.id || uid("task"), date: validDate(item.date), minutes: Math.max(1, Number(item.minutes) || 45), done: Boolean(item.done), tier: ["base", "standard", "full"].includes(item.tier) ? item.tier : "standard" })),
+    wrongs: recordArray(input.wrongs).map((item) => ({ ...item, id: item.id || uid("wrong"), due: validDate(item.due), reps: Math.max(0, Number(item.reps) || 0), archived: Boolean(item.archived) })),
+    cards: recordArray(input.cards).map((item) => ({ ...item, id: item.id || uid("card"), due: validDate(item.due), reps: Math.max(0, Number(item.reps) || 0), archived: Boolean(item.archived) })),
+    scores: recordArray(input.scores).filter((item) => Number(item.full) > 0 && Number(item.score) >= 0 && Number(item.score) <= Number(item.full)),
+    sessions: recordArray(input.sessions).map((item) => ({ ...item, id: item.id || uid("session"), date: validDate(item.date), minutes: Math.max(1, Number(item.minutes) || 1) })),
+    topicProgress: { ...defaultTopicProgress, ...topicProgress },
+    vocabChapters: Object.fromEntries(Object.entries(objectValue(input.vocabChapters)).map(([key, checked]) => [key, Boolean(checked)])),
+    phaseGoals: Object.fromEntries(Object.entries(objectValue(input.phaseGoals)).map(([key, checked]) => [key, Boolean(checked)])),
+    ui: { ...fallbackState.ui, ...objectValue(input.ui) },
   };
 }
 
 function saveState() {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    return true;
+  } catch (error) {
+    console.error("Unable to save local study data", error);
+    return false;
+  }
 }
 
 function uid(prefix) {
@@ -704,14 +727,30 @@ function renderIntel() {
   const type = state.ui.intelType;
   document.querySelectorAll("[data-intel-type]").forEach((button) => button.classList.toggle("active", button.dataset.intelType === type));
   const generated = feed.generatedAt ? new Date(feed.generatedAt) : null;
-  setText("intelUpdated", generated && !Number.isNaN(generated.getTime()) ? `最近同步：${generated.toLocaleString("zh-CN", { hour12: false })}` : "尚未完成自动同步");
+  setText("intelUpdated", generated && !Number.isNaN(generated.getTime()) ? `最近巡检：${generated.toLocaleString("zh-CN", { hour12: false })}` : "尚未完成自动巡检");
   setText("intelEyebrow", type === "admissions" ? "官方招生来源" : "每日时政素材");
   setText("intelTitle", type === "admissions" ? "电子科大与研招信息" : "政治时事与命题主题");
+  setText("intelNotice", feed.notice || "仅以官方原文为准。");
+  const categoryHealth = feed.health?.[type];
+  const lastHealthy = categoryHealth?.lastHealthyAt ? new Date(categoryHealth.lastHealthyAt) : null;
+  const staleHours = lastHealthy && !Number.isNaN(lastHealthy.getTime()) ? (Date.now() - lastHealthy.getTime()) / 3600000 : Infinity;
+  const healthElement = document.getElementById("intelHealth");
+  let healthLabel = "尚未核验";
+  let healthTone = "bad";
+  if (categoryHealth?.status === "degraded") { healthLabel = "部分来源异常"; healthTone = "warn"; }
+  if (categoryHealth?.status === "healthy") { healthLabel = "官方来源已核验"; healthTone = "good"; }
+  if (staleHours > 48) { healthLabel = "数据超过 48 小时"; healthTone = "bad"; }
+  healthElement.className = `health-chip ${healthTone}`;
+  healthElement.textContent = healthLabel;
+  setText("intelSourceSummary", categoryHealth ? `可用 ${categoryHealth.usableSources} / ${categoryHealth.totalSources} 个来源` : "等待来源状态");
+  const statuses = Array.isArray(feed.sourceStatus) ? feed.sourceStatus.filter((item) => item.category === type) : [];
+  const sourceHealthList = document.getElementById("sourceHealthList");
+  sourceHealthList.innerHTML = statuses.map((item) => `<div class="source-health-row"><span class="source-health-dot ${item.ok ? "good" : "bad"}"></span><span>${escapeHtml(item.source)}</span><strong>${item.ok ? `${item.count} 条` : "异常"}</strong></div>`).join("");
   const items = Array.isArray(feed[type]) ? feed[type] : [];
   setText("intelCount", `${items.length} 条`);
   const container = document.getElementById("intelList");
   if (!items.length) return container.replaceChildren(emptyState(type === "admissions" ? "等待首次招生信息同步" : "等待首次时政同步"));
-  container.innerHTML = items.map((item) => `<div class="intel-item"><span class="news-tag ${type === "politics" ? "politics" : ""}">${escapeHtml(item.topic || item.source || "官方信息")}</span><a href="${escapeHtml(item.url)}" target="_blank" rel="noreferrer">${escapeHtml(item.title)}</a><div class="intel-meta"><span>${escapeHtml(item.source || "权威来源")}</span><span>${escapeHtml(item.date || "日期未知")}</span>${item.referenceYear ? `<span>${escapeHtml(item.referenceYear)} 年度参考</span>` : ""}</div>${item.angle ? `<div class="intel-angle"><strong>命题连接：</strong>${escapeHtml(item.angle)}</div>` : ""}</div>`).join("");
+  container.innerHTML = items.map((item) => `<div class="intel-item"><span class="news-tag ${type === "politics" ? "politics" : ""}">${escapeHtml(item.topic || item.source || "官方信息")}</span><a href="${escapeHtml(item.url)}" target="_blank" rel="noreferrer">${escapeHtml(item.title)}</a><div class="intel-meta"><span>${escapeHtml(item.source || "权威来源")}</span><span>${escapeHtml(item.date || "日期未知")}</span>${item.referenceOnly ? `<span>历史年度参考</span>` : ""}${item.verifiedAt ? `<span>本次抓取已核验</span>` : ""}</div>${item.angle ? `<div class="intel-angle"><strong>自动复习归类：</strong>${escapeHtml(item.angle)}</div>` : ""}</div>`).join("");
 }
 
 function renderSettings() {
@@ -808,27 +847,39 @@ function updateTimerReadout() {
 }
 
 function setTimerMinutes(minutes) {
-  timer.total = minutes * 60; timer.remaining = timer.total; timer.running = false;
-  clearInterval(timer.interval); updateTimerReadout();
+  const seconds = Math.max(60, Number(minutes) * 60);
+  timer.total = seconds; timer.remaining = seconds; timer.startRemaining = seconds; timer.startedAt = 0; timer.running = false;
+  clearInterval(timer.interval); timer.interval = null; updateTimerReadout();
   document.querySelectorAll("[data-preset]").forEach((button) => button.classList.toggle("active", Number(button.dataset.preset) === minutes));
+}
+
+function syncTimerClock() {
+  if (!timer.running || !timer.startedAt) return false;
+  const elapsed = Math.floor((Date.now() - timer.startedAt) / 1000);
+  timer.remaining = Math.max(0, timer.startRemaining - elapsed);
+  updateTimerReadout();
+  return timer.remaining === 0;
 }
 
 function startTimer() {
   if (timer.running) return;
-  timer.running = true;
+  timer.running = true; timer.startedAt = Date.now(); timer.startRemaining = timer.remaining;
   timer.interval = setInterval(() => {
-    timer.remaining = Math.max(0, timer.remaining - 1); updateTimerReadout();
-    if (timer.remaining <= 0) finishTimer();
-  }, 1000);
+    if (syncTimerClock()) finishTimer();
+  }, 250);
 }
 
 function pauseTimer() {
-  timer.running = false; clearInterval(timer.interval);
+  syncTimerClock();
+  timer.running = false; timer.startedAt = 0; timer.startRemaining = timer.remaining;
+  clearInterval(timer.interval); timer.interval = null;
 }
 
 function finishTimer() {
   pauseTimer();
-  const elapsed = Math.max(1, Math.round((timer.total - timer.remaining) / 60));
+  const elapsedSeconds = timer.total - timer.remaining;
+  if (elapsedSeconds <= 0) return;
+  const elapsed = Math.max(1, Math.round(elapsedSeconds / 60));
   const taskId = document.getElementById("timerTask").value;
   const task = state.tasks.find((item) => item.id === taskId);
   state.sessions.push({ id: uid("session"), date: todayKey(), subject: document.getElementById("timerSubject").value, taskId, title: task?.title || "专注学习", minutes: elapsed, createdAt: new Date().toISOString() });
@@ -906,7 +957,10 @@ document.getElementById("cardForm").addEventListener("submit", (event) => {
 
 document.getElementById("scoreForm").addEventListener("submit", (event) => {
   event.preventDefault(); const form = event.currentTarget; const data = new FormData(form);
-  state.scores.push({ id: uid("score"), subject: data.get("subject"), name: data.get("name").trim(), score: Number(data.get("score")), full: Number(data.get("full")), note: data.get("note").trim(), date: todayKey(), createdAt: new Date().toISOString() });
+  const score = Number(data.get("score")); const full = Number(data.get("full"));
+  form.elements.score.setCustomValidity(score <= full ? "" : "得分不能高于满分");
+  if (!form.reportValidity()) return;
+  state.scores.push({ id: uid("score"), subject: data.get("subject"), name: data.get("name").trim(), score, full, note: data.get("note").trim(), date: todayKey(), createdAt: new Date().toISOString() });
   form.reset(); form.elements.full.value = 150; saveState(); render();
 });
 
@@ -939,13 +993,22 @@ document.getElementById("exportData").addEventListener("click", () => {
 
 document.getElementById("importData").addEventListener("change", async (event) => {
   const file = event.target.files[0]; if (!file) return;
-  try { state = mergeState(JSON.parse(await file.text())); saveState(); render(); }
+  try {
+    if (file.size > 5 * 1024 * 1024) throw new Error("file too large");
+    state = mergeState(JSON.parse(await file.text())); saveState(); render();
+    alert("备份已导入");
+  }
   catch { alert("JSON 文件无法读取"); }
   finally { event.target.value = ""; }
 });
 
 document.getElementById("clearToday").addEventListener("click", () => {
+  if (!confirm("确认清除今天的任务和计时记录？其他进度不会受影响。")) return;
   const date = todayKey(); state.tasks = state.tasks.filter((task) => task.date !== date); state.sessions = state.sessions.filter((session) => session.date !== date); saveState(); render();
+});
+
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "visible" && syncTimerClock()) finishTimer();
 });
 
 window.addEventListener("resize", () => {

@@ -33,13 +33,18 @@ test("intelligence feed contains official links and bounded lists", async () => 
   }
   assert.ok(feed.admissions.some((item) => /858/.test(item.title)));
   assert.ok(feed.politics.every((item) => item.source && item.angle));
+  assert.equal(feed.health.status, "healthy");
+  assert.ok(feed.sourceStatus.every((item) => item.url && item.checkedAt));
 });
 
 test("automation publishes pages and refreshes information", async () => {
   const pages = await readFile(new URL(".github/workflows/pages.yml", root), "utf8");
   const sync = await readFile(new URL(".github/workflows/sync-intel.yml", root), "utf8");
-  assert.match(pages, /actions\/deploy-pages@v4/);
+  const monitor = await readFile(new URL(".github/workflows/monitor.yml", root), "utf8");
+  assert.match(pages, /actions\/deploy-pages@v5/);
+  assert.match(pages, /workflow_run:/);
   assert.match(sync, /schedule:/);
   assert.match(sync, /npm run sync:intel/);
+  assert.match(sync, /Enforce official source health/);
+  assert.match(monitor, /npm run check:site/);
 });
-

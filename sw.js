@@ -1,4 +1,4 @@
-const CACHE_NAME = "kaoyan-war-room-v2";
+const CACHE_NAME = "kaoyan-war-room-v3";
 const APP_SHELL = ["./", "./index.html", "./styles.css", "./app.js", "./data/updates.js", "./manifest.webmanifest"];
 
 self.addEventListener("install", (event) => {
@@ -11,16 +11,24 @@ self.addEventListener("activate", (event) => {
   self.clients.claim();
 });
 
+async function networkFirst(request, fallbackUrl) {
+  const cache = await caches.open(CACHE_NAME);
+  try {
+    const response = await fetch(request);
+    if (response.ok) await cache.put(request, response.clone());
+    return response;
+  } catch {
+    return (await cache.match(request)) || (fallbackUrl ? await cache.match(fallbackUrl) : null) || new Response("Offline", { status: 503 });
+  }
+}
+
 self.addEventListener("fetch", (event) => {
   if (event.request.method !== "GET") return;
   const requestUrl = new URL(event.request.url);
-  if (requestUrl.pathname.endsWith("/data/updates.js")) {
-    event.respondWith(fetch(event.request).then((response) => {
-      const clone = response.clone();
-      caches.open(CACHE_NAME).then((cache) => cache.put(event.request, clone));
-      return response;
-    }).catch(() => caches.match(event.request)));
+  if (requestUrl.origin !== self.location.origin) return;
+  if (event.request.mode === "navigate") {
+    event.respondWith(networkFirst(event.request, new URL("./index.html", self.registration.scope).toString()));
     return;
   }
-  event.respondWith(caches.match(event.request).then((cached) => cached || fetch(event.request)));
+  event.respondWith(networkFirst(event.request));
 });

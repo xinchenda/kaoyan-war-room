@@ -1031,6 +1031,51 @@ canvas {
   background: #f7fbfe;
 }
 
+.intel-band-actions,
+.intel-health-summary {
+  display: flex;
+  align-items: center;
+}
+
+.intel-band-actions {
+  gap: 16px;
+}
+
+.intel-health-summary {
+  gap: 8px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.health-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 5px 9px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.health-chip.good {
+  border-color: #a8d5c8;
+  background: #eaf8f3;
+  color: #17664f;
+}
+
+.health-chip.warn {
+  border-color: #e7c785;
+  background: #fff7e4;
+  color: #7a510b;
+}
+
+.health-chip.bad {
+  border-color: #e2aaa7;
+  background: #fff0ef;
+  color: #8c302c;
+}
+
 .intel-item {
   padding: 13px;
 }
@@ -1089,6 +1134,37 @@ canvas {
   display: block;
 }
 
+.source-health-list {
+  margin-top: 14px;
+  padding-top: 8px;
+  border-top: 1px solid var(--line);
+}
+
+.source-health-row {
+  display: grid;
+  grid-template-columns: 8px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 0;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.source-health-row strong {
+  color: var(--ink);
+}
+
+.source-health-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--coral);
+}
+
+.source-health-dot.good {
+  background: var(--teal);
+}
+
 .source-list span {
   margin-top: 3px;
   color: var(--muted);
@@ -1142,6 +1218,11 @@ canvas {
   .topbar,
   .mission-band,
   .intel-band {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .intel-band-actions {
     align-items: stretch;
     flex-direction: column;
   }

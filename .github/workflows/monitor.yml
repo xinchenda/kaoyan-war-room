@@ -1,0 +1,51 @@
+name: Reliability monitor
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: reliability-monitor
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run build:pages
+      - run: npm run check:site -- "https://xinchenda.github.io/kaoyan-war-room/"
+      - name: Open or update incident
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          title="[自动巡检] 考研作战室需要维护"
+          number="$(gh issue list --state open --json number,title --jq '.[] | select(.title == "[自动巡检] 考研作战室需要维护") | .number' | head -n 1)"
+          if [ -n "$number" ]; then
+            gh issue comment "$number" --body "巡检再次失败：$RUN_URL"
+          else
+            gh issue create --title "$title" --body "线上访问、数据新鲜度、测试或构建巡检失败。运行记录：$RUN_URL"
+          fi
+      - name: Close recovered incident
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          gh issue list --state open --json number,title --jq '.[] | select(.title == "[自动巡检] 考研作战室需要维护") | .number' | while read -r number; do
+            gh issue close "$number" --comment "巡检已恢复：$RUN_URL"
+          done
