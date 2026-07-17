@@ -4,6 +4,8 @@ const STORAGE_KEY = "kaoyan-war-room-v2";
 const LEGACY_STORAGE_KEY = "kaoyan-war-room-v1";
 const BASELINE_DATE = "2026-07-17";
 const SEPTEMBER_GATE = "2026-08-31";
+const REMOTE_INTEL_URL = "https://xinchenda.github.io/kaoyan-war-room/data/updates.json";
+const OFFICIAL_INTEL_HOSTS = ["uestc.edu.cn", "chsi.com.cn", "news.cn", "gov.cn"];
 
 const scoreTargets = {
   "数一": { target: 135, full: 150, note: "主力拉分科目" },
@@ -753,6 +755,49 @@ function renderIntel() {
   container.innerHTML = items.map((item) => `<div class="intel-item"><span class="news-tag ${type === "politics" ? "politics" : ""}">${escapeHtml(item.topic || item.source || "官方信息")}</span><a href="${escapeHtml(item.url)}" target="_blank" rel="noreferrer">${escapeHtml(item.title)}</a><div class="intel-meta"><span>${escapeHtml(item.source || "权威来源")}</span><span>${escapeHtml(item.date || "日期未知")}</span>${item.referenceOnly ? `<span>历史年度参考</span>` : ""}${item.verifiedAt ? `<span>本次抓取已核验</span>` : ""}</div>${item.angle ? `<div class="intel-angle"><strong>自动复习归类：</strong>${escapeHtml(item.angle)}</div>` : ""}</div>`).join("");
 }
 
+function isTrustedIntelUrl(value) {
+  try {
+    const host = new URL(value).hostname.toLowerCase();
+    return OFFICIAL_INTEL_HOSTS.some((suffix) => host === suffix || host.endsWith(`.${suffix}`));
+  } catch {
+    return false;
+  }
+}
+
+function isTrustedIntelFeed(feed) {
+  const generatedAt = new Date(feed?.generatedAt || 0);
+  const ageHours = (Date.now() - generatedAt.getTime()) / 3600000;
+  const entries = [...(feed?.admissions || []), ...(feed?.politics || [])];
+  const statuses = Array.isArray(feed?.sourceStatus) ? feed.sourceStatus : [];
+  return feed?.health?.status === "healthy"
+    && Array.isArray(feed.admissions)
+    && Array.isArray(feed.politics)
+    && Number.isFinite(ageHours)
+    && ageHours >= -1
+    && ageHours <= 48
+    && entries.every((item) => isTrustedIntelUrl(item.url))
+    && statuses.every((item) => isTrustedIntelUrl(item.url));
+}
+
+async function refreshRemoteIntel() {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 6000);
+  try {
+    const response = await fetch(REMOTE_INTEL_URL, { cache: "no-store", signal: controller.signal });
+    if (!response.ok) return;
+    const remote = await response.json();
+    if (!isTrustedIntelFeed(remote)) return;
+    const currentAt = new Date(window.KAOYAN_UPDATES?.generatedAt || 0).getTime();
+    if (new Date(remote.generatedAt).getTime() < currentAt) return;
+    window.KAOYAN_UPDATES = remote;
+    renderIntel();
+  } catch {
+    // The bundled last-known-good feed remains available offline.
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+
 function renderSettings() {
   const form = document.getElementById("settingsForm");
   form.elements.target.value = state.settings.target;
@@ -1019,3 +1064,4 @@ if ("serviceWorker" in navigator && location.protocol.startsWith("http")) naviga
 
 setTimerMinutes(45);
 render();
+refreshRemoteIntel();

@@ -6,6 +6,7 @@ const root = new URL("../", import.meta.url);
 
 test("dashboard exposes every core preparation surface", async () => {
   const html = await readFile(new URL("index.html", root), "utf8");
+  const app = await readFile(new URL("app.js", root), "utf8");
   for (const id of [
     "panel-today",
     "panel-sprint",
@@ -20,6 +21,8 @@ test("dashboard exposes every core preparation surface", async () => {
   }
   assert.match(html, /data\/updates\.js/);
   assert.match(html, /app\.js/);
+  assert.match(app, /REMOTE_INTEL_URL/);
+  assert.match(app, /isTrustedIntelFeed/);
 });
 
 test("intelligence feed contains official links and bounded lists", async () => {
