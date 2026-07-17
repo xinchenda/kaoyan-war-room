@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-17T07:26:42.240Z",
+  "generatedAt": "2026-07-17T08:03:57.966Z",
   "notice": "招生信息仅展示权威来源标题与原文链接；2027 信息发布前，往年内容均标注参考年度。",
   "admissions": [
     {
@@ -300,28 +300,33 @@
   "sourceStatus": [
     {
       "source": "电子科大研招网",
-      "ok": true,
-      "count": 16
+      "ok": false,
+      "count": 0,
+      "error": "fetch failed"
     },
     {
       "source": "电子科大研招网",
-      "ok": true,
-      "count": 8
+      "ok": false,
+      "count": 0,
+      "error": "fetch failed"
     },
     {
       "source": "电子科大研招网",
-      "ok": true,
-      "count": 2
+      "ok": false,
+      "count": 0,
+      "error": "fetch failed"
     },
     {
       "source": "电子科大信通学院",
-      "ok": true,
-      "count": 8
+      "ok": false,
+      "count": 0,
+      "error": "fetch failed"
     },
     {
       "source": "电子科大电子学院",
-      "ok": true,
-      "count": 0
+      "ok": false,
+      "count": 0,
+      "error": "fetch failed"
     },
     {
       "source": "中国研招网",
