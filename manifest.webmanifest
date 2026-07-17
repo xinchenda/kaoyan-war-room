@@ -1,0 +1,10 @@
+{
+  "name": "410 考研冲刺台",
+  "short_name": "410 冲刺台",
+  "description": "电子科技大学 858、数学一、英语一和政治的备考控制台。",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f3f5f7",
+  "theme_color": "#0f766e",
+  "lang": "zh-CN"
+}

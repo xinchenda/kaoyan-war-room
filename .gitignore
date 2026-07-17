@@ -1,0 +1,8 @@
+node_modules/
+dist-pages/
+dist/
+.next/
+.wrangler/
+public/dashboard/
+.DS_Store
+*.log

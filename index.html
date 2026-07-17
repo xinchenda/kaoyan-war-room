@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0f766e" />
+    <title>410 冲刺台 · 电子科大 858</title>
+    <meta
+      name="description"
+      content="电子科技大学 858、数学一、英语一和政治的 410 分冲刺控制台。"
+    />
+    <meta property="og:title" content="410 考研冲刺台 · 电子科大 858" />
+    <meta property="og:description" content="从当前进度到 410 分目标的完整执行系统。" />
+    <meta property="og:image" content="./og.png" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true"><span>410</span><small>GOAL</small></div>
+        <div>
+          <p class="eyebrow">UESTC · 858</p>
+          <h1>考研冲刺台</h1>
+          <p id="targetLine">电子科技大学 · 电子信息 / 信息与通信工程</p>
+        </div>
+      </div>
+      <div class="top-actions">
+        <div class="date-chip">
+          <span id="todayLabel">今天</span>
+          <strong id="daysLeft">-- 天</strong>
+        </div>
+        <button class="ghost-button" id="rescueModeBtn" type="button">今日保底</button>
+      </div>
+    </header>
+
+    <nav class="tabs" aria-label="备考模块">
+      <button class="tab active" type="button" data-tab="today">今日</button>
+      <button class="tab" type="button" data-tab="sprint">冲刺路线</button>
+      <button class="tab" type="button" data-tab="progress">章节进度</button>
+      <button class="tab" type="button" data-tab="review">错题复盘</button>
+      <button class="tab" type="button" data-tab="cards">单词背诵</button>
+      <button class="tab" type="button" data-tab="scores">模考</button>
+      <button class="tab" type="button" data-tab="intel">考研情报</button>
+      <button class="tab" type="button" data-tab="settings">设置</button>
+    </nav>
+
+    <main>
+      <section class="tab-panel active" id="panel-today">
+        <section class="mission-band" aria-label="当前阶段">
+          <div>
+            <p class="eyebrow">当前战役</p>
+            <h2 id="currentPhaseTitle">加载中</h2>
+            <p id="currentPhaseLine" class="muted-line"></p>
+          </div>
+          <div class="mission-metrics">
+            <div><span>本阶段剩余</span><strong id="phaseDaysLeft">--</strong></div>
+            <div><span>九月门槛</span><strong id="gateStatus">--</strong></div>
+            <div><span>执行风险</span><strong id="riskStatus">--</strong></div>
+          </div>
+        </section>
+
+        <section class="dashboard-grid">
+          <article class="focus-panel">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">今日有效学习</p>
+                <h2 id="modeTitle">标准版</h2>
+              </div>
+              <div class="mode-control" role="group" aria-label="学习强度">
+                <button type="button" data-mode="base">保底</button>
+                <button type="button" data-mode="standard">标准</button>
+                <button type="button" data-mode="full">冲刺</button>
+              </div>
+            </div>
+            <p id="modeLine" class="mode-line"></p>
+            <div class="progress-shell" aria-label="今日完成进度">
+              <div class="progress-bar"><span id="dayProgress"></span></div>
+              <div class="progress-meta">
+                <span id="progressText">0 / 0 分钟</span>
+                <span id="taskText">0 项完成</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="timer-panel">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">专注计时</p>
+                <h2 id="timerReadout">45:00</h2>
+              </div>
+              <select id="timerSubject" aria-label="计时科目">
+                <option>数一</option>
+                <option>858</option>
+                <option>英一</option>
+                <option>政治</option>
+                <option>复盘</option>
+              </select>
+            </div>
+            <select id="timerTask" aria-label="关联任务"></select>
+            <div class="timer-presets" role="group" aria-label="计时长度">
+              <button type="button" data-preset="25">25</button>
+              <button type="button" data-preset="45">45</button>
+              <button type="button" data-preset="90">90</button>
+            </div>
+            <div class="timer-actions">
+              <button class="primary-button" id="startTimer" type="button" title="开始">▶ 开始</button>
+              <button class="ghost-button" id="pauseTimer" type="button" title="暂停">Ⅱ</button>
+              <button class="ghost-button" id="resetTimer" type="button" title="重置">↺</button>
+              <button class="accent-button" id="finishTimer" type="button">记入有效时长</button>
+            </div>
+          </article>
+        </section>
+
+        <section class="stats-grid" id="statsGrid" aria-label="今日概览"></section>
+
+        <section class="work-grid">
+          <article class="schedule-panel">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">08:00 - 22:00</p>
+                <h2>今日时间骨架</h2>
+              </div>
+            </div>
+            <div class="timeline" id="timeline"></div>
+          </article>
+
+          <article class="tasks-panel">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">阶段自动生成</p>
+                <h2>今日交付物</h2>
+              </div>
+            </div>
+            <form class="compact-form" id="taskForm">
+              <select name="subject" aria-label="科目">
+                <option>数一</option>
+                <option>858</option>
+                <option>英一</option>
+                <option>政治</option>
+                <option>复盘</option>
+              </select>
+              <input name="title" type="text" placeholder="自定义任务" required />
+              <input name="minutes" type="number" min="5" step="5" value="45" aria-label="分钟" />
+              <button class="primary-button" type="submit">添加</button>
+            </form>
+            <div class="task-list" id="taskList"></div>
+          </article>
+        </section>
+      </section>
+
+      <section class="tab-panel" id="panel-sprint">
+        <section class="score-contract" id="scoreContract"></section>
+
+        <section class="split-grid sprint-top">
+          <article>
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">计划判断</p>
+                <h2>410 可行，但不能按“题量全收”推进</h2>
+              </div>
+            </div>
+            <div class="plan-verdict">
+              <p>7 月完成数一与 858 的压缩一轮可行；7 月同时达到熟练、8 月刷完所有基础和强化题，不可控。</p>
+              <p>执行口径改为：主干知识 100% 覆盖，高频题型 100% 闭环，低频偏题允许进入九月补洞。8 月 31 日用章节测试和限时训练验收，不用“看完多少页”验收。</p>
+            </div>
+          </article>
+          <article>
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">九月门槛</p>
+                <h2>必须同时满足</h2>
+              </div>
+            </div>
+            <div class="gate-list" id="gateList"></div>
+          </article>
+        </section>
+
+        <section class="wide-panel roadmap-panel">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">2026.07 - 初试</p>
+              <h2>完整阶段路线</h2>
+            </div>
+          </div>
+          <div class="roadmap" id="roadmap"></div>
+        </section>
+
+        <section class="split-grid sprint-bottom">
+          <article>
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">本周交付</p>
+                <h2 id="weekTitle">当前周期</h2>
+              </div>
+              <span class="status-pill" id="weekProgress">0 / 0</span>
+            </div>
+            <div class="goal-list" id="weekGoals"></div>
+          </article>
+          <article>
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">执行护栏</p>
+                <h2>冲刺不崩盘规则</h2>
+              </div>
+            </div>
+            <div class="guardrail-list">
+              <div><strong>连续两天未达标</strong><span>第三天自动切保底版，只保数一、858、单词和复盘。</span></div>
+              <div><strong>一道题卡 20 分钟</strong><span>标错因后看入口，24 小时内必须独立重做。</span></div>
+              <div><strong>周完成率低于 70%</strong><span>删低频题源，不压缩睡眠，不把欠账平移到下周。</span></div>
+              <div><strong>每周半天机动</strong><span>只清本周未闭环内容，不开新章节。</span></div>
+            </div>
+          </article>
+        </section>
+      </section>
+
+      <section class="tab-panel" id="panel-progress">
+        <section class="progress-overview" id="subjectOverview"></section>
+        <section class="wide-panel">
+          <div class="section-heading progress-heading">
+            <div>
+              <p class="eyebrow">点击状态推进</p>
+              <h2>章节与题型进度</h2>
+            </div>
+            <div class="subject-switch" role="group" aria-label="选择科目">
+              <button type="button" class="active" data-progress-subject="数一">数一</button>
+              <button type="button" data-progress-subject="858">858</button>
+              <button type="button" data-progress-subject="英一">英一</button>
+              <button type="button" data-progress-subject="政治">政治</button>
+            </div>
+          </div>
+          <div class="status-legend">
+            <span><i class="status-dot status-0"></i>未开始</span>
+            <span><i class="status-dot status-1"></i>一轮</span>
+            <span><i class="status-dot status-2"></i>二轮</span>
+            <span><i class="status-dot status-3"></i>真题稳定</span>
+          </div>
+          <div class="topic-list" id="topicList"></div>
+        </section>
+      </section>
+
+      <section class="tab-panel" id="panel-review">
+        <section class="split-grid">
+          <article>
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">1 / 3 / 7 / 15 天</p>
+                <h2>到期错题</h2>
+              </div>
+            </div>
+            <div class="review-list" id="dueWrongs"></div>
+          </article>
+
+          <article>
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">只记录可修复原因</p>
+                <h2>新增错题</h2>
+              </div>
+            </div>
+            <form class="stack-form" id="wrongForm">
+              <div class="form-row">
+                <select name="subject" aria-label="科目">
+                  <option>数一</option>
+                  <option>858</option>
+                  <option>英一</option>
+                  <option>政治</option>
+                </select>
+                <input name="topic" type="text" placeholder="知识点 / 题型" required />
+              </div>
+              <select name="cause" aria-label="错误原因">
+                <option>概念不清</option>
+                <option>入口不会</option>
+                <option>公式遗忘</option>
+                <option>计算失误</option>
+                <option>审题偏差</option>
+                <option>时间不足</option>
+              </select>
+              <textarea name="note" placeholder="题目来源、正确入口、下次识别信号" rows="5"></textarea>
+              <button class="primary-button" type="submit">收入错题本</button>
+            </form>
+          </article>
+        </section>
+        <section class="wide-panel">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">全部错题</p>
+              <h2>薄弱点地图</h2>
+            </div>
+          </div>
+          <div class="archive-list" id="wrongArchive"></div>
+        </section>
+      </section>
+
+      <section class="tab-panel" id="panel-cards">
+        <section class="wide-panel vocabulary-panel">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">红宝书 26 章</p>
+              <h2>7 月首轮记背进度</h2>
+            </div>
+            <strong id="vocabProgress">0 / 26</strong>
+          </div>
+          <div class="chapter-grid" id="vocabChapters"></div>
+        </section>
+        <section class="split-grid cards-grid">
+          <article>
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">到期背诵</p>
+                <h2>记忆队列</h2>
+              </div>
+            </div>
+            <div class="review-list" id="dueCards"></div>
+          </article>
+
+          <article>
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">单词 / 公式 / 政治</p>
+                <h2>新增卡片</h2>
+              </div>
+            </div>
+            <form class="stack-form" id="cardForm">
+              <div class="form-row">
+                <select name="subject" aria-label="科目">
+                  <option>英一</option>
+                  <option>数一</option>
+                  <option>858</option>
+                  <option>政治</option>
+                </select>
+                <input name="tag" type="text" placeholder="章节 / 标签" />
+              </div>
+              <textarea name="front" placeholder="正面" rows="3" required></textarea>
+              <textarea name="back" placeholder="背面" rows="4" required></textarea>
+              <button class="primary-button" type="submit">加入背诵</button>
+            </form>
+          </article>
+        </section>
+        <section class="wide-panel">
+          <div class="section-heading"><div><p class="eyebrow">全部卡片</p><h2>记忆仓库</h2></div></div>
+          <div class="archive-list" id="cardArchive"></div>
+        </section>
+      </section>
+
+      <section class="tab-panel" id="panel-scores">
+        <section class="score-targets" id="scoreTargets"></section>
+        <section class="split-grid">
+          <article>
+            <div class="section-heading"><div><p class="eyebrow">按满分归一</p><h2>模考趋势</h2></div></div>
+            <canvas id="scoreChart" width="680" height="320" aria-label="分数趋势图"></canvas>
+          </article>
+          <article>
+            <div class="section-heading"><div><p class="eyebrow">新增成绩</p><h2>套卷反馈</h2></div></div>
+            <form class="stack-form" id="scoreForm">
+              <div class="form-row">
+                <select name="subject" aria-label="科目">
+                  <option>数一</option>
+                  <option>858</option>
+                  <option>英一</option>
+                  <option>政治</option>
+                </select>
+                <input name="name" type="text" placeholder="试卷名称" required />
+              </div>
+              <div class="form-row">
+                <input name="score" type="number" min="0" step="0.5" placeholder="得分" required />
+                <input name="full" type="number" min="1" step="1" value="150" placeholder="满分" required />
+              </div>
+              <textarea name="note" placeholder="丢分结构、下次动作" rows="4"></textarea>
+              <button class="primary-button" type="submit">记录成绩</button>
+            </form>
+          </article>
+        </section>
+        <section class="wide-panel">
+          <div class="section-heading"><div><p class="eyebrow">历史记录</p><h2>最近套卷</h2></div></div>
+          <div class="archive-list" id="scoreArchive"></div>
+        </section>
+      </section>
+
+      <section class="tab-panel" id="panel-intel">
+        <section class="intel-band">
+          <div>
+            <p class="eyebrow">自动巡检</p>
+            <h2>考研情报中心</h2>
+            <p class="muted-line" id="intelUpdated">等待首次同步</p>
+          </div>
+          <div class="intel-switch" role="group" aria-label="情报类型">
+            <button type="button" class="active" data-intel-type="admissions">招生信息</button>
+            <button type="button" data-intel-type="politics">政治时事</button>
+          </div>
+        </section>
+        <section class="intel-layout">
+          <article>
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow" id="intelEyebrow">本周新增</p>
+                <h2 id="intelTitle">电子科大与研招信息</h2>
+              </div>
+              <span class="status-pill" id="intelCount">0 条</span>
+            </div>
+            <div class="intel-list" id="intelList"></div>
+          </article>
+          <aside class="source-panel">
+            <div class="section-heading"><div><p class="eyebrow">权威来源</p><h2>固定入口</h2></div></div>
+            <div class="source-list">
+              <a href="https://yz.uestc.edu.cn/sszs/tzgg.htm" target="_blank" rel="noreferrer"><strong>电子科大研招网</strong><span>硕士通知公告</span></a>
+              <a href="https://yz.uestc.edu.cn/xxcx/ksdg.htm" target="_blank" rel="noreferrer"><strong>858 考试大纲</strong><span>学校官方查询</span></a>
+              <a href="https://www.sice.uestc.edu.cn/" target="_blank" rel="noreferrer"><strong>信息与通信工程学院</strong><span>学院招生与复试通知</span></a>
+              <a href="https://www.ese.uestc.edu.cn/" target="_blank" rel="noreferrer"><strong>电子科学与工程学院</strong><span>学院招生与复试通知</span></a>
+              <a href="https://yz.chsi.com.cn/" target="_blank" rel="noreferrer"><strong>中国研招网</strong><span>政策、报名与考试流程</span></a>
+              <a href="https://www.news.cn/politics/" target="_blank" rel="noreferrer"><strong>新华网时政</strong><span>政治时事原始来源</span></a>
+            </div>
+            <div class="source-note">2027 招生目录与初试日期尚未发布时，页面会标注“沿用上一年度参考”，不会把历史信息当作新政策。</div>
+          </aside>
+        </section>
+      </section>
+
+      <section class="tab-panel" id="panel-settings">
+        <section class="split-grid">
+          <article>
+            <div class="section-heading"><div><p class="eyebrow">目标设置</p><h2>考试信息</h2></div></div>
+            <form class="stack-form" id="settingsForm">
+              <label>目标<input name="target" type="text" /></label>
+              <label>规划用初试日期<input name="examDate" type="date" /></label>
+              <label>目标总分<input name="goalScore" type="number" min="300" max="500" step="1" /></label>
+              <button class="primary-button" type="submit">保存</button>
+            </form>
+            <div class="hint-box">初试日期暂作规划锚点，教育部发布 2027 考试安排后以官方日期为准。</div>
+          </article>
+
+          <article>
+            <div class="section-heading"><div><p class="eyebrow">浏览器数据</p><h2>备份</h2></div></div>
+            <div class="data-actions">
+              <button class="ghost-button" id="exportData" type="button">导出 JSON</button>
+              <label class="file-button">导入 JSON<input id="importData" type="file" accept="application/json" /></label>
+              <button class="danger-button" id="clearToday" type="button">重置今日</button>
+            </div>
+            <div class="hint-box">学习数据保存在当前浏览器。跨设备前导出备份；情报数据由网站自动更新。</div>
+          </article>
+        </section>
+      </section>
+    </main>
+
+    <template id="emptyState"><div class="empty-state">暂时没有记录</div></template>
+    <script src="./data/updates.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
