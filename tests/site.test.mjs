@@ -50,4 +50,5 @@ test("automation publishes pages and refreshes information", async () => {
   assert.match(sync, /npm run sync:intel/);
   assert.match(sync, /Enforce official source health/);
   assert.match(monitor, /npm run check:site/);
+  assert.match(monitor, /chatgpt\.site\/dashboard/);
 });

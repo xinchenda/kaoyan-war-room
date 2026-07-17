@@ -27,6 +27,11 @@ jobs:
       - run: npm test
       - run: npm run build:pages
       - run: npm run check:site -- "https://xinchenda.github.io/kaoyan-war-room/"
+      - name: Check public primary entry
+        run: |
+          curl --fail --location --retry 2 --max-time 30 --silent --show-error \
+            "https://uestc-410-war-room.jc6fmxkms7.chatgpt.site/" | grep -q "410 考研冲刺台"
+          npm run check:site -- "https://uestc-410-war-room.jc6fmxkms7.chatgpt.site/dashboard/"
       - name: Open or update incident
         if: failure()
         env:
