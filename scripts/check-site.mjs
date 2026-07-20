@@ -1,11 +1,87 @@
+import { execFile } from "node:child_process";
+import { promisify } from "node:util";
 import { validateFeed } from "./intel-core.mjs";
 
 const baseUrl = new URL(process.argv[2] || "https://xinchenda.github.io/kaoyan-war-room/");
+const execFileAsync = promisify(execFile);
+const defaultHeaders = {
+  "user-agent": "Mozilla/5.0 (compatible; KaoyanWarRoom/3.0; +https://github.com/xinchenda/kaoyan-war-room)",
+  accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+};
+
+const sleep = (milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds));
+
+function errorDetail(error) {
+  return [error?.message, error?.cause?.code, error?.cause?.message].filter(Boolean).join(" | ") || String(error);
+}
+
+async function fetchWithRetries(url) {
+  let lastError;
+  for (let attempt = 1; attempt <= 3; attempt += 1) {
+    try {
+      const response = await fetch(url, {
+        cache: "no-store",
+        headers: defaultHeaders,
+        signal: AbortSignal.timeout(25000),
+      });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      return response;
+    } catch (error) {
+      lastError = error;
+      if (attempt < 3) await sleep(attempt * 700);
+    }
+  }
+  throw lastError;
+}
+
+async function fetchWithCurl(url) {
+  const { stdout } = await execFileAsync(
+    "/usr/bin/curl",
+    [
+      "-4",
+      "--fail",
+      "--silent",
+      "--show-error",
+      "--location",
+      "--connect-timeout",
+      "12",
+      "--max-time",
+      "35",
+      "--retry",
+      "2",
+      "--retry-all-errors",
+      "--header",
+      `accept: ${defaultHeaders.accept}`,
+      "--user-agent",
+      defaultHeaders["user-agent"],
+      url.toString(),
+    ],
+    { maxBuffer: 8 * 1024 * 1024, timeout: 45000 },
+  );
+  return new Response(stdout, {
+    headers: {
+      "content-type": guessContentType(url.pathname),
+    },
+  });
+}
+
+function guessContentType(pathname) {
+  if (pathname.endsWith(".json")) return "application/json; charset=utf-8";
+  if (pathname.endsWith(".css")) return "text/css; charset=utf-8";
+  if (pathname.endsWith(".js")) return "application/javascript; charset=utf-8";
+  return "text/html; charset=utf-8";
+}
 
 async function fetchResponse(path, expectedType) {
   const url = new URL(path, baseUrl);
-  const response = await fetch(url, { cache: "no-store", signal: AbortSignal.timeout(25000) });
-  if (!response.ok) throw new Error(`${url} returned HTTP ${response.status}`);
+  let response;
+  try {
+    response = await fetchWithRetries(url);
+  } catch (nativeError) {
+    response = await fetchWithCurl(url).catch((curlError) => {
+      throw new Error(`${url} failed: fetch ${errorDetail(nativeError)}; curl ${errorDetail(curlError)}`);
+    });
+  }
   const contentType = response.headers.get("content-type") || "";
   if (expectedType && !contentType.includes(expectedType)) throw new Error(`${url} returned unexpected content-type ${contentType}`);
   return response;
