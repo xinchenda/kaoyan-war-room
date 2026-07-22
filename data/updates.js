@@ -1,24 +1,24 @@
 window.KAOYAN_UPDATES = {
   "schemaVersion": 3,
-  "generatedAt": "2026-07-21T23:13:24.491Z",
+  "generatedAt": "2026-07-22T23:17:12.919Z",
   "notice": "仅收录官方白名单域名的标题与原文链接。2027 招生信息发布前，历史条目只作年度参考；政治主题为自动复习归类，不代表官方命题判断。",
   "health": {
     "status": "healthy",
-    "checkedAt": "2026-07-21T23:13:24.491Z",
+    "checkedAt": "2026-07-22T23:17:12.919Z",
     "targetYear": 2027,
     "admissions": {
       "status": "healthy",
       "successfulSources": 6,
       "usableSources": 5,
       "totalSources": 6,
-      "lastHealthyAt": "2026-07-21T23:13:24.491Z"
+      "lastHealthyAt": "2026-07-22T23:17:12.919Z"
     },
     "politics": {
       "status": "healthy",
       "successfulSources": 2,
       "usableSources": 2,
       "totalSources": 2,
-      "lastHealthyAt": "2026-07-21T23:13:24.491Z"
+      "lastHealthyAt": "2026-07-22T23:17:12.919Z"
     }
   },
   "admissions": [
@@ -31,7 +31,7 @@ window.KAOYAN_UPDATES = {
       "referenceYear": 2026,
       "priority": 100,
       "curated": true,
-      "verifiedAt": "2026-07-21T23:13:24.491Z",
+      "verifiedAt": "2026-07-22T23:17:12.919Z",
       "referenceOnly": true
     },
     {
@@ -43,7 +43,7 @@ window.KAOYAN_UPDATES = {
       "referenceYear": 2026,
       "priority": 100,
       "curated": true,
-      "verifiedAt": "2026-07-21T23:13:24.491Z",
+      "verifiedAt": "2026-07-22T23:17:12.919Z",
       "referenceOnly": true
     },
     {
@@ -55,7 +55,7 @@ window.KAOYAN_UPDATES = {
       "referenceYear": null,
       "priority": 100,
       "curated": true,
-      "verifiedAt": "2026-07-21T23:13:24.491Z",
+      "verifiedAt": "2026-07-22T23:17:12.919Z",
       "referenceOnly": false
     },
     {
@@ -67,7 +67,7 @@ window.KAOYAN_UPDATES = {
       "referenceYear": 2026,
       "priority": 90,
       "curated": true,
-      "verifiedAt": "2026-07-21T23:13:24.491Z",
+      "verifiedAt": "2026-07-22T23:17:12.919Z",
       "referenceOnly": true
     },
     {
@@ -78,7 +78,7 @@ window.KAOYAN_UPDATES = {
       "topic": "学校通知",
       "date": "2026-03-15",
       "referenceYear": 2026,
-      "verifiedAt": "2026-07-21T23:13:24.491Z",
+      "verifiedAt": "2026-07-22T23:17:12.919Z",
       "referenceOnly": true
     },
     {
@@ -89,7 +89,7 @@ window.KAOYAN_UPDATES = {
       "topic": "学校通知",
       "date": "2025-12-11",
       "referenceYear": 2026,
-      "verifiedAt": "2026-07-21T23:13:24.491Z",
+      "verifiedAt": "2026-07-22T23:17:12.919Z",
       "referenceOnly": true
     },
     {
@@ -100,7 +100,7 @@ window.KAOYAN_UPDATES = {
       "topic": "学校通知",
       "date": "2025-10-22",
       "referenceYear": 2026,
-      "verifiedAt": "2026-07-21T23:13:24.491Z",
+      "verifiedAt": "2026-07-22T23:17:12.919Z",
       "referenceOnly": true
     },
     {
@@ -111,7 +111,7 @@ window.KAOYAN_UPDATES = {
       "topic": "招生章程",
       "date": "2025-10-09",
       "referenceYear": 2026,
-      "verifiedAt": "2026-07-21T23:13:24.491Z",
+      "verifiedAt": "2026-07-22T23:17:12.919Z",
       "referenceOnly": true
     },
     {
@@ -122,7 +122,7 @@ window.KAOYAN_UPDATES = {
       "topic": "国家政策",
       "date": "2025-09-25",
       "referenceYear": 2026,
-      "verifiedAt": "2026-07-21T23:13:24.491Z",
+      "verifiedAt": "2026-07-22T23:17:12.919Z",
       "referenceOnly": true
     },
     {
@@ -133,7 +133,7 @@ window.KAOYAN_UPDATES = {
       "topic": "国家政策",
       "date": "2025-09-24",
       "referenceYear": 2026,
-      "verifiedAt": "2026-07-21T23:13:24.491Z",
+      "verifiedAt": "2026-07-22T23:17:12.919Z",
       "referenceOnly": true
     },
     {
@@ -144,7 +144,7 @@ window.KAOYAN_UPDATES = {
       "topic": "国家政策",
       "date": "2025-09-24",
       "referenceYear": 2026,
-      "verifiedAt": "2026-07-21T23:13:24.491Z",
+      "verifiedAt": "2026-07-22T23:17:12.919Z",
       "referenceOnly": true
     },
     {
@@ -155,7 +155,7 @@ window.KAOYAN_UPDATES = {
       "topic": "学校通知",
       "date": "2025-06-11",
       "referenceYear": 2026,
-      "verifiedAt": "2026-07-21T23:13:24.491Z",
+      "verifiedAt": "2026-07-22T23:17:12.919Z",
       "referenceOnly": true
     },
     {
@@ -166,11 +166,71 @@ window.KAOYAN_UPDATES = {
       "topic": "学校通知",
       "date": "2025-05-09",
       "referenceYear": 2026,
-      "verifiedAt": "2026-07-21T23:13:24.491Z",
+      "verifiedAt": "2026-07-22T23:17:12.919Z",
       "referenceOnly": true
     }
   ],
   "politics": [
+    {
+      "title": "新华社消息丨“十五五”林草保护利用规划发布",
+      "url": "https://www.news.cn/politics/20260722/d148c50da33248979eb298e624a3e444/c.html",
+      "source": "新华网时政",
+      "sourceId": "xinhua-politics",
+      "topic": "中国式现代化",
+      "angle": "中国式现代化、进一步全面深化改革与规划实施",
+      "date": "2026-07-22",
+      "verifiedAt": "2026-07-22T23:17:12.919Z"
+    },
+    {
+      "title": "持续焕新扩容，做大做强票根经济",
+      "url": "https://www.news.cn/comments/20260722/fbdee0c9c4d041e6abaef55c89bb94d4/c.html",
+      "source": "新华网时政",
+      "sourceId": "xinhua-politics",
+      "topic": "经济高质量发展",
+      "angle": "经济高质量发展、民生保障与新发展理念",
+      "date": "2026-07-22",
+      "verifiedAt": "2026-07-22T23:17:12.919Z"
+    },
+    {
+      "title": "积极推动新大众文艺赋能生态文化建设",
+      "url": "https://www.news.cn/politics/20260722/cb1df1a5236a440f9c35d950ca95f974/c.html",
+      "source": "新华网时政",
+      "sourceId": "xinhua-politics",
+      "topic": "生态文明建设与绿色发展",
+      "angle": "生态文明建设与绿色发展",
+      "date": "2026-07-22",
+      "verifiedAt": "2026-07-22T23:17:12.919Z"
+    },
+    {
+      "title": "“十五五”时期，交通运输这样发力",
+      "url": "https://www.news.cn/politics/20260721/e11e253b62014fd2b7961dc1c75a3474/c.html",
+      "source": "新华网时政",
+      "sourceId": "xinhua-politics",
+      "topic": "中国式现代化",
+      "angle": "中国式现代化、进一步全面深化改革与规划实施",
+      "date": "2026-07-21",
+      "verifiedAt": "2026-07-22T23:17:12.919Z"
+    },
+    {
+      "title": "2026年中经济观察丨上半年规上工业增加值同比增5.4%",
+      "url": "https://www.news.cn/politics/20260721/7f804cbcb66143d786d6ffe75b270ef2/c.html",
+      "source": "新华网时政",
+      "sourceId": "xinhua-politics",
+      "topic": "经济高质量发展",
+      "angle": "经济高质量发展、民生保障与新发展理念",
+      "date": "2026-07-21",
+      "verifiedAt": "2026-07-22T23:17:12.919Z"
+    },
+    {
+      "title": "文化新观察丨《八仙！》热映，中国神话故事再次闪耀银幕",
+      "url": "https://www.news.cn/politics/20260721/c07f791ce15442789292aa691b99ea71/c.html",
+      "source": "新华网时政",
+      "sourceId": "xinhua-politics",
+      "topic": "文化自信与建设社会主义文化强国",
+      "angle": "文化自信与建设社会主义文化强国",
+      "date": "2026-07-21",
+      "verifiedAt": "2026-07-22T23:17:12.919Z"
+    },
     {
       "title": "人社部：吸纳重点群体就业的家政企业可享受税收优惠",
       "url": "https://www.news.cn/politics/20260721/caa722f997d84eca95d416a50782ac9d/c.html",
@@ -179,7 +239,7 @@ window.KAOYAN_UPDATES = {
       "topic": "经济高质量发展",
       "angle": "经济高质量发展、民生保障与新发展理念",
       "date": "2026-07-21",
-      "verifiedAt": "2026-07-21T23:13:24.491Z"
+      "verifiedAt": "2026-07-22T23:17:12.919Z"
     },
     {
       "title": "“十五五”时期交通运输部将推进跨区域跨流域大通道建设",
@@ -189,7 +249,7 @@ window.KAOYAN_UPDATES = {
       "topic": "中国式现代化",
       "angle": "中国式现代化、进一步全面深化改革与规划实施",
       "date": "2026-07-21",
-      "verifiedAt": "2026-07-21T23:13:24.491Z"
+      "verifiedAt": "2026-07-22T23:17:12.919Z"
     },
     {
       "title": "2026世界人工智能大会闭幕 现场观众累计超40万人次",
@@ -199,17 +259,17 @@ window.KAOYAN_UPDATES = {
       "topic": "科技自立自强",
       "angle": "科技自立自强、教育科技人才一体推进",
       "date": "2026-07-21",
-      "verifiedAt": "2026-07-21T23:13:24.491Z"
+      "verifiedAt": "2026-07-22T23:17:12.919Z"
     },
     {
-      "title": "科技助力预警 四川泸定93人成功避险泥石流",
-      "url": "https://www.news.cn/local/20260721/43ce2e831cfa4f38985d8e77d94f7c43/c.html",
+      "title": "上海市国防动员办公室原党组成员、副主任吴斌一审被判十年八个月",
+      "url": "https://www.news.cn/politics/20260721/111ad0bdf14346b6bcf79465b512d31f/c.html",
       "source": "新华网时政",
       "sourceId": "xinhua-politics",
-      "topic": "科技自立自强",
-      "angle": "科技自立自强、教育科技人才一体推进",
+      "topic": "强军思想与国防和军队现代化",
+      "angle": "强军思想与国防和军队现代化",
       "date": "2026-07-21",
-      "verifiedAt": "2026-07-21T23:13:24.491Z"
+      "verifiedAt": "2026-07-22T23:17:12.919Z"
     },
     {
       "title": "“十五五”开局之年推进新一代通信网建设观察",
@@ -219,7 +279,7 @@ window.KAOYAN_UPDATES = {
       "topic": "中国式现代化",
       "angle": "中国式现代化、进一步全面深化改革与规划实施",
       "date": "2026-07-20",
-      "verifiedAt": "2026-07-21T23:13:24.491Z"
+      "verifiedAt": "2026-07-22T23:17:12.919Z"
     },
     {
       "title": "国务院常务会议解读丨我国将优化社会保障体系",
@@ -229,67 +289,7 @@ window.KAOYAN_UPDATES = {
       "topic": "形势与政策：按背景",
       "angle": "形势与政策：按背景、举措、意义三层复习",
       "date": "2026-07-20",
-      "verifiedAt": "2026-07-21T23:13:24.491Z"
-    },
-    {
-      "title": "促家政服务业发展 9部门出台19条举措",
-      "url": "https://www.news.cn/politics/20260720/25173edb8c2041b590f6fe3c1d356030/c.html",
-      "source": "新华网时政",
-      "sourceId": "xinhua-politics",
-      "topic": "形势与政策：按背景",
-      "angle": "形势与政策：按背景、举措、意义三层复习",
-      "date": "2026-07-20",
-      "verifiedAt": "2026-07-21T23:13:24.491Z"
-    },
-    {
-      "title": "教育如何应对人工智能大考",
-      "url": "https://education.news.cn/20260720/8472c997de884fb6acfbc8f9316dcea7/c.html",
-      "source": "新华网时政",
-      "sourceId": "xinhua-politics",
-      "topic": "科技自立自强",
-      "angle": "科技自立自强、教育科技人才一体推进",
-      "date": "2026-07-20",
-      "verifiedAt": "2026-07-21T23:13:24.491Z"
-    },
-    {
-      "title": "更好把人才优势转化为高质量发展优势",
-      "url": "https://www.news.cn/politics/20260720/c1522104ce2b45bc9d8e81f64f21cad7/c.html",
-      "source": "新华网时政",
-      "sourceId": "xinhua-politics",
-      "topic": "经济高质量发展",
-      "angle": "经济高质量发展、民生保障与新发展理念",
-      "date": "2026-07-20",
-      "verifiedAt": "2026-07-21T23:13:24.491Z"
-    },
-    {
-      "title": "三部门部署加快推进海水淡化产业高质量发展",
-      "url": "https://www.news.cn/politics/20260716/9943cacbe72a4fd48195539e8f80fe93/c.html",
-      "source": "新华网时政",
-      "sourceId": "xinhua-politics",
-      "topic": "经济高质量发展",
-      "angle": "经济高质量发展、民生保障与新发展理念",
-      "date": "2026-07-16",
-      "verifiedAt": "2026-07-21T23:13:24.491Z"
-    },
-    {
-      "title": "成立世界人工智能合作组织协定签署仪式在上海举行",
-      "url": "https://www.news.cn/politics/20260716/72fe4df3e4374bdebc246d4e17cd6694/c.html",
-      "source": "新华网时政",
-      "sourceId": "xinhua-politics",
-      "topic": "科技自立自强",
-      "angle": "科技自立自强、教育科技人才一体推进",
-      "date": "2026-07-16",
-      "verifiedAt": "2026-07-21T23:13:24.491Z"
-    },
-    {
-      "title": "三个关键数据看中国经济“半年报”",
-      "url": "https://www.news.cn/politics/20260716/2b8f1976d00e414abc4a434aea010770/c.html",
-      "source": "新华网时政",
-      "sourceId": "xinhua-politics",
-      "topic": "经济高质量发展",
-      "angle": "经济高质量发展、民生保障与新发展理念",
-      "date": "2026-07-16",
-      "verifiedAt": "2026-07-21T23:13:24.491Z"
+      "verifiedAt": "2026-07-22T23:17:12.919Z"
     }
   ],
   "sourceStatus": [
@@ -301,8 +301,8 @@ window.KAOYAN_UPDATES = {
       "targetSchool": true,
       "ok": true,
       "count": 16,
-      "checkedAt": "2026-07-21T23:13:24.491Z",
-      "transport": "curl-ipv4-fallback",
+      "checkedAt": "2026-07-22T23:17:12.919Z",
+      "transport": "fetch",
       "attempts": 1
     },
     {
@@ -313,8 +313,8 @@ window.KAOYAN_UPDATES = {
       "targetSchool": true,
       "ok": true,
       "count": 8,
-      "checkedAt": "2026-07-21T23:13:24.491Z",
-      "transport": "curl-ipv4-fallback",
+      "checkedAt": "2026-07-22T23:17:12.919Z",
+      "transport": "fetch",
       "attempts": 1
     },
     {
@@ -325,8 +325,8 @@ window.KAOYAN_UPDATES = {
       "targetSchool": true,
       "ok": true,
       "count": 2,
-      "checkedAt": "2026-07-21T23:13:24.491Z",
-      "transport": "curl-ipv4-fallback",
+      "checkedAt": "2026-07-22T23:17:12.919Z",
+      "transport": "fetch",
       "attempts": 1
     },
     {
@@ -337,8 +337,8 @@ window.KAOYAN_UPDATES = {
       "targetSchool": true,
       "ok": true,
       "count": 10,
-      "checkedAt": "2026-07-21T23:13:24.491Z",
-      "transport": "curl-ipv4-fallback",
+      "checkedAt": "2026-07-22T23:17:12.919Z",
+      "transport": "fetch",
       "attempts": 1
     },
     {
@@ -349,8 +349,8 @@ window.KAOYAN_UPDATES = {
       "targetSchool": true,
       "ok": true,
       "count": 0,
-      "checkedAt": "2026-07-21T23:13:24.491Z",
-      "transport": "curl-ipv4-fallback",
+      "checkedAt": "2026-07-22T23:17:12.919Z",
+      "transport": "fetch",
       "attempts": 1
     },
     {
@@ -361,7 +361,7 @@ window.KAOYAN_UPDATES = {
       "targetSchool": false,
       "ok": true,
       "count": 52,
-      "checkedAt": "2026-07-21T23:13:24.491Z",
+      "checkedAt": "2026-07-22T23:17:12.919Z",
       "transport": "fetch",
       "attempts": 1
     },
@@ -372,8 +372,8 @@ window.KAOYAN_UPDATES = {
       "url": "https://www.news.cn/politics/",
       "targetSchool": false,
       "ok": true,
-      "count": 24,
-      "checkedAt": "2026-07-21T23:13:24.491Z",
+      "count": 26,
+      "checkedAt": "2026-07-22T23:17:12.919Z",
       "transport": "fetch",
       "attempts": 1
     },
@@ -385,7 +385,7 @@ window.KAOYAN_UPDATES = {
       "targetSchool": false,
       "ok": true,
       "count": 1,
-      "checkedAt": "2026-07-21T23:13:24.491Z",
+      "checkedAt": "2026-07-22T23:17:12.919Z",
       "transport": "fetch",
       "attempts": 1
     },
@@ -396,8 +396,8 @@ window.KAOYAN_UPDATES = {
       "url": "https://yzbm.uestc.edu.cn/zsml/sszsml/index/2026",
       "ok": true,
       "count": 1,
-      "checkedAt": "2026-07-21T23:13:24.491Z",
-      "transport": "curl-ipv4-fallback",
+      "checkedAt": "2026-07-22T23:17:12.919Z",
+      "transport": "fetch",
       "attempts": 1
     },
     {
@@ -407,8 +407,8 @@ window.KAOYAN_UPDATES = {
       "url": "https://yz.uestc.edu.cn/info/1052/3672.htm",
       "ok": true,
       "count": 1,
-      "checkedAt": "2026-07-21T23:13:24.491Z",
-      "transport": "curl-ipv4-fallback",
+      "checkedAt": "2026-07-22T23:17:12.919Z",
+      "transport": "fetch",
       "attempts": 1
     },
     {
@@ -418,8 +418,8 @@ window.KAOYAN_UPDATES = {
       "url": "https://xxgkw.uestc.edu.cn/info/1054/3967.htm",
       "ok": true,
       "count": 1,
-      "checkedAt": "2026-07-21T23:13:24.491Z",
-      "transport": "curl-ipv4-fallback",
+      "checkedAt": "2026-07-22T23:17:12.919Z",
+      "transport": "fetch",
       "attempts": 1
     },
     {
@@ -429,8 +429,8 @@ window.KAOYAN_UPDATES = {
       "url": "https://www.sice.uestc.edu.cn/info/1142/16093.htm",
       "ok": true,
       "count": 1,
-      "checkedAt": "2026-07-21T23:13:24.491Z",
-      "transport": "curl-ipv4-fallback",
+      "checkedAt": "2026-07-22T23:17:12.919Z",
+      "transport": "fetch",
       "attempts": 1
     }
   ]
