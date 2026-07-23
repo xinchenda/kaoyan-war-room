@@ -3,6 +3,10 @@ import { promisify } from "node:util";
 import { validateFeed } from "./intel-core.mjs";
 
 const baseUrl = new URL(process.argv[2] || "https://xinchenda.github.io/kaoyan-war-room/");
+const runtimeFeedIndex = process.argv.indexOf("--runtime-feed");
+const runtimeFeedUrl = runtimeFeedIndex >= 0 && process.argv[runtimeFeedIndex + 1]
+  ? new URL(process.argv[runtimeFeedIndex + 1])
+  : null;
 const execFileAsync = promisify(execFile);
 const defaultHeaders = {
   "user-agent": "Mozilla/5.0 (compatible; KaoyanWarRoom/3.0; +https://github.com/xinchenda/kaoyan-war-room)",
@@ -101,12 +105,33 @@ const [app, styles, serviceWorker, feed] = await Promise.all([
 
 if (!app.includes("renderIntel") || app.length < 20000) throw new Error("app.js is incomplete");
 if (!styles.includes("health-chip") || styles.length < 10000) throw new Error("styles.css is incomplete");
-if (!serviceWorker.includes("networkFirst")) throw new Error("service worker update strategy is missing");
+if (!serviceWorker.includes("navigationFirst") || !serviceWorker.includes("withoutRedirectMetadata")) {
+  throw new Error("Safari-safe service worker navigation strategy is missing");
+}
 
 const errors = validateFeed(feed);
-const ageHours = (Date.now() - new Date(feed.generatedAt).getTime()) / 3600000;
-if (ageHours > 48) errors.push(`live feed is ${ageHours.toFixed(1)} hours old`);
 if (feed.health?.status !== "healthy") errors.push(`live feed health is ${feed.health?.status || "missing"}`);
+const bundledAgeHours = (Date.now() - new Date(feed.generatedAt).getTime()) / 3600000;
+let effectiveFeed = feed;
+
+if (runtimeFeedUrl) {
+  const runtimeFeed = await (await fetchWithRetries(runtimeFeedUrl).catch(async (nativeError) => {
+    return fetchWithCurl(runtimeFeedUrl).catch((curlError) => {
+      throw new Error(`${runtimeFeedUrl} failed: fetch ${errorDetail(nativeError)}; curl ${errorDetail(curlError)}`);
+    });
+  })).json();
+  errors.push(...validateFeed(runtimeFeed).map((error) => `runtime feed: ${error}`));
+  const runtimeAgeHours = (Date.now() - new Date(runtimeFeed.generatedAt).getTime()) / 3600000;
+  if (runtimeAgeHours > 48) errors.push(`runtime feed is ${runtimeAgeHours.toFixed(1)} hours old`);
+  if (runtimeFeed.health?.status !== "healthy") errors.push(`runtime feed health is ${runtimeFeed.health?.status || "missing"}`);
+  if (bundledAgeHours > 168) errors.push(`bundled fallback is ${bundledAgeHours.toFixed(1)} hours old`);
+  if (!app.includes(runtimeFeedUrl.origin)) errors.push("app.js does not reference the configured runtime feed origin");
+  effectiveFeed = runtimeFeed;
+} else if (bundledAgeHours > 48) {
+  errors.push(`live feed is ${bundledAgeHours.toFixed(1)} hours old`);
+}
+
 if (errors.length) throw new Error(`Live site check failed:\n- ${errors.join("\n- ")}`);
 
-console.log(`Live site healthy at ${baseUrl}: ${feed.admissions.length} admissions and ${feed.politics.length} politics items.`);
+const fallbackNote = runtimeFeedUrl ? `; bundled fallback age ${bundledAgeHours.toFixed(1)}h` : "";
+console.log(`Live site healthy at ${baseUrl}: ${effectiveFeed.admissions.length} admissions and ${effectiveFeed.politics.length} politics items${fallbackNote}.`);

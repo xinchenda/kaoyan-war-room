@@ -31,7 +31,8 @@ jobs:
         run: |
           curl --fail --location --retry 2 --max-time 30 --silent --show-error \
             "https://uestc-410-war-room.jc6fmxkms7.chatgpt.site/" | grep -q "410 考研冲刺台"
-          npm run check:site -- "https://uestc-410-war-room.jc6fmxkms7.chatgpt.site/dashboard/"
+          npm run check:site -- "https://uestc-410-war-room.jc6fmxkms7.chatgpt.site/dashboard/" \
+            --runtime-feed "https://xinchenda.github.io/kaoyan-war-room/data/updates.json"
       - name: Open or update incident
         if: failure()
         env:

@@ -1060,7 +1060,11 @@ window.addEventListener("resize", () => {
   if (document.getElementById("panel-scores").classList.contains("active")) drawScoreChart();
 });
 
-if ("serviceWorker" in navigator && location.protocol.startsWith("http")) navigator.serviceWorker.register("./sw.js").catch(() => {});
+if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
+  navigator.serviceWorker.register("./sw.js", { updateViaCache: "none" })
+    .then((registration) => registration.update())
+    .catch(() => {});
+}
 
 setTimerMinutes(45);
 render();

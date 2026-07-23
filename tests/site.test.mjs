@@ -7,6 +7,8 @@ const root = new URL("../", import.meta.url);
 test("dashboard exposes every core preparation surface", async () => {
   const html = await readFile(new URL("index.html", root), "utf8");
   const app = await readFile(new URL("app.js", root), "utf8");
+  const serviceWorker = await readFile(new URL("sw.js", root), "utf8");
+  const sitesEntry = await readFile(new URL("app/page.tsx", root), "utf8");
   for (const id of [
     "panel-today",
     "panel-sprint",
@@ -23,6 +25,10 @@ test("dashboard exposes every core preparation surface", async () => {
   assert.match(html, /app\.js/);
   assert.match(app, /REMOTE_INTEL_URL/);
   assert.match(app, /isTrustedIntelFeed/);
+  assert.match(serviceWorker, /kaoyan-war-room-v4/);
+  assert.match(serviceWorker, /withoutRedirectMetadata/);
+  assert.match(sitesEntry, /registration\.unregister/);
+  assert.match(sitesEntry, /safari-navigation-v4/);
 });
 
 test("intelligence feed contains official links and bounded lists", async () => {
@@ -51,4 +57,5 @@ test("automation publishes pages and refreshes information", async () => {
   assert.match(sync, /Enforce official source health/);
   assert.match(monitor, /npm run check:site/);
   assert.match(monitor, /chatgpt\.site\/dashboard/);
+  assert.match(monitor, /--runtime-feed/);
 });
