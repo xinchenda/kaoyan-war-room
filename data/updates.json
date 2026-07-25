@@ -1,24 +1,24 @@
 {
   "schemaVersion": 3,
-  "generatedAt": "2026-07-24T23:17:07.673Z",
+  "generatedAt": "2026-07-25T23:14:41.204Z",
   "notice": "仅收录官方白名单域名的标题与原文链接。2027 招生信息发布前，历史条目只作年度参考；政治主题为自动复习归类，不代表官方命题判断。",
   "health": {
     "status": "healthy",
-    "checkedAt": "2026-07-24T23:17:07.673Z",
+    "checkedAt": "2026-07-25T23:14:41.204Z",
     "targetYear": 2027,
     "admissions": {
       "status": "healthy",
       "successfulSources": 6,
       "usableSources": 5,
       "totalSources": 6,
-      "lastHealthyAt": "2026-07-24T23:17:07.673Z"
+      "lastHealthyAt": "2026-07-25T23:14:41.204Z"
     },
     "politics": {
       "status": "healthy",
       "successfulSources": 2,
       "usableSources": 2,
       "totalSources": 2,
-      "lastHealthyAt": "2026-07-24T23:17:07.673Z"
+      "lastHealthyAt": "2026-07-25T23:14:41.204Z"
     }
   },
   "admissions": [
@@ -31,7 +31,7 @@
       "referenceYear": 2026,
       "priority": 100,
       "curated": true,
-      "verifiedAt": "2026-07-24T23:17:07.673Z",
+      "verifiedAt": "2026-07-25T23:14:41.204Z",
       "referenceOnly": true
     },
     {
@@ -43,7 +43,7 @@
       "referenceYear": 2026,
       "priority": 100,
       "curated": true,
-      "verifiedAt": "2026-07-24T23:17:07.673Z",
+      "verifiedAt": "2026-07-25T23:14:41.204Z",
       "referenceOnly": true
     },
     {
@@ -55,7 +55,7 @@
       "referenceYear": null,
       "priority": 100,
       "curated": true,
-      "verifiedAt": "2026-07-24T23:17:07.673Z",
+      "verifiedAt": "2026-07-25T23:14:41.204Z",
       "referenceOnly": false
     },
     {
@@ -67,7 +67,7 @@
       "referenceYear": 2026,
       "priority": 90,
       "curated": true,
-      "verifiedAt": "2026-07-24T23:17:07.673Z",
+      "verifiedAt": "2026-07-25T23:14:41.204Z",
       "referenceOnly": true
     },
     {
@@ -78,7 +78,7 @@
       "topic": "学校通知",
       "date": "2026-03-15",
       "referenceYear": 2026,
-      "verifiedAt": "2026-07-24T23:17:07.673Z",
+      "verifiedAt": "2026-07-25T23:14:41.204Z",
       "referenceOnly": true
     },
     {
@@ -89,7 +89,7 @@
       "topic": "学校通知",
       "date": "2025-12-11",
       "referenceYear": 2026,
-      "verifiedAt": "2026-07-24T23:17:07.673Z",
+      "verifiedAt": "2026-07-25T23:14:41.204Z",
       "referenceOnly": true
     },
     {
@@ -100,7 +100,7 @@
       "topic": "学校通知",
       "date": "2025-10-22",
       "referenceYear": 2026,
-      "verifiedAt": "2026-07-24T23:17:07.673Z",
+      "verifiedAt": "2026-07-25T23:14:41.204Z",
       "referenceOnly": true
     },
     {
@@ -111,7 +111,7 @@
       "topic": "招生章程",
       "date": "2025-10-09",
       "referenceYear": 2026,
-      "verifiedAt": "2026-07-24T23:17:07.673Z",
+      "verifiedAt": "2026-07-25T23:14:41.204Z",
       "referenceOnly": true
     },
     {
@@ -122,7 +122,7 @@
       "topic": "国家政策",
       "date": "2025-09-25",
       "referenceYear": 2026,
-      "verifiedAt": "2026-07-24T23:17:07.673Z",
+      "verifiedAt": "2026-07-25T23:14:41.204Z",
       "referenceOnly": true
     },
     {
@@ -133,7 +133,7 @@
       "topic": "国家政策",
       "date": "2025-09-24",
       "referenceYear": 2026,
-      "verifiedAt": "2026-07-24T23:17:07.673Z",
+      "verifiedAt": "2026-07-25T23:14:41.204Z",
       "referenceOnly": true
     },
     {
@@ -144,7 +144,7 @@
       "topic": "国家政策",
       "date": "2025-09-24",
       "referenceYear": 2026,
-      "verifiedAt": "2026-07-24T23:17:07.673Z",
+      "verifiedAt": "2026-07-25T23:14:41.204Z",
       "referenceOnly": true
     },
     {
@@ -155,7 +155,7 @@
       "topic": "学校通知",
       "date": "2025-06-11",
       "referenceYear": 2026,
-      "verifiedAt": "2026-07-24T23:17:07.673Z",
+      "verifiedAt": "2026-07-25T23:14:41.204Z",
       "referenceOnly": true
     },
     {
@@ -166,7 +166,7 @@
       "topic": "学校通知",
       "date": "2025-05-09",
       "referenceYear": 2026,
-      "verifiedAt": "2026-07-24T23:17:07.673Z",
+      "verifiedAt": "2026-07-25T23:14:41.204Z",
       "referenceOnly": true
     }
   ],
@@ -179,7 +179,7 @@
       "topic": "中国式现代化",
       "angle": "中国式现代化、进一步全面深化改革与规划实施",
       "date": "2026-07-23",
-      "verifiedAt": "2026-07-24T23:17:07.673Z"
+      "verifiedAt": "2026-07-25T23:14:41.204Z"
     },
     {
       "title": "中共中央 国务院印发《关于加强新时代社会工作的意见》",
@@ -189,7 +189,7 @@
       "topic": "形势与政策：按背景",
       "angle": "形势与政策：按背景、举措、意义三层复习",
       "date": "2026-07-23",
-      "verifiedAt": "2026-07-24T23:17:07.673Z"
+      "verifiedAt": "2026-07-25T23:14:41.204Z"
     },
     {
       "title": "新华鲜报丨扩量提质、可靠替代 可再生能源有了“十五五”发展路线图",
@@ -199,7 +199,7 @@
       "topic": "中国式现代化",
       "angle": "中国式现代化、进一步全面深化改革与规划实施",
       "date": "2026-07-23",
-      "verifiedAt": "2026-07-24T23:17:07.673Z"
+      "verifiedAt": "2026-07-25T23:14:41.204Z"
     },
     {
       "title": "国家发展改革委、国家能源局有关负责人就《可再生能源发展“十五五”规划》答记者问",
@@ -209,7 +209,7 @@
       "topic": "中国式现代化",
       "angle": "中国式现代化、进一步全面深化改革与规划实施",
       "date": "2026-07-23",
-      "verifiedAt": "2026-07-24T23:17:07.673Z"
+      "verifiedAt": "2026-07-25T23:14:41.204Z"
     },
     {
       "title": "《可再生能源发展“十五五”规划》发布",
@@ -219,7 +219,7 @@
       "topic": "中国式现代化",
       "angle": "中国式现代化、进一步全面深化改革与规划实施",
       "date": "2026-07-23",
-      "verifiedAt": "2026-07-24T23:17:07.673Z"
+      "verifiedAt": "2026-07-25T23:14:41.204Z"
     },
     {
       "title": "最高检印发《人民检察事业发展“十五五”规划》",
@@ -229,7 +229,7 @@
       "topic": "中国式现代化",
       "angle": "中国式现代化、进一步全面深化改革与规划实施",
       "date": "2026-07-23",
-      "verifiedAt": "2026-07-24T23:17:07.673Z"
+      "verifiedAt": "2026-07-25T23:14:41.204Z"
     },
     {
       "title": "四川省成都市政协原党组副书记、副主席田蓉受贿案一审宣判",
@@ -239,7 +239,7 @@
       "topic": "形势与政策：按背景",
       "angle": "形势与政策：按背景、举措、意义三层复习",
       "date": "2026-07-23",
-      "verifiedAt": "2026-07-24T23:17:07.673Z"
+      "verifiedAt": "2026-07-25T23:14:41.204Z"
     },
     {
       "title": "水清岸绿鸟翩跹——河南黄河流域生态治理观察",
@@ -249,7 +249,7 @@
       "topic": "生态文明建设与绿色发展",
       "angle": "生态文明建设与绿色发展",
       "date": "2026-07-23",
-      "verifiedAt": "2026-07-24T23:17:07.673Z"
+      "verifiedAt": "2026-07-25T23:14:41.204Z"
     },
     {
       "title": "北京推出10条举措加快智能体引领发展",
@@ -259,7 +259,7 @@
       "topic": "形势与政策：按背景",
       "angle": "形势与政策：按背景、举措、意义三层复习",
       "date": "2026-07-23",
-      "verifiedAt": "2026-07-24T23:17:07.673Z"
+      "verifiedAt": "2026-07-25T23:14:41.204Z"
     },
     {
       "title": "“义乌发展经验”的深刻启示",
@@ -269,7 +269,7 @@
       "topic": "形势与政策：按背景",
       "angle": "形势与政策：按背景、举措、意义三层复习",
       "date": "2026-07-22",
-      "verifiedAt": "2026-07-24T23:17:07.673Z"
+      "verifiedAt": "2026-07-25T23:14:41.204Z"
     },
     {
       "title": "林业草原保护利用“十五五”规划发布",
@@ -279,7 +279,7 @@
       "topic": "中国式现代化",
       "angle": "中国式现代化、进一步全面深化改革与规划实施",
       "date": "2026-07-22",
-      "verifiedAt": "2026-07-24T23:17:07.673Z"
+      "verifiedAt": "2026-07-25T23:14:41.204Z"
     },
     {
       "title": "新华社消息丨“十五五”林草保护利用规划发布",
@@ -289,7 +289,7 @@
       "topic": "中国式现代化",
       "angle": "中国式现代化、进一步全面深化改革与规划实施",
       "date": "2026-07-22",
-      "verifiedAt": "2026-07-24T23:17:07.673Z"
+      "verifiedAt": "2026-07-25T23:14:41.204Z"
     }
   ],
   "sourceStatus": [
@@ -301,7 +301,7 @@
       "targetSchool": true,
       "ok": true,
       "count": 16,
-      "checkedAt": "2026-07-24T23:17:07.673Z",
+      "checkedAt": "2026-07-25T23:14:41.204Z",
       "transport": "curl-ipv4-fallback",
       "attempts": 1
     },
@@ -313,7 +313,7 @@
       "targetSchool": true,
       "ok": true,
       "count": 8,
-      "checkedAt": "2026-07-24T23:17:07.673Z",
+      "checkedAt": "2026-07-25T23:14:41.204Z",
       "transport": "curl-ipv4-fallback",
       "attempts": 1
     },
@@ -325,7 +325,7 @@
       "targetSchool": true,
       "ok": true,
       "count": 2,
-      "checkedAt": "2026-07-24T23:17:07.673Z",
+      "checkedAt": "2026-07-25T23:14:41.204Z",
       "transport": "curl-ipv4-fallback",
       "attempts": 1
     },
@@ -337,7 +337,7 @@
       "targetSchool": true,
       "ok": true,
       "count": 10,
-      "checkedAt": "2026-07-24T23:17:07.673Z",
+      "checkedAt": "2026-07-25T23:14:41.204Z",
       "transport": "curl-ipv4-fallback",
       "attempts": 1
     },
@@ -349,7 +349,7 @@
       "targetSchool": true,
       "ok": true,
       "count": 0,
-      "checkedAt": "2026-07-24T23:17:07.673Z",
+      "checkedAt": "2026-07-25T23:14:41.204Z",
       "transport": "curl-ipv4-fallback",
       "attempts": 1
     },
@@ -361,7 +361,7 @@
       "targetSchool": false,
       "ok": true,
       "count": 52,
-      "checkedAt": "2026-07-24T23:17:07.673Z",
+      "checkedAt": "2026-07-25T23:14:41.204Z",
       "transport": "fetch",
       "attempts": 1
     },
@@ -373,7 +373,7 @@
       "targetSchool": false,
       "ok": true,
       "count": 31,
-      "checkedAt": "2026-07-24T23:17:07.673Z",
+      "checkedAt": "2026-07-25T23:14:41.204Z",
       "transport": "fetch",
       "attempts": 1
     },
@@ -385,7 +385,7 @@
       "targetSchool": false,
       "ok": true,
       "count": 1,
-      "checkedAt": "2026-07-24T23:17:07.673Z",
+      "checkedAt": "2026-07-25T23:14:41.204Z",
       "transport": "fetch",
       "attempts": 1
     },
@@ -396,7 +396,7 @@
       "url": "https://yzbm.uestc.edu.cn/zsml/sszsml/index/2026",
       "ok": true,
       "count": 1,
-      "checkedAt": "2026-07-24T23:17:07.673Z",
+      "checkedAt": "2026-07-25T23:14:41.204Z",
       "transport": "curl-ipv4-fallback",
       "attempts": 1
     },
@@ -407,7 +407,7 @@
       "url": "https://yz.uestc.edu.cn/info/1052/3672.htm",
       "ok": true,
       "count": 1,
-      "checkedAt": "2026-07-24T23:17:07.673Z",
+      "checkedAt": "2026-07-25T23:14:41.204Z",
       "transport": "curl-ipv4-fallback",
       "attempts": 1
     },
@@ -418,7 +418,7 @@
       "url": "https://xxgkw.uestc.edu.cn/info/1054/3967.htm",
       "ok": true,
       "count": 1,
-      "checkedAt": "2026-07-24T23:17:07.673Z",
+      "checkedAt": "2026-07-25T23:14:41.204Z",
       "transport": "curl-ipv4-fallback",
       "attempts": 1
     },
@@ -429,7 +429,7 @@
       "url": "https://www.sice.uestc.edu.cn/info/1142/16093.htm",
       "ok": true,
       "count": 1,
-      "checkedAt": "2026-07-24T23:17:07.673Z",
+      "checkedAt": "2026-07-25T23:14:41.204Z",
       "transport": "curl-ipv4-fallback",
       "attempts": 1
     }
