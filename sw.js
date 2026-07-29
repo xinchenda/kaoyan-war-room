@@ -1,4 +1,4 @@
-const CACHE_NAME = "kaoyan-war-room-v4";
+const CACHE_NAME = "kaoyan-war-room-v5";
 const STATIC_SHELL = ["./styles.css", "./app.js", "./data/updates.js", "./manifest.webmanifest"];
 
 function indexUrl() {
