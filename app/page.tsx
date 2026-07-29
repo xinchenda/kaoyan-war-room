@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 
-const REPAIR_VERSION = "safari-navigation-v4";
+const REPAIR_VERSION = "safari-navigation-v5";
 
 export default function Home() {
   useEffect(() => {

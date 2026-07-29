@@ -3,6 +3,8 @@
 const STORAGE_KEY = "kaoyan-war-room-v2";
 const LEGACY_STORAGE_KEY = "kaoyan-war-room-v1";
 const BASELINE_DATE = "2026-07-17";
+const SPRINT_BASELINE_DATE = "2026-07-29";
+const PLAN_VERSION = "sprint-2026-07-29";
 const SEPTEMBER_GATE = "2026-08-31";
 const REMOTE_INTEL_URL = "https://xinchenda.github.io/kaoyan-war-room/data/updates.json";
 const OFFICIAL_INTEL_HOSTS = ["uestc.edu.cn", "chsi.com.cn", "news.cn", "gov.cn"];
@@ -11,20 +13,20 @@ const scoreTargets = {
   "数一": { target: 135, full: 150, note: "主力拉分科目" },
   "858": { target: 130, full: 150, note: "专业课稳定输出" },
   "英一": { target: 75, full: 100, note: "阅读决定上限" },
-  "政治": { target: 70, full: 100, note: "九月启动不晚" },
+  "政治": { target: 70, full: 100, note: "9 月 1 日正式启动" },
 };
 
 const tiers = {
   base: { title: "保底版", rank: 1, minutes: "约 4 小时", target: 245 },
-  standard: { title: "标准版", rank: 2, minutes: "约 7.5 小时", target: 465 },
-  full: { title: "冲刺版", rank: 3, minutes: "约 9.5 小时", target: 570 },
+  standard: { title: "标准版", rank: 2, minutes: "约 7.8 小时", target: 465 },
+  full: { title: "完全冲刺", rank: 3, minutes: "约 9.4 小时", target: 565 },
 };
 
 const tierNames = { base: "保底", standard: "标准", full: "冲刺" };
 const modeCopy = {
   base: "守住数一、858、单词与当天复盘。低状态日完成这四块，连续性就没有断。",
-  standard: "完成两轮主科学习、两轮对应练题和英语记背。以有效学习 7.5 小时为达标线。",
-  full: "在标准版上增加薄弱专题和限时训练。有效学习控制在 9 到 9.5 小时，不透支次日。",
+  standard: "完成两轮主科学习、两轮对应练题和英语记背。以有效学习约 7.8 小时为达标线。",
+  full: "完整执行 10 个时间块，主科新课、对应练题、英语和复盘全部闭环。有效学习控制在 9 到 9.5 小时，不靠压缩睡眠凑时长。",
 };
 
 const subjectColors = {
@@ -106,144 +108,210 @@ const phases = [
     ],
   },
   {
-    id: "round1-core",
+    id: "pause-gap",
     start: "2026-07-21",
-    end: "2026-07-27",
-    title: "一轮主干推进",
-    focus: "数一与 858 双主线",
-    output: "高数下册主干；858 时域与频域；红宝书 7-16 章。",
+    end: "2026-07-28",
+    title: "停学空档记录",
+    focus: "如实记录，不把 8 天欠账平移到今天",
+    output: "保留此前已完成进度；旧日未完成任务不追补；7 月 29 日按新基线重启。",
     daily: {
-      math: "多元微分、重积分、曲线曲面积分或级数",
-      signal: "LTI 时域分析与傅里叶分析",
-      english: "红宝书 7-16 章首背 + 前章回忆",
-      extra: "主干题型闭环与错因标注",
+      math: "暂停记录",
+      signal: "暂停记录",
+      english: "暂停记录",
+      extra: "不补账，只保护睡眠和下一次启动",
     },
     goals: [
-      ["math-lower", "数一", "高数下册主干完成一轮并配套基础题"],
-      ["sig-fourier", "858", "卷积、傅里叶级数与傅里叶变换完成一轮"],
-      ["vocab-7-16", "英一", "红宝书第 7-16 章完成首背"],
-      ["foundation-rate", "执行", "当天新知识对应基础题完成率不低于 80%"],
+      ["gap-recorded", "执行", "确认 7 月 21-28 日为停学空档"],
+      ["progress-kept", "数据", "保留此前章节、任务、错题与背诵记录"],
+      ["no-debt", "执行", "不把空档任务逐条搬到新计划"],
+      ["restart-ready", "执行", "7 月 29 日从已完成位置继续"],
     ],
   },
   {
-    id: "round1-close",
-    start: "2026-07-28",
-    end: "2026-08-03",
+    id: "sprint-reset",
+    start: "2026-07-29",
+    end: "2026-08-02",
+    title: "完全冲刺重启",
+    focus: "从高阶线性微分方程后的真实进度继续，先连续跑通 5 天",
+    output: "多元微分与二重积分主干；858 基本概念和时域；红宝书 1-6 章；英语长难句启动。",
+    daily: {
+      math: [
+        "常微分方程闭卷诊断 + 多元函数与偏导",
+        "全微分、复合函数与隐函数求导",
+        "多元极值、方向导数与梯度",
+        "二重积分：直角坐标与区域拆分",
+        "二重积分：极坐标 + 5 日诊断",
+      ],
+      mathPractice: [
+        "常微分方程错点回收 + 偏导基础题",
+        "全微分与复合求导基础题",
+        "多元极值和方向导数基础题",
+        "二重积分直角坐标题",
+        "二重积分极坐标题 + 本阶段重做",
+      ],
+      signal: [
+        "信号分类、基本运算与典型信号",
+        "自变量变换、冲激与阶跃信号",
+        "系统性质与 LTI 判断",
+        "连续时间卷积积分",
+        "离散时间卷积和 + 时域诊断",
+      ],
+      signalPractice: [
+        "信号分类与波形变换基础题",
+        "冲激阶跃运算与作图",
+        "系统性质判断与反例",
+        "连续卷积计算与作图",
+        "离散卷积计算 + 本阶段重做",
+      ],
+      english: ["红宝书第 1-2 章", "红宝书第 3 章", "红宝书第 4 章", "红宝书第 5 章", "红宝书第 6 章"],
+      englishPractice: ["前日词回忆 + 长难句找主干", "第 1-3 章回忆", "第 1-4 章回忆 + 长难句", "第 1-5 章回忆 + 阅读 1 篇", "第 1-6 章闭卷回忆"],
+      extra: "当天错题 24 小时内独立重做",
+    },
+    goals: [
+      ["reset-math", "数一", "多元微分和二重积分完成一轮及对应基础题"],
+      ["reset-signal", "858", "基本概念、系统性质和卷积完成一轮"],
+      ["reset-vocab", "英一", "红宝书第 1-6 章首背并完成滚动回忆"],
+      ["reset-rhythm", "执行", "5 天中至少 4 天完成 8 小时以上有效学习"],
+    ],
+  },
+  {
+    id: "compressed-r1-a",
+    start: "2026-08-03",
+    end: "2026-08-09",
+    title: "压缩一轮 I",
+    focus: "高数下册收口，858 进入频域与采样",
+    output: "高数下册剩余主干完成；858 频域和采样完成；红宝书 7-14 章；精读 2 篇。",
+    daily: {
+      math: ["三重积分", "第一类曲线积分", "第二类曲线积分与 Green 公式", "第一类曲面积分", "第二类曲面积分与 Gauss 公式", "Stokes 公式与综合作图", "无穷级数主干 + 高数下册诊断"],
+      mathPractice: "当天章节基础题 + 典型强化题 2-4 道",
+      signal: ["傅里叶级数", "连续时间傅里叶变换", "傅里叶变换性质", "系统频率响应与滤波", "幅度调制", "采样定理与频谱", "频域/采样章节诊断"],
+      signalPractice: "当天模块计算、证明与作图闭环",
+      english: ["红宝书第 7 章", "红宝书第 8 章", "红宝书第 9 章", "红宝书第 10 章", "红宝书第 11 章", "红宝书第 12-13 章", "红宝书第 14 章"],
+      englishPractice: ["滚动回忆 + 长难句", "滚动回忆", "阅读精读 1 篇", "滚动回忆 + 长难句", "滚动回忆", "阅读精读 1 篇", "第 1-14 章抽测"],
+      extra: "只回收当天重复错误，不增加新题源",
+    },
+    goals: [
+      ["r1a-math", "数一", "高数下册主干完成一轮并通过章节诊断"],
+      ["r1a-signal", "858", "傅里叶、频响、调制和采样完成一轮"],
+      ["r1a-english", "英一", "红宝书第 7-14 章首背并精读 2 篇"],
+      ["r1a-questions", "执行", "当天知识对应基础题完成率不低于 80%"],
+    ],
+  },
+  {
+    id: "compressed-r1-b",
+    start: "2026-08-10",
+    end: "2026-08-16",
+    title: "压缩一轮 II",
+    focus: "线性代数全覆盖，858 完成 S 域与 Z 域",
+    output: "线代一轮完成；858 六模块主干覆盖；红宝书 15-22 章；精读 3 篇。",
+    daily: {
+      math: ["行列式", "矩阵、逆与初等变换", "向量与线性相关", "线性方程组", "特征值、特征向量与相似", "二次型与正定性", "线代综合诊断"],
+      mathPractice: "线代当天章节基础题 + 高频模型",
+      signal: ["拉普拉斯变换与 ROC", "拉普拉斯性质与逆变换", "S 域系统响应与 H(s)", "Z 变换与 ROC", "Z 变换性质与逆变换", "Z 域系统响应与 H(z)", "框图、微分/差分方程与变换域诊断"],
+      signalPractice: "S/Z 域当天模块基础题 + 典型综合题",
+      english: ["红宝书第 15 章", "红宝书第 16 章", "红宝书第 17 章", "红宝书第 18 章", "红宝书第 19 章", "红宝书第 20-21 章", "红宝书第 22 章"],
+      englishPractice: ["阅读精读 1 篇", "滚动回忆 + 长难句", "阅读精读 1 篇", "滚动回忆", "阅读精读 1 篇", "翻译 2 句", "第 1-22 章抽测"],
+      extra: "24 小时错题重做 + 公式条件默写",
+    },
+    goals: [
+      ["r1b-math", "数一", "线性代数完成一轮和一次综合诊断"],
+      ["r1b-signal", "858", "拉普拉斯、Z 变换及系统响应完成一轮"],
+      ["r1b-english", "英一", "红宝书第 15-22 章首背并精读 3 篇"],
+      ["r1b-redo", "复盘", "本周错题 24 小时重做率达到 80%"],
+    ],
+  },
+  {
+    id: "compressed-r1-close",
+    start: "2026-08-17",
+    end: "2026-08-23",
     title: "压缩一轮收口",
-    focus: "允许延至 8 月 3 日，但不再扩张",
-    output: "线代与概率主干；858 采样、S 域、Z 域；红宝书 17-26 章。",
+    focus: "概率统计一轮完成，三科做第一次完整验收",
+    output: "数一、858 一轮在 8 月 23 日收口；红宝书 26 章首背完成；形成唯一漏项清单。",
     daily: {
-      math: "线代/概率主干快速覆盖与高频例题",
-      signal: "采样、拉普拉斯变换、Z 变换",
-      english: "红宝书 17-26 章首背 + 全书滚动回忆",
-      extra: "一轮遗漏清单与章节自测",
+      math: ["随机事件与概率", "一维随机变量", "多维随机变量", "随机变量函数分布", "数字特征", "大数定律与中心极限定理", "数理统计 + 数一一轮诊断"],
+      mathPractice: "概率当天章节基础题 + 高频计算",
+      signal: ["基本概念模块自测", "时域模块自测", "频域模块自测", "采样模块自测", "拉普拉斯模块自测", "Z 变换模块自测", "858 一轮综合诊断 + 作图证明清单"],
+      signalPractice: "诊断订正，只补概念、入口和计算三类漏项",
+      english: ["红宝书第 23 章", "红宝书第 24 章", "红宝书第 25 章", "红宝书第 26 章", "红宝书第 1-9 章复测", "红宝书第 10-18 章复测", "红宝书第 19-26 章复测"],
+      englishPractice: ["阅读精读 1 篇", "滚动回忆", "阅读精读 1 篇", "滚动回忆", "阅读精读 1 篇", "翻译 2 句", "阅读阶段诊断"],
+      extra: "一轮漏项清单：只留未掌握的高频点",
     },
     goals: [
-      ["math-round1", "数一", "数一主干一轮覆盖达到 90% 以上"],
-      ["sig-round1", "858", "官方大纲 6 个模块完成一轮"],
-      ["vocab-round1", "英一", "红宝书 26 章首背全部完成"],
-      ["no-new-source", "执行", "停止增加题源，形成唯一主线资料"],
+      ["r1-close-math", "数一", "21 个主干模块一轮覆盖达到 90% 以上"],
+      ["r1-close-signal", "858", "官方大纲 6 个模块一轮达到 100%"],
+      ["r1-close-vocab", "英一", "红宝书 26 章首背全部完成"],
+      ["r1-close-map", "复盘", "完成一轮诊断并形成唯一漏项清单"],
     ],
   },
   {
-    id: "diagnose",
-    start: "2026-08-04",
-    end: "2026-08-10",
-    title: "诊断与补漏",
-    focus: "从“看过”切到“会做”",
-    output: "数一与 858 章节测评；基础题漏项回收；英语阅读启动。",
-    daily: {
-      math: "章节测试 + 基础题漏项回收",
-      signal: "六模块章节测试 + 作图/证明专项",
-      english: "单词二刷 + 真题阅读精读",
-      extra: "按错因重做，不无差别刷题",
-    },
-    goals: [
-      ["math-test", "数一", "完成高数、线代、概率三次章节诊断"],
-      ["sig-test", "858", "完成时域、频域、变换域三次诊断"],
-      ["eng-reading-start", "英一", "精读 3 篇真题阅读并整理长难句"],
-      ["error-map", "复盘", "形成按概念/入口/计算分类的错题地图"],
-    ],
-  },
-  {
-    id: "round2-a",
-    start: "2026-08-11",
-    end: "2026-08-17",
-    title: "二轮高频模型 I",
-    focus: "题型识别和计算稳定性",
-    output: "数一高频题型前半；858 时域/频域强化；英语阅读保持。",
-    daily: {
-      math: "高频模型专题练习与限时计算",
-      signal: "卷积、傅里叶、系统性质强化题",
-      english: "单词滚动 + 真题阅读/长难句",
-      extra: "24 小时错题重做",
-    },
-    goals: [
-      ["math-model-a", "数一", "完成极限、微积分、线代高频模型"],
-      ["sig-model-a", "858", "完成时域、频域、采样强化题"],
-      ["eng-reading-4", "英一", "精读 4 篇真题阅读"],
-      ["redo-80", "复盘", "本周错题 24 小时重做率达到 80%"],
-    ],
-  },
-  {
-    id: "round2-b",
-    start: "2026-08-18",
-    end: "2026-08-24",
-    title: "二轮高频模型 II",
-    focus: "跨章节综合与速度",
-    output: "数一高频题型后半；858 S/Z 域强化；英语阅读稳定。",
-    daily: {
-      math: "概率与跨章节综合题、限时计算",
-      signal: "S 域、Z 域、系统框图与响应强化",
-      english: "单词滚动 + 真题阅读/翻译",
-      extra: "跨章节错题归因与重做",
-    },
-    goals: [
-      ["math-model-b", "数一", "完成概率与综合高频模型"],
-      ["sig-model-b", "858", "完成拉普拉斯与 Z 变换强化题"],
-      ["eng-reading-4b", "英一", "精读 4 篇真题阅读并做 2 次翻译"],
-      ["timed-block", "执行", "完成 4 次 90 分钟主科限时训练"],
-    ],
-  },
-  {
-    id: "gate-check",
-    start: "2026-08-25",
+    id: "round2-sprint",
+    start: "2026-08-24",
     end: "2026-08-31",
-    title: "九月门槛验收",
-    focus: "不追求题量数字，追求可复现得分",
-    output: "数一/858 综合卷；英语阅读阶段测试；二轮薄弱点清单。",
+    title: "二轮高频冲刺",
+    focus: "不追求刷完所有题，只闭环高频模型和诊断错题",
+    output: "主科二轮高频覆盖达到 30%；各完成一次限时综合测试；英语单词二刷和阅读稳定启动。",
     daily: {
-      math: "综合卷、订正与薄弱专题补洞",
-      signal: "综合卷、证明作图与薄弱专题补洞",
-      english: "单词三刷 + 阅读阶段测试",
-      extra: "九月三轮清单定稿",
+      math: ["极限、导数与微分方程高频模型", "一元积分高频模型", "多元微积分高频模型", "级数高频模型", "线代高频模型", "概率高频模型", "数一 150 分钟综合测试", "订正 + 九月补分清单"],
+      mathPractice: "基础题漏项回收 + 选做高频强化题",
+      signal: ["基本概念与时域高频模型", "傅里叶高频模型", "采样与调制高频模型", "拉普拉斯高频模型", "Z 变换高频模型", "证明、作图与系统框图", "858 150 分钟综合测试", "订正 + 九月补分清单"],
+      signalPractice: "限时训练后按概念/入口/计算归因",
+      english: ["第 1-7 章二刷", "第 8-14 章二刷", "第 15-20 章二刷", "第 21-26 章二刷", "第 1-7 章抽测", "第 8-14 章抽测", "第 15-20 章抽测", "第 21-26 章抽测"],
+      englishPractice: "真题阅读 1 篇 + 长难句拆解",
+      extra: "九月只保留能直接补分的薄弱项",
     },
     goals: [
       ["math-gate", "数一", "综合测试达到 105/150 或明确补分路径"],
       ["sig-gate", "858", "综合测试达到 105/150 或明确补分路径"],
-      ["eng-gate", "英一", "阅读正确率达到 60%，26 章可滚动回忆"],
-      ["september-list", "复盘", "三轮只保留高收益薄弱项"],
+      ["round2-gate", "主科", "高频题型二轮覆盖达到 30% 以上"],
+      ["eng-gate", "英一", "26 章进入二刷，阅读正确率达到 60%"],
     ],
   },
   {
-    id: "round3",
+    id: "round2-politics",
     start: "2026-09-01",
+    end: "2026-09-14",
+    title: "二轮收口 + 政治启动",
+    focus: "用两周补完高频二轮，政治每天 1-1.5 小时",
+    output: "数一/858 高频二轮完成；英语阅读和翻译持续；政治基础课与选择题启动。",
+    daily: {
+      math: "二轮高频模型、限时计算与诊断漏项",
+      mathPractice: "高频强化题 + 24 小时错题重做",
+      signal: "六模块高频模型、证明与作图",
+      signalPractice: "高频强化题 + 24 小时错题重做",
+      english: "红宝书滚动二刷",
+      englishPractice: "真题阅读 + 长难句/翻译",
+      politics: "政治基础知识 + 对应选择题",
+      extra: "四科到期错题与背诵回收",
+    },
+    goals: [
+      ["sep-r2-math", "数一", "高频二轮完成并能独立识别题型入口"],
+      ["sep-r2-signal", "858", "六模块高频题、证明和作图完成二轮"],
+      ["sep-r2-eng", "英一", "阅读稳定训练并完成每周 2 次翻译"],
+      ["sep-r2-pol", "政治", "政治基础启动并同步完成选择题"],
+    ],
+  },
+  {
+    id: "round3-start",
+    start: "2026-09-15",
     end: "2026-09-30",
-    title: "三轮启动 + 政治一轮",
-    focus: "真题题型化，政治每天 1.5 小时",
-    output: "数一/858 真题专题；英语阅读与翻译；政治基础课和选择题。",
+    title: "三轮真题启动",
+    focus: "按题型进入真题，政治一轮不断档",
+    output: "数一/858 真题专题；英语阅读与翻译；政治基础一轮推进。",
     daily: {
       math: "真题专题与薄弱模型",
+      mathPractice: "限时真题 + 订正",
       signal: "真题专题、证明与作图",
-      english: "真题阅读 + 单词滚动 + 翻译",
+      signalPractice: "模块真题 + 订正",
+      english: "红宝书滚动回忆",
+      englishPractice: "真题阅读 + 翻译",
       politics: "政治基础知识 + 选择题",
       extra: "四科错题回收",
     },
     goals: [
-      ["sep-math", "数一", "按题型完成一轮真题专题训练"],
-      ["sep-sig", "858", "按大纲模块完成真题/高质量模拟专题"],
-      ["sep-eng", "英一", "阅读稳定训练，月底启动作文素材"],
-      ["sep-pol", "政治", "完成基础一轮并同步选择题"],
+      ["sep-r3-math", "数一", "按题型启动真题专题训练"],
+      ["sep-r3-signal", "858", "按大纲模块启动真题/高质量模拟专题"],
+      ["sep-r3-eng", "英一", "阅读保持稳定，月底启动作文素材"],
+      ["sep-r3-pol", "政治", "完成政治基础一轮的阶段任务"],
     ],
   },
   {
@@ -300,6 +368,7 @@ const defaultTopicProgress = {
   "math-limit": 1,
   "math-derivative": 1,
   "math-integral": 1,
+  "math-ode": 1,
 };
 
 const fallbackState = {
@@ -307,7 +376,7 @@ const fallbackState = {
     target: "电子科技大学 · 电子信息 / 信息与通信工程 · 858",
     examDate: "2026-12-19",
     goalScore: 410,
-    mode: "standard",
+    mode: "full",
   },
   tasks: [],
   wrongs: [],
@@ -445,27 +514,57 @@ function tierAllowed(itemTier, mode = state.settings.mode) {
   return tiers[itemTier].rank <= tiers[mode].rank;
 }
 
+function phaseDailyValue(phase, key, dateKey = todayKey()) {
+  const value = phase.daily?.[key];
+  if (!Array.isArray(value)) return value || "";
+  const index = Math.max(0, Math.min(value.length - 1, daysBetween(phase.start, dateKey)));
+  return value[index] || value.at(-1) || "";
+}
+
+function taskTemplateKey(phase, key) {
+  return `${PLAN_VERSION}-${phase.id}-${key}`;
+}
+
 function phaseSchedule(phase) {
-  const politicsActive = phase.start >= "2026-09-01";
+  const math = phaseDailyValue(phase, "math");
+  const signal = phaseDailyValue(phase, "signal");
+  const english = phaseDailyValue(phase, "english");
+  const extra = phaseDailyValue(phase, "extra");
+  const politics = phaseDailyValue(phase, "politics");
+  const politicsActive = Boolean(politics);
   return [
-    { key: "math-am", slot: "08:00-09:30", subject: "数一", title: phase.daily.math, detail: "新知识或高频模型；结束前闭卷写出入口。", minutes: 90, tier: "base" },
-    { key: "signals-am", slot: "09:45-11:15", subject: "858", title: phase.daily.signal, detail: "概念、公式条件和典型例题形成一页闭环。", minutes: 90, tier: "base" },
-    { key: "english-am", slot: "11:25-12:00", subject: "英一", title: phase.daily.english, detail: "新词与昨日遗忘词分开处理。", minutes: 35, tier: "base" },
-    { key: "math-pm", slot: "14:00-15:30", subject: "数一", title: "对应题型训练", detail: "先限时独立做，再按概念/入口/计算归因。", minutes: 90, tier: "standard" },
-    { key: "signals-pm", slot: "15:45-17:15", subject: "858", title: "基础/强化题闭环", detail: "计算题之外保留证明与作图训练。", minutes: 90, tier: "standard" },
-    { key: "english-pm", slot: "17:20-18:00", subject: "英一", title: phase.start >= "2026-08-01" ? "真题阅读 / 长难句" : "红宝书回忆测试", detail: "以可复述和错因记录为验收。", minutes: 40, tier: "standard" },
+    { key: "math-am", slot: "08:00-09:30", subject: "数一", title: math, detail: "新知识或高频模型；结束前闭卷写出入口。", minutes: 90, tier: "base" },
+    { key: "signals-am", slot: "09:45-11:15", subject: "858", title: signal, detail: "概念、公式条件和典型例题形成一页闭环。", minutes: 90, tier: "base" },
+    { key: "english-am", slot: "11:25-12:00", subject: "英一", title: english, detail: "新词与昨日遗忘词分开处理。", minutes: 35, tier: "base" },
+    { key: "math-pm", slot: "14:00-15:30", subject: "数一", title: phaseDailyValue(phase, "mathPractice") || "对应题型训练", detail: "先限时独立做，再按概念/入口/计算归因。", minutes: 90, tier: "standard" },
+    { key: "signals-pm", slot: "15:45-17:15", subject: "858", title: phaseDailyValue(phase, "signalPractice") || "基础/强化题闭环", detail: "计算题之外保留证明与作图训练。", minutes: 90, tier: "standard" },
+    { key: "english-pm", slot: "17:20-18:00", subject: "英一", title: phaseDailyValue(phase, "englishPractice") || (phase.start >= "2026-08-01" ? "真题阅读 / 长难句" : "红宝书回忆测试"), detail: "以可复述和错因记录为验收。", minutes: 40, tier: "standard" },
     { key: "review-night", slot: "19:00-19:30", subject: "复盘", title: "到期错题与背诵队列", detail: "只处理到期项，不无限补账。", minutes: 30, tier: "base" },
-    { key: "extra-night-a", slot: "19:40-20:40", subject: politicsActive ? "政治" : "数一", title: politicsActive ? phase.daily.politics : phase.daily.extra, detail: politicsActive ? "基础/选择题/背诵按阶段推进。" : "优先处理当天重复错误。", minutes: 60, tier: "full" },
-    { key: "extra-night-b", slot: "20:50-21:50", subject: politicsActive ? "复盘" : "858", title: politicsActive ? phase.daily.extra : "858 薄弱点与证明作图", detail: "只做能补分的薄弱项。", minutes: 60, tier: "full" },
+    { key: "extra-night-a", slot: "19:40-20:25", subject: politicsActive ? "政治" : "数一", title: politicsActive ? politics : extra, detail: politicsActive ? "基础/选择题/背诵按阶段推进。" : "优先处理当天重复错误。", minutes: 45, tier: "full" },
+    { key: "extra-night-b", slot: "20:40-21:25", subject: politicsActive ? "政治" : "858", title: politicsActive ? (phaseDailyValue(phase, "politicsPractice") || "政治选择题订正与时政归类") : "858 薄弱点与证明作图", detail: politicsActive ? "选择题错因和当天时政主题必须留下记录。" : "只做能补分的薄弱项。", minutes: 45, tier: "full" },
     { key: "close-night", slot: "21:50-22:00", subject: "复盘", title: "写下明日第一题", detail: "让明天 8:00 可以直接开始。", minutes: 10, tier: "full" },
   ];
+}
+
+function applyPlanMigration() {
+  if (state.ui.planVersion === PLAN_VERSION) return;
+  state.tasks = state.tasks.filter((task) => {
+    const staleAutoTask = task.date >= SPRINT_BASELINE_DATE
+      && typeof task.templateKey === "string"
+      && task.templateKey.startsWith("v2-")
+      && task.templateKey !== "v2-rescue-start";
+    return !staleAutoTask || task.done;
+  });
+  state.settings.mode = "full";
+  state.ui.planVersion = PLAN_VERSION;
+  saveState();
 }
 
 function ensureTodayTasks() {
   const date = todayKey();
   const phase = currentPhase(date);
   for (const template of phaseSchedule(phase)) {
-    const templateKey = `v2-${phase.id}-${template.key}`;
+    const templateKey = taskTemplateKey(phase, template.key);
     if (state.tasks.some((task) => task.date === date && task.templateKey === templateKey)) continue;
     state.tasks.push({
       id: uid("task"), templateKey, date, subject: template.subject, title: template.title,
@@ -521,7 +620,7 @@ function gateChecks() {
   return [
     { title: "数一主干一轮 ≥ 90%", detail: `当前 ${Math.round(mathRound1 * 100)}%`, met: mathRound1 >= 0.9 },
     { title: "858 官方 6 模块一轮 = 100%", detail: `当前 ${Math.round(signalRound1 * 100)}%`, met: signalRound1 >= 1 },
-    { title: "主科高频题型二轮 ≥ 45%", detail: `当前 ${Math.round(secondRound * 100)}%`, met: secondRound >= 0.45 },
+    { title: "主科高频题型二轮 ≥ 30%", detail: `当前 ${Math.round(secondRound * 100)}%`, met: secondRound >= 0.3 },
     { title: "红宝书 26 章首背 = 100%", detail: `当前 ${Math.round(vocabRate() * 100)}%`, met: vocabRate() >= 1 },
     { title: "英语阅读模块已启动", detail: statusNames[state.topicProgress["eng-reading"] || 0], met: Number(state.topicProgress["eng-reading"] || 0) >= 1 },
   ];
@@ -534,8 +633,11 @@ function riskAssessment() {
   const gateRatio = checks.filter((item) => item.met).length / checks.length;
   if (today > SEPTEMBER_GATE) return gateRatio >= 0.8 ? { label: "可控", tone: "good" } : { label: "高", tone: "bad" };
 
-  const elapsed = Math.max(0, daysBetween(BASELINE_DATE, today));
-  const total = Math.max(1, daysBetween(BASELINE_DATE, SEPTEMBER_GATE));
+  if (today >= SPRINT_BASELINE_DATE && today <= "2026-08-02" && subjectFirstRoundRate("858") === 0 && vocabRate() < 0.1) {
+    return { label: "高", tone: "bad" };
+  }
+  const elapsed = Math.max(0, daysBetween(SPRINT_BASELINE_DATE, today));
+  const total = Math.max(1, daysBetween(SPRINT_BASELINE_DATE, SEPTEMBER_GATE));
   const expected = Math.min(1, elapsed / total);
   const progress = subjectFirstRoundRate("数一") * 0.32 + subjectFirstRoundRate("858") * 0.32 + vocabRate() * 0.2 + gateRatio * 0.16;
   const gap = expected * 0.85 - progress;
@@ -545,6 +647,7 @@ function riskAssessment() {
 }
 
 function render() {
+  applyPlanMigration();
   ensureTodayTasks();
   renderHeader();
   renderMission();
@@ -620,7 +723,7 @@ function renderTimeline() {
   const phase = currentPhase();
   const allTasks = todayTasks(true);
   container.innerHTML = phaseSchedule(phase).map((template) => {
-    const key = `v2-${phase.id}-${template.key}`;
+    const key = taskTemplateKey(phase, template.key);
     const task = allTasks.find((item) => item.templateKey === key);
     const allowed = tierAllowed(template.tier);
     return `<div class="time-block ${allowed ? "" : "is-muted"} ${task?.done ? "is-done" : ""}">
@@ -1019,8 +1122,9 @@ document.getElementById("settingsForm").addEventListener("submit", (event) => {
 
 document.getElementById("rescueModeBtn").addEventListener("click", () => {
   state.settings.mode = "base";
-  if (!state.tasks.some((task) => task.date === todayKey() && task.templateKey === "v2-rescue-start")) {
-    state.tasks.unshift({ id: uid("task"), templateKey: "v2-rescue-start", date: todayKey(), subject: "复盘", title: "20 分钟启动：做一道最熟悉的题或回忆一组单词", minutes: 20, tier: "base", done: false, createdAt: new Date().toISOString() });
+  const rescueKey = `${PLAN_VERSION}-rescue-start`;
+  if (!state.tasks.some((task) => task.date === todayKey() && task.templateKey === rescueKey)) {
+    state.tasks.unshift({ id: uid("task"), templateKey: rescueKey, date: todayKey(), subject: "复盘", title: "20 分钟启动：做一道最熟悉的题或回忆一组单词", minutes: 20, tier: "base", done: false, createdAt: new Date().toISOString() });
   }
   saveState(); render();
 });

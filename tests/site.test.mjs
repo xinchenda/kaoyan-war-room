@@ -25,10 +25,15 @@ test("dashboard exposes every core preparation surface", async () => {
   assert.match(html, /app\.js/);
   assert.match(app, /REMOTE_INTEL_URL/);
   assert.match(app, /isTrustedIntelFeed/);
-  assert.match(serviceWorker, /kaoyan-war-room-v4/);
+  assert.match(serviceWorker, /kaoyan-war-room-v5/);
   assert.match(serviceWorker, /withoutRedirectMetadata/);
   assert.match(sitesEntry, /registration\.unregister/);
-  assert.match(sitesEntry, /safari-navigation-v4/);
+  assert.match(sitesEntry, /safari-navigation-v5/);
+  assert.match(app, /PLAN_VERSION = "sprint-2026-07-29"/);
+  assert.match(app, /task\.date >= SPRINT_BASELINE_DATE/);
+  assert.match(app, /return !staleAutoTask \|\| task\.done/);
+  assert.match(app, /"math-ode": 1/);
+  assert.match(app, /mode: "full"/);
 });
 
 test("intelligence feed contains official links and bounded lists", async () => {
