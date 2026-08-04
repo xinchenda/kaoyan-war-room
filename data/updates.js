@@ -1,15 +1,15 @@
 window.KAOYAN_UPDATES = {
   "schemaVersion": 3,
-  "generatedAt": "2026-08-03T23:20:06.234Z",
+  "generatedAt": "2026-08-04T23:19:17.339Z",
   "notice": "仅收录官方白名单域名的标题与原文链接。2027 招生信息发布前，历史条目只作年度参考；政治主题为自动复习归类，不代表官方命题判断。",
   "health": {
-    "status": "healthy",
-    "checkedAt": "2026-08-03T23:20:06.234Z",
+    "status": "degraded",
+    "checkedAt": "2026-08-04T23:19:17.339Z",
     "targetYear": 2027,
     "admissions": {
-      "status": "healthy",
-      "successfulSources": 6,
-      "usableSources": 5,
+      "status": "degraded",
+      "successfulSources": 1,
+      "usableSources": 1,
       "totalSources": 6,
       "lastHealthyAt": "2026-08-03T23:20:06.234Z"
     },
@@ -18,7 +18,7 @@ window.KAOYAN_UPDATES = {
       "successfulSources": 2,
       "usableSources": 2,
       "totalSources": 2,
-      "lastHealthyAt": "2026-08-03T23:20:06.234Z"
+      "lastHealthyAt": "2026-08-04T23:19:17.339Z"
     }
   },
   "admissions": [
@@ -31,7 +31,6 @@ window.KAOYAN_UPDATES = {
       "referenceYear": 2026,
       "priority": 100,
       "curated": true,
-      "verifiedAt": "2026-08-03T23:20:06.234Z",
       "referenceOnly": true
     },
     {
@@ -43,7 +42,6 @@ window.KAOYAN_UPDATES = {
       "referenceYear": 2026,
       "priority": 100,
       "curated": true,
-      "verifiedAt": "2026-08-03T23:20:06.234Z",
       "referenceOnly": true
     },
     {
@@ -55,7 +53,6 @@ window.KAOYAN_UPDATES = {
       "referenceYear": null,
       "priority": 100,
       "curated": true,
-      "verifiedAt": "2026-08-03T23:20:06.234Z",
       "referenceOnly": false
     },
     {
@@ -67,7 +64,6 @@ window.KAOYAN_UPDATES = {
       "referenceYear": 2026,
       "priority": 90,
       "curated": true,
-      "verifiedAt": "2026-08-03T23:20:06.234Z",
       "referenceOnly": true
     },
     {
@@ -122,7 +118,7 @@ window.KAOYAN_UPDATES = {
       "topic": "国家政策",
       "date": "2025-09-25",
       "referenceYear": 2026,
-      "verifiedAt": "2026-08-03T23:20:06.234Z",
+      "verifiedAt": "2026-08-04T23:19:17.339Z",
       "referenceOnly": true
     },
     {
@@ -133,7 +129,7 @@ window.KAOYAN_UPDATES = {
       "topic": "国家政策",
       "date": "2025-09-24",
       "referenceYear": 2026,
-      "verifiedAt": "2026-08-03T23:20:06.234Z",
+      "verifiedAt": "2026-08-04T23:19:17.339Z",
       "referenceOnly": true
     },
     {
@@ -144,7 +140,7 @@ window.KAOYAN_UPDATES = {
       "topic": "国家政策",
       "date": "2025-09-24",
       "referenceYear": 2026,
-      "verifiedAt": "2026-08-03T23:20:06.234Z",
+      "verifiedAt": "2026-08-04T23:19:17.339Z",
       "referenceOnly": true
     },
     {
@@ -172,6 +168,36 @@ window.KAOYAN_UPDATES = {
   ],
   "politics": [
     {
+      "title": "《全国地质灾害防治“十五五”实施方案》公布",
+      "url": "https://www.news.cn/politics/20260804/d6ca5d205a68459c9cf0ccdf82616bc0/c.html",
+      "source": "新华网时政",
+      "sourceId": "xinhua-politics",
+      "topic": "中国式现代化",
+      "angle": "中国式现代化、进一步全面深化改革与规划实施",
+      "date": "2026-08-04",
+      "verifiedAt": "2026-08-04T23:19:17.339Z"
+    },
+    {
+      "title": "《新型电力系统建设“十五五”规划》发布",
+      "url": "https://www.news.cn/politics/20260803/0a3793e7524d4950afd620ab6b3ca0d7/c.html",
+      "source": "新华网时政",
+      "sourceId": "xinhua-politics",
+      "topic": "中国式现代化",
+      "angle": "中国式现代化、进一步全面深化改革与规划实施",
+      "date": "2026-08-03",
+      "verifiedAt": "2026-08-04T23:19:17.339Z"
+    },
+    {
+      "title": "李强签署国务院令 公布修订后的《集成电路布图设计保护条例》",
+      "url": "https://www.news.cn/politics/20260803/7e0e400485ff4f2680bac086478bd03c/c.html",
+      "source": "新华网时政",
+      "sourceId": "xinhua-politics",
+      "topic": "形势与政策：按背景",
+      "angle": "形势与政策：按背景、举措、意义三层复习",
+      "date": "2026-08-03",
+      "verifiedAt": "2026-08-04T23:19:17.339Z"
+    },
+    {
       "title": "推动城市发展绿色低碳转型走深走实",
       "url": "https://www.news.cn/politics/20260803/1472f86405a5426baef62732a3e1b820/c.html",
       "source": "新华网时政",
@@ -179,7 +205,7 @@ window.KAOYAN_UPDATES = {
       "topic": "生态文明建设与绿色发展",
       "angle": "生态文明建设与绿色发展",
       "date": "2026-08-03",
-      "verifiedAt": "2026-08-03T23:20:06.234Z"
+      "verifiedAt": "2026-08-04T23:19:17.339Z"
     },
     {
       "title": "深刻把握党建引领基层治理的重大意义与重要要求",
@@ -189,17 +215,7 @@ window.KAOYAN_UPDATES = {
       "topic": "党的领导",
       "angle": "党的领导、党的建设与全面从严治党",
       "date": "2026-08-03",
-      "verifiedAt": "2026-08-03T23:20:06.234Z"
-    },
-    {
-      "title": "哈尔滨持续壮大农业新质生产力",
-      "url": "https://www.news.cn/local/20260803/c93e70873f364acba1612b4db0377baa/c.html",
-      "source": "新华网时政",
-      "sourceId": "xinhua-politics",
-      "topic": "经济高质量发展",
-      "angle": "经济高质量发展、民生保障与新发展理念",
-      "date": "2026-08-03",
-      "verifiedAt": "2026-08-03T23:20:06.234Z"
+      "verifiedAt": "2026-08-04T23:19:17.339Z"
     },
     {
       "title": "未来五年退役军人就业培训将更加注重“需求牵引”",
@@ -209,7 +225,7 @@ window.KAOYAN_UPDATES = {
       "topic": "经济高质量发展",
       "angle": "经济高质量发展、民生保障与新发展理念",
       "date": "2026-07-31",
-      "verifiedAt": "2026-08-03T23:20:06.234Z"
+      "verifiedAt": "2026-08-04T23:19:17.339Z"
     },
     {
       "title": "《工业绿色低碳发展“十五五”规划》发布",
@@ -219,7 +235,7 @@ window.KAOYAN_UPDATES = {
       "topic": "生态文明建设与绿色发展",
       "angle": "生态文明建设与绿色发展",
       "date": "2026-07-31",
-      "verifiedAt": "2026-08-03T23:20:06.234Z"
+      "verifiedAt": "2026-08-04T23:19:17.339Z"
     },
     {
       "title": "“十五五”时期，工业绿色低碳发展这样推进",
@@ -229,7 +245,7 @@ window.KAOYAN_UPDATES = {
       "topic": "生态文明建设与绿色发展",
       "angle": "生态文明建设与绿色发展",
       "date": "2026-07-31",
-      "verifiedAt": "2026-08-03T23:20:06.234Z"
+      "verifiedAt": "2026-08-04T23:19:17.339Z"
     },
     {
       "title": "文化中国行·博物馆之夜丨探访洛阳古墓博物馆",
@@ -239,7 +255,7 @@ window.KAOYAN_UPDATES = {
       "topic": "文化自信与建设社会主义文化强国",
       "angle": "文化自信与建设社会主义文化强国",
       "date": "2026-07-31",
-      "verifiedAt": "2026-08-03T23:20:06.234Z"
+      "verifiedAt": "2026-08-04T23:19:17.339Z"
     },
     {
       "title": "《人工智能拟人化互动服务管理暂行办法》施行 “机械陪伴者”如何通过伦理安全关",
@@ -249,27 +265,7 @@ window.KAOYAN_UPDATES = {
       "topic": "科技自立自强",
       "angle": "科技自立自强、教育科技人才一体推进",
       "date": "2026-07-31",
-      "verifiedAt": "2026-08-03T23:20:06.234Z"
-    },
-    {
-      "title": "最高检发布检察机关依法维护国防利益、军人军属合法权益典型案例",
-      "url": "https://www.news.cn/legal/20260731/893ff58c18004706aa143b89a633b4fd/c.html",
-      "source": "新华网时政",
-      "sourceId": "xinhua-politics",
-      "topic": "强军思想与国防和军队现代化",
-      "angle": "强军思想与国防和军队现代化",
-      "date": "2026-07-31",
-      "verifiedAt": "2026-08-03T23:20:06.234Z"
-    },
-    {
-      "title": "四川省乐山市政协原党组副书记、副主席王策鸿被“双开”",
-      "url": "https://www.news.cn/legal/20260731/41076328198f468d858a055282a1cb49/c.html",
-      "source": "新华网时政",
-      "sourceId": "xinhua-politics",
-      "topic": "形势与政策：按背景",
-      "angle": "形势与政策：按背景、举措、意义三层复习",
-      "date": "2026-07-31",
-      "verifiedAt": "2026-08-03T23:20:06.234Z"
+      "verifiedAt": "2026-08-04T23:19:17.339Z"
     },
     {
       "title": "从中央政治局会议看下半年经济工作着力点",
@@ -279,7 +275,7 @@ window.KAOYAN_UPDATES = {
       "topic": "党的领导",
       "angle": "党的领导、党的建设与全面从严治党",
       "date": "2026-07-30",
-      "verifiedAt": "2026-08-03T23:20:06.234Z"
+      "verifiedAt": "2026-08-04T23:19:17.339Z"
     },
     {
       "title": "“十五五”时期推进应对气候变化工作的总抓手——解读《国家应对气候变化“十五五”规划》",
@@ -289,7 +285,7 @@ window.KAOYAN_UPDATES = {
       "topic": "中国式现代化",
       "angle": "中国式现代化、进一步全面深化改革与规划实施",
       "date": "2026-07-29",
-      "verifiedAt": "2026-08-03T23:20:06.234Z"
+      "verifiedAt": "2026-08-04T23:19:17.339Z"
     }
   ],
   "sourceStatus": [
@@ -299,11 +295,10 @@ window.KAOYAN_UPDATES = {
       "source": "电子科大研招网·通知公告",
       "url": "https://yz.uestc.edu.cn/sszs/tzgg.htm",
       "targetSchool": true,
-      "ok": true,
-      "count": 16,
-      "checkedAt": "2026-08-03T23:20:06.234Z",
-      "transport": "curl-ipv4-fallback",
-      "attempts": 1
+      "ok": false,
+      "count": 0,
+      "checkedAt": "2026-08-04T23:19:17.339Z",
+      "error": "fetch: fetch failed | ETIMEDOUT; curl: Command failed: curl -4 --fail --silent --show-error --location --connect-timeout 12 --max-time 35 --retry 2 --retry-all-errors --header accept: text/html,application/xhtml+xml --user-agent Mozilla/5.0 (compatible; KaoyanWarRoom/3.0; +https://github.com/xinchenda/kaoyan-war-room) https://yz.uestc.edu.cn/sszs/tzgg.htm\ncurl: (28) Failed to connect to yz.uestc.edu.cn port 443 after 12002 ms: Timeout was reached\ncurl: (28) Failed to connect to yz.uestc.edu.cn port 443 after 12002 ms: Timeout was reached\ncurl: (28) Failed to connect to yz.uestc.edu.cn port 443 after 12002 ms: Timeout was reached\n"
     },
     {
       "id": "uestc-guides",
@@ -311,11 +306,10 @@ window.KAOYAN_UPDATES = {
       "source": "电子科大研招网·招生章程",
       "url": "https://yz.uestc.edu.cn/sszs/zsjz.htm",
       "targetSchool": true,
-      "ok": true,
-      "count": 8,
-      "checkedAt": "2026-08-03T23:20:06.234Z",
-      "transport": "curl-ipv4-fallback",
-      "attempts": 1
+      "ok": false,
+      "count": 0,
+      "checkedAt": "2026-08-04T23:19:17.339Z",
+      "error": "fetch: fetch failed | ETIMEDOUT; curl: Command failed: curl -4 --fail --silent --show-error --location --connect-timeout 12 --max-time 35 --retry 2 --retry-all-errors --header accept: text/html,application/xhtml+xml --user-agent Mozilla/5.0 (compatible; KaoyanWarRoom/3.0; +https://github.com/xinchenda/kaoyan-war-room) https://yz.uestc.edu.cn/sszs/zsjz.htm\ncurl: (28) Failed to connect to yz.uestc.edu.cn port 443 after 12002 ms: Timeout was reached\ncurl: (28) Failed to connect to yz.uestc.edu.cn port 443 after 12002 ms: Timeout was reached\ncurl: (28) Failed to connect to yz.uestc.edu.cn port 443 after 12002 ms: Timeout was reached\n"
     },
     {
       "id": "uestc-syllabi",
@@ -323,11 +317,10 @@ window.KAOYAN_UPDATES = {
       "source": "电子科大研招网·考试大纲",
       "url": "https://yz.uestc.edu.cn/xxcx/ksdg.htm",
       "targetSchool": true,
-      "ok": true,
-      "count": 2,
-      "checkedAt": "2026-08-03T23:20:06.234Z",
-      "transport": "curl-ipv4-fallback",
-      "attempts": 1
+      "ok": false,
+      "count": 0,
+      "checkedAt": "2026-08-04T23:19:17.339Z",
+      "error": "fetch: fetch failed | ETIMEDOUT; curl: Command failed: curl -4 --fail --silent --show-error --location --connect-timeout 12 --max-time 35 --retry 2 --retry-all-errors --header accept: text/html,application/xhtml+xml --user-agent Mozilla/5.0 (compatible; KaoyanWarRoom/3.0; +https://github.com/xinchenda/kaoyan-war-room) https://yz.uestc.edu.cn/xxcx/ksdg.htm\ncurl: (28) Failed to connect to yz.uestc.edu.cn port 443 after 12002 ms: Timeout was reached\ncurl: (28) Failed to connect to yz.uestc.edu.cn port 443 after 12002 ms: Timeout was reached\ncurl: (28) Failed to connect to yz.uestc.edu.cn port 443 after 12002 ms: Timeout was reached\n"
     },
     {
       "id": "sice-notices",
@@ -335,11 +328,10 @@ window.KAOYAN_UPDATES = {
       "source": "电子科大信通学院·研究生通知",
       "url": "https://www.sice.uestc.edu.cn/index/tzgg/yjsk.htm",
       "targetSchool": true,
-      "ok": true,
-      "count": 10,
-      "checkedAt": "2026-08-03T23:20:06.234Z",
-      "transport": "curl-ipv4-fallback",
-      "attempts": 1
+      "ok": false,
+      "count": 0,
+      "checkedAt": "2026-08-04T23:19:17.339Z",
+      "error": "fetch: fetch failed | ETIMEDOUT; curl: Command failed: curl -4 --fail --silent --show-error --location --connect-timeout 12 --max-time 35 --retry 2 --retry-all-errors --header accept: text/html,application/xhtml+xml --user-agent Mozilla/5.0 (compatible; KaoyanWarRoom/3.0; +https://github.com/xinchenda/kaoyan-war-room) https://www.sice.uestc.edu.cn/index/tzgg/yjsk.htm\ncurl: (28) Failed to connect to www.sice.uestc.edu.cn port 443 after 12002 ms: Timeout was reached\ncurl: (28) Failed to connect to www.sice.uestc.edu.cn port 443 after 12002 ms: Timeout was reached\ncurl: (28) Failed to connect to www.sice.uestc.edu.cn port 443 after 12002 ms: Timeout was reached\n"
     },
     {
       "id": "ese-notices",
@@ -347,11 +339,10 @@ window.KAOYAN_UPDATES = {
       "source": "电子科大电子学院·官网",
       "url": "https://www.ese.uestc.edu.cn/",
       "targetSchool": true,
-      "ok": true,
+      "ok": false,
       "count": 0,
-      "checkedAt": "2026-08-03T23:20:06.234Z",
-      "transport": "curl-ipv4-fallback",
-      "attempts": 1
+      "checkedAt": "2026-08-04T23:19:17.339Z",
+      "error": "fetch: fetch failed | ETIMEDOUT; curl: Command failed: curl -4 --fail --silent --show-error --location --connect-timeout 12 --max-time 35 --retry 2 --retry-all-errors --header accept: text/html,application/xhtml+xml --user-agent Mozilla/5.0 (compatible; KaoyanWarRoom/3.0; +https://github.com/xinchenda/kaoyan-war-room) https://www.ese.uestc.edu.cn/\ncurl: (28) Failed to connect to www.ese.uestc.edu.cn port 443 after 12002 ms: Timeout was reached\ncurl: (28) Failed to connect to www.ese.uestc.edu.cn port 443 after 12002 ms: Timeout was reached\ncurl: (28) Failed to connect to www.ese.uestc.edu.cn port 443 after 12002 ms: Timeout was reached\n"
     },
     {
       "id": "chsi-policy",
@@ -361,7 +352,7 @@ window.KAOYAN_UPDATES = {
       "targetSchool": false,
       "ok": true,
       "count": 52,
-      "checkedAt": "2026-08-03T23:20:06.234Z",
+      "checkedAt": "2026-08-04T23:19:17.339Z",
       "transport": "fetch",
       "attempts": 1
     },
@@ -372,8 +363,8 @@ window.KAOYAN_UPDATES = {
       "url": "https://www.news.cn/politics/",
       "targetSchool": false,
       "ok": true,
-      "count": 27,
-      "checkedAt": "2026-08-03T23:20:06.234Z",
+      "count": 25,
+      "checkedAt": "2026-08-04T23:19:17.339Z",
       "transport": "fetch",
       "attempts": 1
     },
@@ -385,7 +376,7 @@ window.KAOYAN_UPDATES = {
       "targetSchool": false,
       "ok": true,
       "count": 1,
-      "checkedAt": "2026-08-03T23:20:06.234Z",
+      "checkedAt": "2026-08-04T23:19:17.339Z",
       "transport": "fetch",
       "attempts": 1
     },
@@ -394,44 +385,40 @@ window.KAOYAN_UPDATES = {
       "category": "references",
       "source": "2026 年电子科技大学硕士研究生招生专业目录",
       "url": "https://yzbm.uestc.edu.cn/zsml/sszsml/index/2026",
-      "ok": true,
-      "count": 1,
-      "checkedAt": "2026-08-03T23:20:06.234Z",
-      "transport": "curl-ipv4-fallback",
-      "attempts": 1
+      "ok": false,
+      "count": 0,
+      "checkedAt": "2026-08-04T23:19:17.339Z",
+      "error": "fetch: fetch failed | ETIMEDOUT; curl: Command failed: curl -4 --fail --silent --show-error --location --connect-timeout 12 --max-time 35 --retry 2 --retry-all-errors --header accept: text/html,application/xhtml+xml --user-agent Mozilla/5.0 (compatible; KaoyanWarRoom/3.0; +https://github.com/xinchenda/kaoyan-war-room) https://yzbm.uestc.edu.cn/zsml/sszsml/index/2026\ncurl: (28) Failed to connect to yzbm.uestc.edu.cn port 443 after 12002 ms: Timeout was reached\ncurl: (28) Failed to connect to yzbm.uestc.edu.cn port 443 after 12002 ms: Timeout was reached\ncurl: (28) Failed to connect to yzbm.uestc.edu.cn port 443 after 12002 ms: Timeout was reached\n"
     },
     {
       "id": "reference-books",
       "category": "references",
       "source": "2026 年电子科技大学 858 信号与系统参考书目",
       "url": "https://yz.uestc.edu.cn/info/1052/3672.htm",
-      "ok": true,
-      "count": 1,
-      "checkedAt": "2026-08-03T23:20:06.234Z",
-      "transport": "curl-ipv4-fallback",
-      "attempts": 1
+      "ok": false,
+      "count": 0,
+      "checkedAt": "2026-08-04T23:19:17.339Z",
+      "error": "fetch: fetch failed | ETIMEDOUT; curl: Command failed: curl -4 --fail --silent --show-error --location --connect-timeout 12 --max-time 35 --retry 2 --retry-all-errors --header accept: text/html,application/xhtml+xml --user-agent Mozilla/5.0 (compatible; KaoyanWarRoom/3.0; +https://github.com/xinchenda/kaoyan-war-room) https://yz.uestc.edu.cn/info/1052/3672.htm\ncurl: (28) Failed to connect to yz.uestc.edu.cn port 443 after 12001 ms: Timeout was reached\ncurl: (28) Failed to connect to yz.uestc.edu.cn port 443 after 12002 ms: Timeout was reached\ncurl: (28) Failed to connect to yz.uestc.edu.cn port 443 after 12002 ms: Timeout was reached\n"
     },
     {
       "id": "reference-syllabus",
       "category": "references",
       "source": "电子科技大学 858 信号与系统官方考试大纲",
       "url": "https://xxgkw.uestc.edu.cn/info/1054/3967.htm",
-      "ok": true,
-      "count": 1,
-      "checkedAt": "2026-08-03T23:20:06.234Z",
-      "transport": "curl-ipv4-fallback",
-      "attempts": 1
+      "ok": false,
+      "count": 0,
+      "checkedAt": "2026-08-04T23:19:17.339Z",
+      "error": "fetch: fetch failed | ETIMEDOUT; curl: Command failed: curl -4 --fail --silent --show-error --location --connect-timeout 12 --max-time 35 --retry 2 --retry-all-errors --header accept: text/html,application/xhtml+xml --user-agent Mozilla/5.0 (compatible; KaoyanWarRoom/3.0; +https://github.com/xinchenda/kaoyan-war-room) https://xxgkw.uestc.edu.cn/info/1054/3967.htm\ncurl: (28) Failed to connect to xxgkw.uestc.edu.cn port 443 after 12002 ms: Timeout was reached\ncurl: (28) Failed to connect to xxgkw.uestc.edu.cn port 443 after 12002 ms: Timeout was reached\ncurl: (28) Failed to connect to xxgkw.uestc.edu.cn port 443 after 12002 ms: Timeout was reached\n"
     },
     {
       "id": "reference-cutoff",
       "category": "references",
       "source": "2026 年信息与通信工程学院复试线：电子信息全日制 365 分",
       "url": "https://www.sice.uestc.edu.cn/info/1142/16093.htm",
-      "ok": true,
-      "count": 1,
-      "checkedAt": "2026-08-03T23:20:06.234Z",
-      "transport": "curl-ipv4-fallback",
-      "attempts": 1
+      "ok": false,
+      "count": 0,
+      "checkedAt": "2026-08-04T23:19:17.339Z",
+      "error": "fetch: fetch failed | ETIMEDOUT; curl: Command failed: curl -4 --fail --silent --show-error --location --connect-timeout 12 --max-time 35 --retry 2 --retry-all-errors --header accept: text/html,application/xhtml+xml --user-agent Mozilla/5.0 (compatible; KaoyanWarRoom/3.0; +https://github.com/xinchenda/kaoyan-war-room) https://www.sice.uestc.edu.cn/info/1142/16093.htm\ncurl: (28) Failed to connect to www.sice.uestc.edu.cn port 443 after 12002 ms: Timeout was reached\ncurl: (28) Failed to connect to www.sice.uestc.edu.cn port 443 after 12003 ms: Timeout was reached\ncurl: (28) Failed to connect to www.sice.uestc.edu.cn port 443 after 12002 ms: Timeout was reached\n"
     }
   ]
 };
