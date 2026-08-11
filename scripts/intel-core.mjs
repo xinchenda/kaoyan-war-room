@@ -6,6 +6,11 @@ export function cleanText(value) {
   return String(value || "").replace(/\s+/g, " ").trim();
 }
 
+export function extractOfficialTitle(html, selector) {
+  const $ = load(html);
+  return cleanText($(selector).first().text());
+}
+
 export function isOfficialUrl(value) {
   try {
     const { hostname, protocol } = new URL(value);
@@ -45,8 +50,8 @@ export function referenceYear(title) {
 
 export function topicAngle(title) {
   const mappings = [
-    [/习近平|党中央|政治局|党建|全面从严治党/, "党的领导、党的建设与全面从严治党"],
-    [/经济|统一大市场|新质生产力|高质量|就业|民生|共同富裕/, "经济高质量发展、民生保障与新发展理念"],
+    [/习近平|党中央|政治局|党建|全面从严治党|学习教育/, "党的领导、党的建设与全面从严治党"],
+    [/经济|统一大市场|新质生产力|高质量|就业|民生|共同富裕|新发展理念/, "经济高质量发展、民生保障与新发展理念"],
     [/科技|人工智能|教育|人才|创新/, "科技自立自强、教育科技人才一体推进"],
     [/生态|碳达峰|绿色|自然资源/, "生态文明建设与绿色发展"],
     [/法治|法院|司法|立法|安全/, "全面依法治国与国家安全"],
@@ -143,7 +148,7 @@ export function validateFeed(feed) {
       urls.add(item.url);
     }
   }
-  if (!(feed.admissions || []).some((item) => /858|信号与系统/.test(item.title))) errors.push("admissions is missing the 858 reference");
+  if (!(feed.admissions || []).some((item) => /858|信号与系统/.test(`${item.title} ${item.topic || ""}`))) errors.push("admissions is missing the 858 reference");
   if (!(feed.politics || []).every((item) => item.source && item.angle)) errors.push("politics contains an unclassified item");
   if (!feed.health || !["healthy", "degraded"].includes(feed.health.status)) errors.push("health status is missing");
   return errors;

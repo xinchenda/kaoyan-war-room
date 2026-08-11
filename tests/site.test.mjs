@@ -45,7 +45,7 @@ test("intelligence feed contains official links and bounded lists", async () => 
     assert.equal(url.protocol, "https:");
     assert.ok(item.title.length >= 8);
   }
-  assert.ok(feed.admissions.some((item) => /858/.test(item.title)));
+  assert.ok(feed.admissions.some((item) => /858|信号与系统/.test(`${item.title} ${item.topic || ""}`)));
   assert.ok(feed.politics.every((item) => item.source && item.angle));
   assert.equal(feed.health.status, "healthy");
   assert.ok(feed.sourceStatus.every((item) => item.url && item.checkedAt));

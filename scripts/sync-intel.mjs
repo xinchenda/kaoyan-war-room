@@ -4,6 +4,7 @@ import { resolve } from "node:path";
 import { promisify } from "node:util";
 import {
   dedupe,
+  extractOfficialTitle,
   isOfficialUrl,
   parseAdmissionPage,
   parsePoliticsPage,
@@ -36,10 +37,10 @@ const politicsSources = [
 ];
 
 const pinnedAdmissions = [
-  { id: "reference-catalog", title: "2026 年电子科技大学硕士研究生招生专业目录", url: "https://yzbm.uestc.edu.cn/zsml/sszsml/index/2026", source: "电子科大研招网", topic: "专业目录", date: "2025-10-09", referenceYear: 2026, priority: 100, verifyPattern: /招生目录/ },
-  { id: "reference-books", title: "2026 年电子科技大学 858 信号与系统参考书目", url: "https://yz.uestc.edu.cn/info/1052/3672.htm", source: "电子科大研招网", topic: "858 参考书", date: "2025-09-30", referenceYear: 2026, priority: 100, verifyPattern: /参考书目/ },
-  { id: "reference-syllabus", title: "电子科技大学 858 信号与系统官方考试大纲", url: "https://xxgkw.uestc.edu.cn/info/1054/3967.htm", source: "电子科技大学信息公开网", topic: "858 大纲", date: "2019-03-20", referenceYear: null, priority: 100, verifyPattern: /858/ },
-  { id: "reference-cutoff", title: "2026 年信息与通信工程学院复试线：电子信息全日制 365 分", url: "https://www.sice.uestc.edu.cn/info/1142/16093.htm", source: "电子科大信通学院", topic: "目标参照", date: "2026-03-20", referenceYear: 2026, priority: 90, verifyPattern: /365|电子信息/ },
+  { id: "reference-catalog", title: "电子科技大学2026年招收攻读硕士学位研究生专业目录", titleSelector: "h1", url: "https://yzbm.uestc.edu.cn/zsml/sszsml/index/2026", source: "电子科大研招网", topic: "专业目录", date: "2025-10-09", referenceYear: 2026, priority: 100, verifyPattern: /招生目录/ },
+  { id: "reference-books", title: "2026年全国硕士研究招生考试电子科技大学初试自命题科目参考书目", titleSelector: ".tit", url: "https://yz.uestc.edu.cn/info/1052/3672.htm", source: "电子科大研招网", topic: "858 参考书", date: "2025-09-30", referenceYear: 2026, priority: 100, verifyPattern: /参考书目/ },
+  { id: "reference-syllabus", title: "电子科技大学硕士研究生入学考试子命题科目初试大纲", titleSelector: ".detail .tit", url: "https://xxgkw.uestc.edu.cn/info/1054/3967.htm", source: "电子科技大学信息公开网", topic: "858 大纲", date: "2019-03-20", referenceYear: 2014, priority: 100, verifyPattern: /858/ },
+  { id: "reference-cutoff", title: "2026年电子科技大学信息与通信工程学院硕士研究生复试工作安排通知", titleSelector: ".c-tit h3", url: "https://www.sice.uestc.edu.cn/info/1142/16093.htm", source: "电子科大信通学院", topic: "目标参照", date: "2026-03-20", referenceYear: 2026, priority: 90, verifyPattern: /365|电子信息/ },
 ];
 
 const sleep = (milliseconds) => new Promise((resolvePromise) => setTimeout(resolvePromise, milliseconds));
@@ -149,13 +150,15 @@ async function verifyPinnedReferences(items) {
     try {
       const response = await fetchHtml(item.url);
       if (!item.verifyPattern.test(response.html)) throw new Error("expected reference text was not found");
-      const { id, verifyPattern, ...publishedItem } = item;
+      const officialTitle = extractOfficialTitle(response.html, item.titleSelector);
+      if (!officialTitle) throw new Error("official page title was not found");
+      const { id, titleSelector, verifyPattern, ...publishedItem } = item;
       return {
-        item: { ...publishedItem, curated: true, verifiedAt: nowIso },
+        item: { ...publishedItem, title: officialTitle, curated: true, verifiedAt: nowIso },
         status: { id, category: "references", source: item.title, url: item.url, ok: true, count: 1, checkedAt: nowIso, transport: response.transport, attempts: response.attempts },
       };
     } catch (error) {
-      const { id, verifyPattern, ...publishedItem } = item;
+      const { id, titleSelector, verifyPattern, ...publishedItem } = item;
       return {
         item: { ...publishedItem, curated: true },
         status: { id, category: "references", source: item.title, url: item.url, ok: false, count: 0, checkedAt: nowIso, error: errorDetail(error) },

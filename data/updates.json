@@ -1,29 +1,29 @@
 {
   "schemaVersion": 3,
-  "generatedAt": "2026-08-10T22:57:29.422Z",
+  "generatedAt": "2026-08-11T03:59:43.321Z",
   "notice": "仅收录官方白名单域名的标题与原文链接。2027 招生信息发布前，历史条目只作年度参考；政治主题为自动复习归类，不代表官方命题判断。",
   "health": {
     "status": "healthy",
-    "checkedAt": "2026-08-10T22:57:29.422Z",
+    "checkedAt": "2026-08-11T03:59:43.321Z",
     "targetYear": 2027,
     "admissions": {
       "status": "healthy",
       "successfulSources": 6,
       "usableSources": 5,
       "totalSources": 6,
-      "lastHealthyAt": "2026-08-10T22:57:29.422Z"
+      "lastHealthyAt": "2026-08-11T03:59:43.321Z"
     },
     "politics": {
       "status": "healthy",
       "successfulSources": 2,
       "usableSources": 2,
       "totalSources": 2,
-      "lastHealthyAt": "2026-08-10T22:57:29.422Z"
+      "lastHealthyAt": "2026-08-11T03:59:43.321Z"
     }
   },
   "admissions": [
     {
-      "title": "2026 年电子科技大学硕士研究生招生专业目录",
+      "title": "电子科技大学2026年招收攻读硕士学位研究生专业目录",
       "url": "https://yzbm.uestc.edu.cn/zsml/sszsml/index/2026",
       "source": "电子科大研招网",
       "topic": "专业目录",
@@ -31,11 +31,11 @@
       "referenceYear": 2026,
       "priority": 100,
       "curated": true,
-      "verifiedAt": "2026-08-10T22:57:29.422Z",
+      "verifiedAt": "2026-08-11T03:59:43.321Z",
       "referenceOnly": true
     },
     {
-      "title": "2026 年电子科技大学 858 信号与系统参考书目",
+      "title": "2026年全国硕士研究招生考试电子科技大学初试自命题科目参考书目",
       "url": "https://yz.uestc.edu.cn/info/1052/3672.htm",
       "source": "电子科大研招网",
       "topic": "858 参考书",
@@ -43,23 +43,23 @@
       "referenceYear": 2026,
       "priority": 100,
       "curated": true,
-      "verifiedAt": "2026-08-10T22:57:29.422Z",
+      "verifiedAt": "2026-08-11T03:59:43.321Z",
       "referenceOnly": true
     },
     {
-      "title": "电子科技大学 858 信号与系统官方考试大纲",
+      "title": "电子科技大学硕士研究生入学考试子命题科目初试大纲",
       "url": "https://xxgkw.uestc.edu.cn/info/1054/3967.htm",
       "source": "电子科技大学信息公开网",
       "topic": "858 大纲",
       "date": "2019-03-20",
-      "referenceYear": null,
+      "referenceYear": 2014,
       "priority": 100,
       "curated": true,
-      "verifiedAt": "2026-08-10T22:57:29.422Z",
-      "referenceOnly": false
+      "verifiedAt": "2026-08-11T03:59:43.321Z",
+      "referenceOnly": true
     },
     {
-      "title": "2026 年信息与通信工程学院复试线：电子信息全日制 365 分",
+      "title": "2026年电子科技大学信息与通信工程学院硕士研究生复试工作安排通知",
       "url": "https://www.sice.uestc.edu.cn/info/1142/16093.htm",
       "source": "电子科大信通学院",
       "topic": "目标参照",
@@ -67,7 +67,7 @@
       "referenceYear": 2026,
       "priority": 90,
       "curated": true,
-      "verifiedAt": "2026-08-10T22:57:29.422Z",
+      "verifiedAt": "2026-08-11T03:59:43.321Z",
       "referenceOnly": true
     },
     {
@@ -78,7 +78,7 @@
       "topic": "学校通知",
       "date": "2026-03-15",
       "referenceYear": 2026,
-      "verifiedAt": "2026-08-10T22:57:29.422Z",
+      "verifiedAt": "2026-08-11T03:59:43.321Z",
       "referenceOnly": true
     },
     {
@@ -89,7 +89,7 @@
       "topic": "学校通知",
       "date": "2025-12-11",
       "referenceYear": 2026,
-      "verifiedAt": "2026-08-10T22:57:29.422Z",
+      "verifiedAt": "2026-08-11T03:59:43.321Z",
       "referenceOnly": true
     },
     {
@@ -100,7 +100,7 @@
       "topic": "学校通知",
       "date": "2025-10-22",
       "referenceYear": 2026,
-      "verifiedAt": "2026-08-10T22:57:29.422Z",
+      "verifiedAt": "2026-08-11T03:59:43.321Z",
       "referenceOnly": true
     },
     {
@@ -111,7 +111,7 @@
       "topic": "招生章程",
       "date": "2025-10-09",
       "referenceYear": 2026,
-      "verifiedAt": "2026-08-10T22:57:29.422Z",
+      "verifiedAt": "2026-08-11T03:59:43.321Z",
       "referenceOnly": true
     },
     {
@@ -122,7 +122,7 @@
       "topic": "国家政策",
       "date": "2025-09-25",
       "referenceYear": 2026,
-      "verifiedAt": "2026-08-10T22:57:29.422Z",
+      "verifiedAt": "2026-08-11T03:59:43.321Z",
       "referenceOnly": true
     },
     {
@@ -133,7 +133,7 @@
       "topic": "国家政策",
       "date": "2025-09-24",
       "referenceYear": 2026,
-      "verifiedAt": "2026-08-10T22:57:29.422Z",
+      "verifiedAt": "2026-08-11T03:59:43.321Z",
       "referenceOnly": true
     },
     {
@@ -144,7 +144,7 @@
       "topic": "国家政策",
       "date": "2025-09-24",
       "referenceYear": 2026,
-      "verifiedAt": "2026-08-10T22:57:29.422Z",
+      "verifiedAt": "2026-08-11T03:59:43.321Z",
       "referenceOnly": true
     },
     {
@@ -155,7 +155,7 @@
       "topic": "学校通知",
       "date": "2025-06-11",
       "referenceYear": 2026,
-      "verifiedAt": "2026-08-10T22:57:29.422Z",
+      "verifiedAt": "2026-08-11T03:59:43.321Z",
       "referenceOnly": true
     },
     {
@@ -166,11 +166,21 @@
       "topic": "学校通知",
       "date": "2025-05-09",
       "referenceYear": 2026,
-      "verifiedAt": "2026-08-10T22:57:29.422Z",
+      "verifiedAt": "2026-08-11T03:59:43.321Z",
       "referenceOnly": true
     }
   ],
   "politics": [
+    {
+      "title": "“十五五”开局之年城市地下管网建设观察",
+      "url": "https://www.news.cn/politics/20260810/6f0c33e61217453da3bcbf85e036fcd3/c.html",
+      "source": "新华网时政",
+      "sourceId": "xinhua-politics",
+      "topic": "中国式现代化",
+      "angle": "中国式现代化、进一步全面深化改革与规划实施",
+      "date": "2026-08-10",
+      "verifiedAt": "2026-08-11T03:59:43.321Z"
+    },
     {
       "title": "潮起渤海湾 奋楫“十五五”——党中央国务院邀请优秀专家人才代表北戴河休假侧记",
       "url": "https://www.news.cn/politics/20260810/d11e0d6b7e1a44709742dc9dd50ccf66/c.html",
@@ -179,7 +189,17 @@
       "topic": "党的领导",
       "angle": "党的领导、党的建设与全面从严治党",
       "date": "2026-08-10",
-      "verifiedAt": "2026-08-10T22:57:29.422Z"
+      "verifiedAt": "2026-08-11T03:59:43.321Z"
+    },
+    {
+      "title": "沈阳打造一刻钟便民生活圈观察",
+      "url": "https://www.news.cn/local/20260810/af9b5251820d45a68b21f5613722f276/c.html",
+      "source": "新华网时政",
+      "sourceId": "xinhua-politics",
+      "topic": "经济高质量发展",
+      "angle": "经济高质量发展、民生保障与新发展理念",
+      "date": "2026-08-10",
+      "verifiedAt": "2026-08-11T03:59:43.321Z"
     },
     {
       "title": "玉猪龙为啥这么“奇”——探寻红山文化出土的玉器",
@@ -189,7 +209,7 @@
       "topic": "文化自信与建设社会主义文化强国",
       "angle": "文化自信与建设社会主义文化强国",
       "date": "2026-08-09",
-      "verifiedAt": "2026-08-10T22:57:29.422Z"
+      "verifiedAt": "2026-08-11T03:59:43.321Z"
     },
     {
       "title": "国防部征兵办公室印发征兵工作人员职业道德准则",
@@ -199,17 +219,7 @@
       "topic": "强军思想与国防和军队现代化",
       "angle": "强军思想与国防和军队现代化",
       "date": "2026-08-09",
-      "verifiedAt": "2026-08-10T22:57:29.422Z"
-    },
-    {
-      "title": "武汉试点智能捕蚊“黑科技”，20天灭蚊超7万只",
-      "url": "https://www.news.cn/local/20260809/2c75c5c35c7d4b4ba66f08df143f9a5f/c.html",
-      "source": "新华网时政",
-      "sourceId": "xinhua-politics",
-      "topic": "科技自立自强",
-      "angle": "科技自立自强、教育科技人才一体推进",
-      "date": "2026-08-09",
-      "verifiedAt": "2026-08-10T22:57:29.422Z"
+      "verifiedAt": "2026-08-11T03:59:43.321Z"
     },
     {
       "title": "《民用航空发展“十五五”规划》印发",
@@ -219,17 +229,17 @@
       "topic": "中国式现代化",
       "angle": "中国式现代化、进一步全面深化改革与规划实施",
       "date": "2026-08-07",
-      "verifiedAt": "2026-08-10T22:57:29.422Z"
+      "verifiedAt": "2026-08-11T03:59:43.321Z"
     },
     {
       "title": "各地区各部门各单位深入开展学习教育——着力在为民造福上出实招、求实效",
       "url": "https://www.news.cn/politics/20260807/0975887d4ff6443eb493b258ea835c0e/c.html",
       "source": "新华网时政",
       "sourceId": "xinhua-politics",
-      "topic": "科技自立自强",
-      "angle": "科技自立自强、教育科技人才一体推进",
+      "topic": "党的领导",
+      "angle": "党的领导、党的建设与全面从严治党",
       "date": "2026-08-07",
-      "verifiedAt": "2026-08-10T22:57:29.422Z"
+      "verifiedAt": "2026-08-11T03:59:43.321Z"
     },
     {
       "title": "《民用爆炸物品行业安全发展“十五五”规划》发布",
@@ -239,7 +249,7 @@
       "topic": "全面依法治国与国家安全",
       "angle": "全面依法治国与国家安全",
       "date": "2026-08-06",
-      "verifiedAt": "2026-08-10T22:57:29.422Z"
+      "verifiedAt": "2026-08-11T03:59:43.321Z"
     },
     {
       "title": "防灾减灾救灾一线见闻丨高温持续，多地旱涝同防保民生",
@@ -249,17 +259,17 @@
       "topic": "经济高质量发展",
       "angle": "经济高质量发展、民生保障与新发展理念",
       "date": "2026-08-06",
-      "verifiedAt": "2026-08-10T22:57:29.422Z"
+      "verifiedAt": "2026-08-11T03:59:43.321Z"
     },
     {
       "title": "新发展理念引领我国发展格局深刻变革",
       "url": "https://www.news.cn/politics/20260806/772648a535b14e7faaa9f36606887ce7/c.html",
       "source": "新华网时政",
       "sourceId": "xinhua-politics",
-      "topic": "形势与政策：按背景",
-      "angle": "形势与政策：按背景、举措、意义三层复习",
+      "topic": "经济高质量发展",
+      "angle": "经济高质量发展、民生保障与新发展理念",
       "date": "2026-08-06",
-      "verifiedAt": "2026-08-10T22:57:29.422Z"
+      "verifiedAt": "2026-08-11T03:59:43.321Z"
     },
     {
       "title": "这份规划，为“十五五”气象观测建设划重点",
@@ -269,27 +279,17 @@
       "topic": "中国式现代化",
       "angle": "中国式现代化、进一步全面深化改革与规划实施",
       "date": "2026-08-05",
-      "verifiedAt": "2026-08-10T22:57:29.422Z"
+      "verifiedAt": "2026-08-11T03:59:43.321Z"
     },
     {
-      "title": "既要靠科技又要靠“老把式”——自然资源部有关负责人介绍“十五五”地灾防治工作",
-      "url": "https://www.news.cn/politics/20260804/b030d395e6d649c39249cb64f88232f7/c.html",
-      "source": "新华网时政",
-      "sourceId": "xinhua-politics",
-      "topic": "科技自立自强",
-      "angle": "科技自立自强、教育科技人才一体推进",
-      "date": "2026-08-04",
-      "verifiedAt": "2026-08-10T22:57:29.422Z"
-    },
-    {
-      "title": "国务院成立重庆彭水汉葭街道“7·17”特别重大山体崩塌灾害调查评估组",
-      "url": "https://www.news.cn/politics/20260804/28d74d55d95846139237f96d79bc4d5a/c.html",
+      "title": "便民的“空中天梯”，更是富民的“发展阶梯”",
+      "url": "https://www.news.cn/comments/20260805/821f7ecd1aac41da89a6c791e089625b/c.html",
       "source": "新华网时政",
       "sourceId": "xinhua-politics",
       "topic": "形势与政策：按背景",
       "angle": "形势与政策：按背景、举措、意义三层复习",
-      "date": "2026-08-04",
-      "verifiedAt": "2026-08-10T22:57:29.422Z"
+      "date": "2026-08-05",
+      "verifiedAt": "2026-08-11T03:59:43.321Z"
     }
   ],
   "sourceStatus": [
@@ -301,7 +301,7 @@
       "targetSchool": true,
       "ok": true,
       "count": 16,
-      "checkedAt": "2026-08-10T22:57:29.422Z",
+      "checkedAt": "2026-08-11T03:59:43.321Z",
       "transport": "fetch",
       "attempts": 1
     },
@@ -313,7 +313,7 @@
       "targetSchool": true,
       "ok": true,
       "count": 8,
-      "checkedAt": "2026-08-10T22:57:29.422Z",
+      "checkedAt": "2026-08-11T03:59:43.321Z",
       "transport": "fetch",
       "attempts": 1
     },
@@ -325,7 +325,7 @@
       "targetSchool": true,
       "ok": true,
       "count": 2,
-      "checkedAt": "2026-08-10T22:57:29.422Z",
+      "checkedAt": "2026-08-11T03:59:43.321Z",
       "transport": "fetch",
       "attempts": 1
     },
@@ -337,7 +337,7 @@
       "targetSchool": true,
       "ok": true,
       "count": 10,
-      "checkedAt": "2026-08-10T22:57:29.422Z",
+      "checkedAt": "2026-08-11T03:59:43.321Z",
       "transport": "fetch",
       "attempts": 1
     },
@@ -349,7 +349,7 @@
       "targetSchool": true,
       "ok": true,
       "count": 0,
-      "checkedAt": "2026-08-10T22:57:29.422Z",
+      "checkedAt": "2026-08-11T03:59:43.321Z",
       "transport": "fetch",
       "attempts": 1
     },
@@ -361,7 +361,7 @@
       "targetSchool": false,
       "ok": true,
       "count": 52,
-      "checkedAt": "2026-08-10T22:57:29.422Z",
+      "checkedAt": "2026-08-11T03:59:43.321Z",
       "transport": "fetch",
       "attempts": 1
     },
@@ -372,8 +372,8 @@
       "url": "https://www.news.cn/politics/",
       "targetSchool": false,
       "ok": true,
-      "count": 27,
-      "checkedAt": "2026-08-10T22:57:29.422Z",
+      "count": 25,
+      "checkedAt": "2026-08-11T03:59:43.321Z",
       "transport": "fetch",
       "attempts": 1
     },
@@ -385,51 +385,51 @@
       "targetSchool": false,
       "ok": true,
       "count": 1,
-      "checkedAt": "2026-08-10T22:57:29.422Z",
+      "checkedAt": "2026-08-11T03:59:43.321Z",
       "transport": "fetch",
       "attempts": 1
     },
     {
       "id": "reference-catalog",
       "category": "references",
-      "source": "2026 年电子科技大学硕士研究生招生专业目录",
+      "source": "电子科技大学2026年招收攻读硕士学位研究生专业目录",
       "url": "https://yzbm.uestc.edu.cn/zsml/sszsml/index/2026",
       "ok": true,
       "count": 1,
-      "checkedAt": "2026-08-10T22:57:29.422Z",
+      "checkedAt": "2026-08-11T03:59:43.321Z",
       "transport": "fetch",
       "attempts": 1
     },
     {
       "id": "reference-books",
       "category": "references",
-      "source": "2026 年电子科技大学 858 信号与系统参考书目",
+      "source": "2026年全国硕士研究招生考试电子科技大学初试自命题科目参考书目",
       "url": "https://yz.uestc.edu.cn/info/1052/3672.htm",
       "ok": true,
       "count": 1,
-      "checkedAt": "2026-08-10T22:57:29.422Z",
+      "checkedAt": "2026-08-11T03:59:43.321Z",
       "transport": "fetch",
       "attempts": 1
     },
     {
       "id": "reference-syllabus",
       "category": "references",
-      "source": "电子科技大学 858 信号与系统官方考试大纲",
+      "source": "电子科技大学硕士研究生入学考试子命题科目初试大纲",
       "url": "https://xxgkw.uestc.edu.cn/info/1054/3967.htm",
       "ok": true,
       "count": 1,
-      "checkedAt": "2026-08-10T22:57:29.422Z",
+      "checkedAt": "2026-08-11T03:59:43.321Z",
       "transport": "fetch",
       "attempts": 1
     },
     {
       "id": "reference-cutoff",
       "category": "references",
-      "source": "2026 年信息与通信工程学院复试线：电子信息全日制 365 分",
+      "source": "2026年电子科技大学信息与通信工程学院硕士研究生复试工作安排通知",
       "url": "https://www.sice.uestc.edu.cn/info/1142/16093.htm",
       "ok": true,
       "count": 1,
-      "checkedAt": "2026-08-10T22:57:29.422Z",
+      "checkedAt": "2026-08-11T03:59:43.321Z",
       "transport": "fetch",
       "attempts": 1
     }

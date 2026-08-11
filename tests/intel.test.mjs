@@ -1,10 +1,12 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import {
+  extractOfficialTitle,
   isOfficialUrl,
   normalizeUrl,
   parseAdmissionPage,
   parsePoliticsPage,
+  topicAngle,
   validateFeed,
 } from "../scripts/intel-core.mjs";
 
@@ -35,6 +37,16 @@ test("politics parser labels automatic review angle without changing source titl
   assert.equal(item.title, "人工智能赋能教育科技人才协同创新");
   assert.match(item.angle, /科技自立自强/);
   assert.equal(item.date, "2026-07-17");
+});
+
+test("politics topic classification prioritizes study education and new development concepts", () => {
+  assert.match(topicAngle("各地区深入开展学习教育着力为民造福"), /党的领导/);
+  assert.match(topicAngle("新发展理念引领我国发展格局深刻变革"), /经济高质量发展/);
+});
+
+test("official page title is extracted verbatim from the configured heading", () => {
+  const html = `<aside><div class="tit">栏目标题</div></aside><main class="detail"><div class="tit">电子科技大学 2026 年招生专业目录</div></main>`;
+  assert.equal(extractOfficialTitle(html, ".detail .tit"), "电子科技大学 2026 年招生专业目录");
 });
 
 test("feed validator rejects unofficial content", () => {
