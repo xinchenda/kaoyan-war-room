@@ -1,24 +1,24 @@
 {
   "schemaVersion": 3,
-  "generatedAt": "2026-09-08T00:26:23.110Z",
+  "generatedAt": "2026-09-09T00:16:43.506Z",
   "notice": "仅收录官方白名单域名的标题与原文链接。2027 招生信息发布前，历史条目只作年度参考；政治主题为自动复习归类，不代表官方命题判断。",
   "health": {
     "status": "healthy",
-    "checkedAt": "2026-09-08T00:26:23.110Z",
+    "checkedAt": "2026-09-09T00:16:43.506Z",
     "targetYear": 2027,
     "admissions": {
       "status": "healthy",
       "successfulSources": 6,
       "usableSources": 5,
       "totalSources": 6,
-      "lastHealthyAt": "2026-09-08T00:26:23.110Z"
+      "lastHealthyAt": "2026-09-09T00:16:43.506Z"
     },
     "politics": {
       "status": "healthy",
       "successfulSources": 2,
       "usableSources": 2,
       "totalSources": 2,
-      "lastHealthyAt": "2026-09-08T00:26:23.110Z"
+      "lastHealthyAt": "2026-09-09T00:16:43.506Z"
     }
   },
   "admissions": [
@@ -31,7 +31,7 @@
       "referenceYear": 2026,
       "priority": 100,
       "curated": true,
-      "verifiedAt": "2026-09-08T00:26:23.110Z",
+      "verifiedAt": "2026-09-09T00:16:43.506Z",
       "referenceOnly": true
     },
     {
@@ -43,7 +43,7 @@
       "referenceYear": 2026,
       "priority": 100,
       "curated": true,
-      "verifiedAt": "2026-09-08T00:26:23.110Z",
+      "verifiedAt": "2026-09-09T00:16:43.506Z",
       "referenceOnly": true
     },
     {
@@ -55,7 +55,7 @@
       "referenceYear": 2014,
       "priority": 100,
       "curated": true,
-      "verifiedAt": "2026-09-08T00:26:23.110Z",
+      "verifiedAt": "2026-09-09T00:16:43.506Z",
       "referenceOnly": true
     },
     {
@@ -67,7 +67,7 @@
       "referenceYear": 2026,
       "priority": 90,
       "curated": true,
-      "verifiedAt": "2026-09-08T00:26:23.110Z",
+      "verifiedAt": "2026-09-09T00:16:43.506Z",
       "referenceOnly": true
     },
     {
@@ -78,7 +78,7 @@
       "topic": "学校通知",
       "date": "2026-09-07",
       "referenceYear": 2027,
-      "verifiedAt": "2026-09-08T00:26:23.110Z",
+      "verifiedAt": "2026-09-09T00:16:43.506Z",
       "referenceOnly": false
     },
     {
@@ -89,7 +89,7 @@
       "topic": "学校通知",
       "date": "2026-03-15",
       "referenceYear": 2026,
-      "verifiedAt": "2026-09-08T00:26:23.110Z",
+      "verifiedAt": "2026-09-09T00:16:43.506Z",
       "referenceOnly": true
     },
     {
@@ -100,7 +100,7 @@
       "topic": "学校通知",
       "date": "2025-12-11",
       "referenceYear": 2026,
-      "verifiedAt": "2026-09-08T00:26:23.110Z",
+      "verifiedAt": "2026-09-09T00:16:43.506Z",
       "referenceOnly": true
     },
     {
@@ -111,7 +111,7 @@
       "topic": "学校通知",
       "date": "2025-10-22",
       "referenceYear": 2026,
-      "verifiedAt": "2026-09-08T00:26:23.110Z",
+      "verifiedAt": "2026-09-09T00:16:43.506Z",
       "referenceOnly": true
     },
     {
@@ -122,7 +122,7 @@
       "topic": "招生章程",
       "date": "2025-10-09",
       "referenceYear": 2026,
-      "verifiedAt": "2026-09-08T00:26:23.110Z",
+      "verifiedAt": "2026-09-09T00:16:43.506Z",
       "referenceOnly": true
     },
     {
@@ -133,7 +133,7 @@
       "topic": "国家政策",
       "date": "2025-09-25",
       "referenceYear": 2026,
-      "verifiedAt": "2026-09-08T00:26:23.110Z",
+      "verifiedAt": "2026-09-09T00:16:43.506Z",
       "referenceOnly": true
     },
     {
@@ -144,7 +144,7 @@
       "topic": "国家政策",
       "date": "2025-09-24",
       "referenceYear": 2026,
-      "verifiedAt": "2026-09-08T00:26:23.110Z",
+      "verifiedAt": "2026-09-09T00:16:43.506Z",
       "referenceOnly": true
     },
     {
@@ -155,7 +155,7 @@
       "topic": "国家政策",
       "date": "2025-09-24",
       "referenceYear": 2026,
-      "verifiedAt": "2026-09-08T00:26:23.110Z",
+      "verifiedAt": "2026-09-09T00:16:43.506Z",
       "referenceOnly": true
     },
     {
@@ -166,7 +166,7 @@
       "topic": "学校通知",
       "date": "2025-06-11",
       "referenceYear": 2026,
-      "verifiedAt": "2026-09-08T00:26:23.110Z",
+      "verifiedAt": "2026-09-09T00:16:43.506Z",
       "referenceOnly": true
     },
     {
@@ -177,11 +177,71 @@
       "topic": "学校通知",
       "date": "2025-05-09",
       "referenceYear": 2026,
-      "verifiedAt": "2026-09-08T00:26:23.110Z",
+      "verifiedAt": "2026-09-09T00:16:43.506Z",
       "referenceOnly": true
     }
   ],
   "politics": [
+    {
+      "title": "国家版权局印发《版权工作“十五五”规划》",
+      "url": "https://www.news.cn/politics/20260907/c019894f739c4c068755fc151a3c40d2/c.html",
+      "source": "新华网时政",
+      "sourceId": "xinhua-politics",
+      "topic": "中国式现代化",
+      "angle": "中国式现代化、进一步全面深化改革与规划实施",
+      "date": "2026-09-07",
+      "verifiedAt": "2026-09-09T00:16:43.506Z"
+    },
+    {
+      "title": "这份规划，将让你我网上生活更美好",
+      "url": "https://www.news.cn/politics/20260907/1d9bc8d1e17447078f0d916cafa93c94/c.html",
+      "source": "新华网时政",
+      "sourceId": "xinhua-politics",
+      "topic": "中国式现代化",
+      "angle": "中国式现代化、进一步全面深化改革与规划实施",
+      "date": "2026-09-07",
+      "verifiedAt": "2026-09-09T00:16:43.506Z"
+    },
+    {
+      "title": "新华解码丨未来，乡村振兴投入机制这样完善",
+      "url": "https://www.news.cn/politics/20260907/c08eacc451124ee685bc78d042a19287/c.html",
+      "source": "新华网时政",
+      "sourceId": "xinhua-politics",
+      "topic": "乡村全面振兴与农业现代化",
+      "angle": "乡村全面振兴与农业现代化",
+      "date": "2026-09-07",
+      "verifiedAt": "2026-09-09T00:16:43.506Z"
+    },
+    {
+      "title": "《版权工作“十五五”规划》印发",
+      "url": "https://www.news.cn/politics/20260907/a380d2090bb7474f96280f0f6fe40547/c.html",
+      "source": "新华网时政",
+      "sourceId": "xinhua-politics",
+      "topic": "中国式现代化",
+      "angle": "中国式现代化、进一步全面深化改革与规划实施",
+      "date": "2026-09-07",
+      "verifiedAt": "2026-09-09T00:16:43.506Z"
+    },
+    {
+      "title": "专家学者共话社会主义学院办学发展",
+      "url": "https://www.news.cn/politics/20260907/0fc932ec115342a8bdbecadfec676878/c.html",
+      "source": "新华网时政",
+      "sourceId": "xinhua-politics",
+      "topic": "形势与政策：按背景",
+      "angle": "形势与政策：按背景、举措、意义三层复习",
+      "date": "2026-09-07",
+      "verifiedAt": "2026-09-09T00:16:43.506Z"
+    },
+    {
+      "title": "国家发展改革委运行局组织安排提高疆煤外运规模",
+      "url": "https://www.news.cn/politics/20260907/a4ad2cd4ca1f498cbd707551d8d864b9/c.html",
+      "source": "新华网时政",
+      "sourceId": "xinhua-politics",
+      "topic": "中国式现代化",
+      "angle": "中国式现代化、进一步全面深化改革与规划实施",
+      "date": "2026-09-07",
+      "verifiedAt": "2026-09-09T00:16:43.506Z"
+    },
     {
       "title": "工信部等六部门联合印发《关于推动历史经典产业高质量发展的意见》",
       "url": "https://www.news.cn/politics/20260907/1d0ae2bfeb1f4d0fb58f7611ba77a3c3/c.html",
@@ -190,7 +250,7 @@
       "topic": "经济高质量发展",
       "angle": "经济高质量发展、民生保障与新发展理念",
       "date": "2026-09-07",
-      "verifiedAt": "2026-09-08T00:26:23.110Z"
+      "verifiedAt": "2026-09-09T00:16:43.506Z"
     },
     {
       "title": "五问+一图，读懂《关于推动历史经典产业高质量发展的意见》",
@@ -200,7 +260,17 @@
       "topic": "经济高质量发展",
       "angle": "经济高质量发展、民生保障与新发展理念",
       "date": "2026-09-07",
-      "verifiedAt": "2026-09-08T00:26:23.110Z"
+      "verifiedAt": "2026-09-09T00:16:43.506Z"
+    },
+    {
+      "title": "新华鲜报丨法治护航 让人工智能这匹千里马既跑得快又跑得稳",
+      "url": "https://www.news.cn/legal/20260907/2ea41ea761494f65ad12a105d01956e4/c.html",
+      "source": "新华网时政",
+      "sourceId": "xinhua-politics",
+      "topic": "科技自立自强",
+      "angle": "科技自立自强、教育科技人才一体推进",
+      "date": "2026-09-07",
+      "verifiedAt": "2026-09-09T00:16:43.506Z"
     },
     {
       "title": "新华漫说丨“十五五”，医疗保障事业发展这样绘就新蓝图",
@@ -210,7 +280,7 @@
       "topic": "中国式现代化",
       "angle": "中国式现代化、进一步全面深化改革与规划实施",
       "date": "2026-09-06",
-      "verifiedAt": "2026-09-08T00:26:23.110Z"
+      "verifiedAt": "2026-09-09T00:16:43.506Z"
     },
     {
       "title": "新华社国家高端智库发布《新大众文艺的繁荣发展与世界影响》智库报告",
@@ -220,7 +290,7 @@
       "topic": "中国特色大国外交与人类命运共同体",
       "angle": "中国特色大国外交与人类命运共同体",
       "date": "2026-09-06",
-      "verifiedAt": "2026-09-08T00:26:23.110Z"
+      "verifiedAt": "2026-09-09T00:16:43.506Z"
     },
     {
       "title": "夜间经济热度高涨 文艺新玩法亮相上海街市",
@@ -230,57 +300,7 @@
       "topic": "经济高质量发展",
       "angle": "经济高质量发展、民生保障与新发展理念",
       "date": "2026-09-06",
-      "verifiedAt": "2026-09-08T00:26:23.110Z"
-    },
-    {
-      "title": "新中国中医药高等教育70年：从守住根脉到走向世界",
-      "url": "https://www.news.cn/politics/20260904/b235ecf7ac7342c5a68377cf38c4bb6b/c.html",
-      "source": "新华网时政",
-      "sourceId": "xinhua-politics",
-      "topic": "科技自立自强",
-      "angle": "科技自立自强、教育科技人才一体推进",
-      "date": "2026-09-04",
-      "verifiedAt": "2026-09-08T00:26:23.110Z"
-    },
-    {
-      "title": "进一步畅通实体经济的“筋络”——“十五五”开局之年推进物流网建设观察",
-      "url": "https://www.news.cn/politics/20260903/e7d40c687c104b6c8510b53df76ed012/c.html",
-      "source": "新华网时政",
-      "sourceId": "xinhua-politics",
-      "topic": "经济高质量发展",
-      "angle": "经济高质量发展、民生保障与新发展理念",
-      "date": "2026-09-03",
-      "verifiedAt": "2026-09-08T00:26:23.110Z"
-    },
-    {
-      "title": "新华时评·民生无小事丨杜绝农村高额彩礼不靠“一阵清”",
-      "url": "https://www.news.cn/legal/20260903/b4d122392b0e41999136020105215166/c.html",
-      "source": "新华网时政",
-      "sourceId": "xinhua-politics",
-      "topic": "经济高质量发展",
-      "angle": "经济高质量发展、民生保障与新发展理念",
-      "date": "2026-09-03",
-      "verifiedAt": "2026-09-08T00:26:23.110Z"
-    },
-    {
-      "title": "技术赋能、政策护航、良性竞争——推动AI微短剧品质化发展",
-      "url": "https://www.news.cn/politics/20260902/55c73c6ed2954781b152599026d0973e/c.html",
-      "source": "新华网时政",
-      "sourceId": "xinhua-politics",
-      "topic": "形势与政策：按背景",
-      "angle": "形势与政策：按背景、举措、意义三层复习",
-      "date": "2026-09-02",
-      "verifiedAt": "2026-09-08T00:26:23.110Z"
-    },
-    {
-      "title": "中共中央宣传部等印发《关于组织开展2026年“全民国防教育月”活动的通知》",
-      "url": "https://www.news.cn/politics/20260901/46965e5525d04d468f8eb7b9df7c9ddc/c.html",
-      "source": "新华网时政",
-      "sourceId": "xinhua-politics",
-      "topic": "科技自立自强",
-      "angle": "科技自立自强、教育科技人才一体推进",
-      "date": "2026-09-01",
-      "verifiedAt": "2026-09-08T00:26:23.110Z"
+      "verifiedAt": "2026-09-09T00:16:43.506Z"
     }
   ],
   "sourceStatus": [
@@ -292,7 +312,7 @@
       "targetSchool": true,
       "ok": true,
       "count": 16,
-      "checkedAt": "2026-09-08T00:26:23.110Z",
+      "checkedAt": "2026-09-09T00:16:43.506Z",
       "transport": "curl-ipv4-fallback",
       "attempts": 1
     },
@@ -304,7 +324,7 @@
       "targetSchool": true,
       "ok": true,
       "count": 8,
-      "checkedAt": "2026-09-08T00:26:23.110Z",
+      "checkedAt": "2026-09-09T00:16:43.506Z",
       "transport": "curl-ipv4-fallback",
       "attempts": 1
     },
@@ -316,7 +336,7 @@
       "targetSchool": true,
       "ok": true,
       "count": 2,
-      "checkedAt": "2026-09-08T00:26:23.110Z",
+      "checkedAt": "2026-09-09T00:16:43.506Z",
       "transport": "curl-ipv4-fallback",
       "attempts": 1
     },
@@ -328,7 +348,7 @@
       "targetSchool": true,
       "ok": true,
       "count": 10,
-      "checkedAt": "2026-09-08T00:26:23.110Z",
+      "checkedAt": "2026-09-09T00:16:43.506Z",
       "transport": "curl-ipv4-fallback",
       "attempts": 1
     },
@@ -340,7 +360,7 @@
       "targetSchool": true,
       "ok": true,
       "count": 0,
-      "checkedAt": "2026-09-08T00:26:23.110Z",
+      "checkedAt": "2026-09-09T00:16:43.506Z",
       "transport": "curl-ipv4-fallback",
       "attempts": 1
     },
@@ -352,7 +372,7 @@
       "targetSchool": false,
       "ok": true,
       "count": 52,
-      "checkedAt": "2026-09-08T00:26:23.110Z",
+      "checkedAt": "2026-09-09T00:16:43.506Z",
       "transport": "fetch",
       "attempts": 1
     },
@@ -363,8 +383,8 @@
       "url": "https://www.news.cn/politics/",
       "targetSchool": false,
       "ok": true,
-      "count": 22,
-      "checkedAt": "2026-09-08T00:26:23.110Z",
+      "count": 27,
+      "checkedAt": "2026-09-09T00:16:43.506Z",
       "transport": "fetch",
       "attempts": 1
     },
@@ -376,7 +396,7 @@
       "targetSchool": false,
       "ok": true,
       "count": 1,
-      "checkedAt": "2026-09-08T00:26:23.110Z",
+      "checkedAt": "2026-09-09T00:16:43.506Z",
       "transport": "fetch",
       "attempts": 1
     },
@@ -387,7 +407,7 @@
       "url": "https://yzbm.uestc.edu.cn/zsml/sszsml/index/2026",
       "ok": true,
       "count": 1,
-      "checkedAt": "2026-09-08T00:26:23.110Z",
+      "checkedAt": "2026-09-09T00:16:43.506Z",
       "transport": "curl-ipv4-fallback",
       "attempts": 1
     },
@@ -398,7 +418,7 @@
       "url": "https://yz.uestc.edu.cn/info/1052/3672.htm",
       "ok": true,
       "count": 1,
-      "checkedAt": "2026-09-08T00:26:23.110Z",
+      "checkedAt": "2026-09-09T00:16:43.506Z",
       "transport": "curl-ipv4-fallback",
       "attempts": 1
     },
@@ -409,7 +429,7 @@
       "url": "https://xxgkw.uestc.edu.cn/info/1054/3967.htm",
       "ok": true,
       "count": 1,
-      "checkedAt": "2026-09-08T00:26:23.110Z",
+      "checkedAt": "2026-09-09T00:16:43.506Z",
       "transport": "curl-ipv4-fallback",
       "attempts": 1
     },
@@ -420,7 +440,7 @@
       "url": "https://www.sice.uestc.edu.cn/info/1142/16093.htm",
       "ok": true,
       "count": 1,
-      "checkedAt": "2026-09-08T00:26:23.110Z",
+      "checkedAt": "2026-09-09T00:16:43.506Z",
       "transport": "curl-ipv4-fallback",
       "attempts": 1
     }
