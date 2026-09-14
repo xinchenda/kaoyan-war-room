@@ -1,24 +1,24 @@
 window.KAOYAN_UPDATES = {
   "schemaVersion": 3,
-  "generatedAt": "2026-09-13T00:01:13.846Z",
+  "generatedAt": "2026-09-14T00:13:33.554Z",
   "notice": "仅收录官方白名单域名的标题与原文链接。2027 招生信息发布前，历史条目只作年度参考；政治主题为自动复习归类，不代表官方命题判断。",
   "health": {
     "status": "healthy",
-    "checkedAt": "2026-09-13T00:01:13.846Z",
+    "checkedAt": "2026-09-14T00:13:33.554Z",
     "targetYear": 2027,
     "admissions": {
       "status": "healthy",
       "successfulSources": 6,
       "usableSources": 5,
       "totalSources": 6,
-      "lastHealthyAt": "2026-09-13T00:01:13.846Z"
+      "lastHealthyAt": "2026-09-14T00:13:33.554Z"
     },
     "politics": {
       "status": "healthy",
       "successfulSources": 2,
       "usableSources": 2,
       "totalSources": 2,
-      "lastHealthyAt": "2026-09-13T00:01:13.846Z"
+      "lastHealthyAt": "2026-09-14T00:13:33.554Z"
     }
   },
   "admissions": [
@@ -31,7 +31,7 @@ window.KAOYAN_UPDATES = {
       "referenceYear": 2026,
       "priority": 100,
       "curated": true,
-      "verifiedAt": "2026-09-13T00:01:13.846Z",
+      "verifiedAt": "2026-09-14T00:13:33.554Z",
       "referenceOnly": true
     },
     {
@@ -43,7 +43,7 @@ window.KAOYAN_UPDATES = {
       "referenceYear": 2026,
       "priority": 100,
       "curated": true,
-      "verifiedAt": "2026-09-13T00:01:13.846Z",
+      "verifiedAt": "2026-09-14T00:13:33.554Z",
       "referenceOnly": true
     },
     {
@@ -55,7 +55,7 @@ window.KAOYAN_UPDATES = {
       "referenceYear": 2014,
       "priority": 100,
       "curated": true,
-      "verifiedAt": "2026-09-13T00:01:13.846Z",
+      "verifiedAt": "2026-09-14T00:13:33.554Z",
       "referenceOnly": true
     },
     {
@@ -67,7 +67,7 @@ window.KAOYAN_UPDATES = {
       "referenceYear": 2026,
       "priority": 90,
       "curated": true,
-      "verifiedAt": "2026-09-13T00:01:13.846Z",
+      "verifiedAt": "2026-09-14T00:13:33.554Z",
       "referenceOnly": true
     },
     {
@@ -78,7 +78,7 @@ window.KAOYAN_UPDATES = {
       "topic": "学校通知",
       "date": "2026-09-07",
       "referenceYear": 2027,
-      "verifiedAt": "2026-09-13T00:01:13.846Z",
+      "verifiedAt": "2026-09-14T00:13:33.554Z",
       "referenceOnly": false
     },
     {
@@ -89,7 +89,7 @@ window.KAOYAN_UPDATES = {
       "topic": "学校通知",
       "date": "2026-03-15",
       "referenceYear": 2026,
-      "verifiedAt": "2026-09-13T00:01:13.846Z",
+      "verifiedAt": "2026-09-14T00:13:33.554Z",
       "referenceOnly": true
     },
     {
@@ -100,7 +100,7 @@ window.KAOYAN_UPDATES = {
       "topic": "学校通知",
       "date": "2025-12-11",
       "referenceYear": 2026,
-      "verifiedAt": "2026-09-13T00:01:13.846Z",
+      "verifiedAt": "2026-09-14T00:13:33.554Z",
       "referenceOnly": true
     },
     {
@@ -111,7 +111,7 @@ window.KAOYAN_UPDATES = {
       "topic": "学校通知",
       "date": "2025-10-22",
       "referenceYear": 2026,
-      "verifiedAt": "2026-09-13T00:01:13.846Z",
+      "verifiedAt": "2026-09-14T00:13:33.554Z",
       "referenceOnly": true
     },
     {
@@ -122,7 +122,7 @@ window.KAOYAN_UPDATES = {
       "topic": "招生章程",
       "date": "2025-10-09",
       "referenceYear": 2026,
-      "verifiedAt": "2026-09-13T00:01:13.846Z",
+      "verifiedAt": "2026-09-14T00:13:33.554Z",
       "referenceOnly": true
     },
     {
@@ -133,7 +133,7 @@ window.KAOYAN_UPDATES = {
       "topic": "国家政策",
       "date": "2025-09-25",
       "referenceYear": 2026,
-      "verifiedAt": "2026-09-13T00:01:13.846Z",
+      "verifiedAt": "2026-09-14T00:13:33.554Z",
       "referenceOnly": true
     },
     {
@@ -144,7 +144,7 @@ window.KAOYAN_UPDATES = {
       "topic": "国家政策",
       "date": "2025-09-24",
       "referenceYear": 2026,
-      "verifiedAt": "2026-09-13T00:01:13.846Z",
+      "verifiedAt": "2026-09-14T00:13:33.554Z",
       "referenceOnly": true
     },
     {
@@ -155,7 +155,7 @@ window.KAOYAN_UPDATES = {
       "topic": "国家政策",
       "date": "2025-09-24",
       "referenceYear": 2026,
-      "verifiedAt": "2026-09-13T00:01:13.846Z",
+      "verifiedAt": "2026-09-14T00:13:33.554Z",
       "referenceOnly": true
     },
     {
@@ -166,7 +166,7 @@ window.KAOYAN_UPDATES = {
       "topic": "学校通知",
       "date": "2025-06-11",
       "referenceYear": 2026,
-      "verifiedAt": "2026-09-13T00:01:13.846Z",
+      "verifiedAt": "2026-09-14T00:13:33.554Z",
       "referenceOnly": true
     },
     {
@@ -177,7 +177,7 @@ window.KAOYAN_UPDATES = {
       "topic": "学校通知",
       "date": "2025-05-09",
       "referenceYear": 2026,
-      "verifiedAt": "2026-09-13T00:01:13.846Z",
+      "verifiedAt": "2026-09-14T00:13:33.554Z",
       "referenceOnly": true
     }
   ],
@@ -190,7 +190,7 @@ window.KAOYAN_UPDATES = {
       "topic": "文化自信与建设社会主义文化强国",
       "angle": "文化自信与建设社会主义文化强国",
       "date": "2026-09-11",
-      "verifiedAt": "2026-09-13T00:01:13.846Z"
+      "verifiedAt": "2026-09-14T00:13:33.554Z"
     },
     {
       "title": "坚持以正确政绩观高质量推进国防和军队现代化——军队开展树立和践行正确政绩观学习教育取得明显成效",
@@ -200,7 +200,7 @@ window.KAOYAN_UPDATES = {
       "topic": "党的领导",
       "angle": "党的领导、党的建设与全面从严治党",
       "date": "2026-09-11",
-      "verifiedAt": "2026-09-13T00:01:13.846Z"
+      "verifiedAt": "2026-09-14T00:13:33.554Z"
     },
     {
       "title": "新就业群体身边的权益保障网",
@@ -210,7 +210,7 @@ window.KAOYAN_UPDATES = {
       "topic": "经济高质量发展",
       "angle": "经济高质量发展、民生保障与新发展理念",
       "date": "2026-09-11",
-      "verifiedAt": "2026-09-13T00:01:13.846Z"
+      "verifiedAt": "2026-09-14T00:13:33.554Z"
     },
     {
       "title": "《微短剧发展管理办法》施行划出11条内容红线 推动行业从“拼数量”转向“拼质量”",
@@ -220,7 +220,7 @@ window.KAOYAN_UPDATES = {
       "topic": "形势与政策：按背景",
       "angle": "形势与政策：按背景、举措、意义三层复习",
       "date": "2026-09-11",
-      "verifiedAt": "2026-09-13T00:01:13.846Z"
+      "verifiedAt": "2026-09-14T00:13:33.554Z"
     },
     {
       "title": "“中国热极”吐鲁番：把热资源做成“热经济",
@@ -230,7 +230,7 @@ window.KAOYAN_UPDATES = {
       "topic": "经济高质量发展",
       "angle": "经济高质量发展、民生保障与新发展理念",
       "date": "2026-09-11",
-      "verifiedAt": "2026-09-13T00:01:13.846Z"
+      "verifiedAt": "2026-09-14T00:13:33.554Z"
     },
     {
       "title": "服贸会上的科技新看点",
@@ -240,7 +240,7 @@ window.KAOYAN_UPDATES = {
       "topic": "科技自立自强",
       "angle": "科技自立自强、教育科技人才一体推进",
       "date": "2026-09-10",
-      "verifiedAt": "2026-09-13T00:01:13.846Z"
+      "verifiedAt": "2026-09-14T00:13:33.554Z"
     },
     {
       "title": "加快建设金融强国、服务经济社会高质量发展——国新办发布会聚焦金融领域“十五五”时期工作重点",
@@ -250,7 +250,7 @@ window.KAOYAN_UPDATES = {
       "topic": "经济高质量发展",
       "angle": "经济高质量发展、民生保障与新发展理念",
       "date": "2026-09-10",
-      "verifiedAt": "2026-09-13T00:01:13.846Z"
+      "verifiedAt": "2026-09-14T00:13:33.554Z"
     },
     {
       "title": "完善乡村振兴投入机制相关实施方案印发——如何引导更多资金流向“三农”领域",
@@ -260,7 +260,7 @@ window.KAOYAN_UPDATES = {
       "topic": "乡村全面振兴与农业现代化",
       "angle": "乡村全面振兴与农业现代化",
       "date": "2026-09-10",
-      "verifiedAt": "2026-09-13T00:01:13.846Z"
+      "verifiedAt": "2026-09-14T00:13:33.554Z"
     },
     {
       "title": "中央宣传部、教育部联合发布“最美教师”先进事迹",
@@ -270,7 +270,7 @@ window.KAOYAN_UPDATES = {
       "topic": "科技自立自强",
       "angle": "科技自立自强、教育科技人才一体推进",
       "date": "2026-09-10",
-      "verifiedAt": "2026-09-13T00:01:13.846Z"
+      "verifiedAt": "2026-09-14T00:13:33.554Z"
     },
     {
       "title": "为开好局起好步广泛凝聚力量——国新办发布会介绍“十五五”发展社会主义民主有关情况",
@@ -280,7 +280,7 @@ window.KAOYAN_UPDATES = {
       "topic": "中国式现代化",
       "angle": "中国式现代化、进一步全面深化改革与规划实施",
       "date": "2026-09-10",
-      "verifiedAt": "2026-09-13T00:01:13.846Z"
+      "verifiedAt": "2026-09-14T00:13:33.554Z"
     },
     {
       "title": "新华视点丨灵活就业人员看病报销如何更有保障",
@@ -290,7 +290,7 @@ window.KAOYAN_UPDATES = {
       "topic": "经济高质量发展",
       "angle": "经济高质量发展、民生保障与新发展理念",
       "date": "2026-09-08",
-      "verifiedAt": "2026-09-13T00:01:13.846Z"
+      "verifiedAt": "2026-09-14T00:13:33.554Z"
     },
     {
       "title": "渔业发展“十五五”规划公布",
@@ -300,7 +300,7 @@ window.KAOYAN_UPDATES = {
       "topic": "中国式现代化",
       "angle": "中国式现代化、进一步全面深化改革与规划实施",
       "date": "2026-09-08",
-      "verifiedAt": "2026-09-13T00:01:13.846Z"
+      "verifiedAt": "2026-09-14T00:13:33.554Z"
     }
   ],
   "sourceStatus": [
@@ -312,8 +312,8 @@ window.KAOYAN_UPDATES = {
       "targetSchool": true,
       "ok": true,
       "count": 16,
-      "checkedAt": "2026-09-13T00:01:13.846Z",
-      "transport": "curl-ipv4-fallback",
+      "checkedAt": "2026-09-14T00:13:33.554Z",
+      "transport": "fetch",
       "attempts": 1
     },
     {
@@ -324,8 +324,8 @@ window.KAOYAN_UPDATES = {
       "targetSchool": true,
       "ok": true,
       "count": 8,
-      "checkedAt": "2026-09-13T00:01:13.846Z",
-      "transport": "curl-ipv4-fallback",
+      "checkedAt": "2026-09-14T00:13:33.554Z",
+      "transport": "fetch",
       "attempts": 1
     },
     {
@@ -336,8 +336,8 @@ window.KAOYAN_UPDATES = {
       "targetSchool": true,
       "ok": true,
       "count": 2,
-      "checkedAt": "2026-09-13T00:01:13.846Z",
-      "transport": "curl-ipv4-fallback",
+      "checkedAt": "2026-09-14T00:13:33.554Z",
+      "transport": "fetch",
       "attempts": 1
     },
     {
@@ -348,8 +348,8 @@ window.KAOYAN_UPDATES = {
       "targetSchool": true,
       "ok": true,
       "count": 10,
-      "checkedAt": "2026-09-13T00:01:13.846Z",
-      "transport": "curl-ipv4-fallback",
+      "checkedAt": "2026-09-14T00:13:33.554Z",
+      "transport": "fetch",
       "attempts": 1
     },
     {
@@ -360,8 +360,8 @@ window.KAOYAN_UPDATES = {
       "targetSchool": true,
       "ok": true,
       "count": 0,
-      "checkedAt": "2026-09-13T00:01:13.846Z",
-      "transport": "curl-ipv4-fallback",
+      "checkedAt": "2026-09-14T00:13:33.554Z",
+      "transport": "fetch",
       "attempts": 1
     },
     {
@@ -372,7 +372,7 @@ window.KAOYAN_UPDATES = {
       "targetSchool": false,
       "ok": true,
       "count": 52,
-      "checkedAt": "2026-09-13T00:01:13.846Z",
+      "checkedAt": "2026-09-14T00:13:33.554Z",
       "transport": "fetch",
       "attempts": 1
     },
@@ -384,7 +384,7 @@ window.KAOYAN_UPDATES = {
       "targetSchool": false,
       "ok": true,
       "count": 29,
-      "checkedAt": "2026-09-13T00:01:13.846Z",
+      "checkedAt": "2026-09-14T00:13:33.554Z",
       "transport": "fetch",
       "attempts": 1
     },
@@ -396,7 +396,7 @@ window.KAOYAN_UPDATES = {
       "targetSchool": false,
       "ok": true,
       "count": 1,
-      "checkedAt": "2026-09-13T00:01:13.846Z",
+      "checkedAt": "2026-09-14T00:13:33.554Z",
       "transport": "fetch",
       "attempts": 1
     },
@@ -407,9 +407,9 @@ window.KAOYAN_UPDATES = {
       "url": "https://yzbm.uestc.edu.cn/zsml/sszsml/index/2026",
       "ok": true,
       "count": 1,
-      "checkedAt": "2026-09-13T00:01:13.846Z",
-      "transport": "curl-ipv4-fallback",
-      "attempts": 1
+      "checkedAt": "2026-09-14T00:13:33.554Z",
+      "transport": "fetch",
+      "attempts": 3
     },
     {
       "id": "reference-books",
@@ -418,9 +418,9 @@ window.KAOYAN_UPDATES = {
       "url": "https://yz.uestc.edu.cn/info/1052/3672.htm",
       "ok": true,
       "count": 1,
-      "checkedAt": "2026-09-13T00:01:13.846Z",
-      "transport": "curl-ipv4-fallback",
-      "attempts": 1
+      "checkedAt": "2026-09-14T00:13:33.554Z",
+      "transport": "fetch",
+      "attempts": 2
     },
     {
       "id": "reference-syllabus",
@@ -429,9 +429,9 @@ window.KAOYAN_UPDATES = {
       "url": "https://xxgkw.uestc.edu.cn/info/1054/3967.htm",
       "ok": true,
       "count": 1,
-      "checkedAt": "2026-09-13T00:01:13.846Z",
-      "transport": "curl-ipv4-fallback",
-      "attempts": 1
+      "checkedAt": "2026-09-14T00:13:33.554Z",
+      "transport": "fetch",
+      "attempts": 3
     },
     {
       "id": "reference-cutoff",
@@ -440,9 +440,9 @@ window.KAOYAN_UPDATES = {
       "url": "https://www.sice.uestc.edu.cn/info/1142/16093.htm",
       "ok": true,
       "count": 1,
-      "checkedAt": "2026-09-13T00:01:13.846Z",
-      "transport": "curl-ipv4-fallback",
-      "attempts": 1
+      "checkedAt": "2026-09-14T00:13:33.554Z",
+      "transport": "fetch",
+      "attempts": 2
     }
   ]
 };
